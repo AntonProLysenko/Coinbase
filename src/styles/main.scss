@@ -1,4 +1,6 @@
 $primary: rgb(0,82,250);
+$background: rgb(255,255,255);
+
 
 
 
@@ -16,7 +18,6 @@ $primary: rgb(0,82,250);
 
     animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
 }
-
 @keyframes slide_down{
     0% {
             transform: translateY(-40px);
@@ -25,4 +26,21 @@ $primary: rgb(0,82,250);
         100% {
             transform: translateY(0px);
         }
+}
+
+.styledLink{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color:$background;
+    padding: 10px;
+
+    span{
+            font-size: 16px;
+                line-height: 19px;
+                font-weight: 500;
+    }
+
+
+        
 }

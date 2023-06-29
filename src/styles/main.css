@@ -17,4 +17,16 @@
   100% {
     transform: translateY(0px);
   }
+}
+.styledLink {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.styledLink span {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
