@@ -2,13 +2,64 @@ import {Link} from "react-router-dom"
 
 export default function Header() {
   return (
-    <div className='mainNav'>
+    <div className='mainNav_wrapper'>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className="styledLink" to = "/signup" >
                     <span>Get up to $200 for getting started</span> <sup>1</sup> <span> →</span>
                 </Link>
             </div>
+        </div>
+
+        <div className="mainNav">
+          <div className="logoWrapper">
+              <Link className="styledLink" to = "/" >
+                <img src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg" height="20" width="112" alt="Coinbase Logo" className="logo"></img>
+              </Link>
+          </div>
+
+          <nav className="centerWrapper">
+            <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore">
+              <div className="">
+                <span className="textLabel">Explore</span>
+              </div>
+            </Link>
+
+             <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
+              <div className="">
+                <span className="textLabel">Web3</span>
+              </div>
+            </Link>
+
+              <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
+              <div className="">
+                <span className="textLabel">Learn</span>
+              </div>
+            </Link>
+
+            <div className="navLinkItem defaultCursor">
+               <span className="textLabel">Individuals</span>
+            </div>
+            <div className="navLinkItem defaultCursor">
+               <span className="textLabel">Businesses</span>
+            </div>
+            <div className="navLinkItem defaultCursor">
+               <span className="textLabel">Developers</span>
+            </div>
+              <div className="navLinkItem defaultCursor">
+               <span className="textLabel">Company</span>
+            </div>
+          </nav>
+
+          <div className="buttonWrapper">
+                <Link to="/login" className="styledLink navLinkItem">
+                    <span className="textLabel">Sign in</span>
+                </Link>
+
+               <Link className="styledLink" to = "/signup" >
+                    <button className="interactableButton">Sign up</button>
+                </Link>
+          </div>
         </div>
     </div>
   )
