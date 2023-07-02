@@ -60,6 +60,14 @@ export default function Header() {
                     <button className="interactableButton">Sign up</button>
                 </Link>
           </div>
+
+           <div className="mobileMenuToggleWrapper">
+              <div className="mobileMenuToggle">
+                  <span className="bar"></span>
+                  {/* <span className="bar"></span> */}
+                  {/* <span className="bar"></span> */}
+                </div>
+            </div>  
         </div>
     </div>
   )

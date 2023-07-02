@@ -19,7 +19,7 @@ $spacing-10: 80px;
     background-color: $primary;
 
     min-height: 37px;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     transform: translateY(-40px);
 
     position: relative;
@@ -54,7 +54,7 @@ $spacing-10: 80px;
 }
 .mainNav{
     max-width: 1180px;
-    margin: 0px auto;
+    margin: -4px auto;
     display: flex;
     align-items: stretch;
     padding: 0px 20px;
@@ -110,6 +110,7 @@ $spacing-10: 80px;
     justify-content: flex-end;
     align-items: center;
 }
+
 .interactableButton{
 
     display: inline-flex;
@@ -137,12 +138,95 @@ $spacing-10: 80px;
     font-size: 100%;
 }
 
-  .interactableButton:hover {
-      background-color: rgb(1, 76, 236);
-      opacity: 0.92;
-  }
+.interactableButton:hover {
+    background-color: rgb(1, 76, 236);
+    opacity: 0.92;
+}
 
-  .interactableButton:active {
-      background-color: rgb(1, 72, 221);
-      opacity: 0.86;
+.interactableButton:active {
+    background-color: rgb(1, 72, 221);
+    opacity: 0.86;
+}
+
+.mobileMenuToggleWrapper{
+    position: relative;
+        width: 18px;
+        height: 17px;
+        cursor: pointer;
+
+        padding: 10px;
+        margin: 14px -10px 10px 20px;
+}
+
+.mobileMenuToggle{
+    display:none;
+
+    position: relative;
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    .bar {
+        position: absolute;
+            top: 8px;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(5, 15, 25);
+            border-radius: 4px;
+            transform: initial;
+    }
+
+    .bar::before{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(5, 15, 25);
+        border-radius: 4px;
+        content: "";
+        transform: translateY(-8px);
+    }
+    .bar::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(5, 15, 25);
+        border-radius: 4px;
+        content: "";
+        transform: translateY(8px) rotate(0deg);
+        // transition: transform 300ms ease 0s, background-color 0s cubic-bezier(0.6, 0, 0.15, 1) 0s;
+    }
+}
+
+
+
+
+
+
+
+
+  @media(max-width: 1050px){
+
+    .styledLink {
+            span {font-size: 14px;
+                font-weight: 650;
+            }
+    }
+    .centerWrapper{
+        display: none;
+    }
+
+    .buttonWrapper{
+        .navLinkItem{//signIn nav Item
+            display:none;
+        }
+    }
+
+    .mobileMenuToggle{
+        display:flex
+    }
   }
