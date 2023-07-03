@@ -2,10 +2,11 @@ import {Link} from "react-router-dom"
 
 export default function Header() {
   return (
+    <>
     <header className='mainNav_wrapper'>
         <div className='bannerWrapper'>
             <div className='banner'>
-                <Link className="styledLink" to = "/signup" >
+                <Link className=" styledLink banerStyledLink" to = "/signup" >
                     <span>Get up to $200 for getting started</span> <sup>1</sup> <span> →</span>
                 </Link>
             </div>
@@ -19,36 +20,38 @@ export default function Header() {
           </div>
 
           <nav className="centerWrapper">
-            <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore">
-              <div className="">
-                <span className="textLabel">Explore</span>
-              </div>
-            </Link>
+            {/* <div className="centerNavItems"> */}
+              <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore">
+                <div className="">
+                  <span className="textLabel">Explore</span>
+                </div>
+              </Link>
 
-             <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
-              <div className="">
-                <span className="textLabel">Web3</span>
-              </div>
-            </Link>
+              <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
+                <div className="">
+                  <span className="textLabel">Web3</span>
+                </div>
+              </Link>
 
-              <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
-              <div className="">
-                <span className="textLabel">Learn</span>
-              </div>
-            </Link>
+                <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
+                <div className="">
+                  <span className="textLabel">Learn</span>
+                </div>
+              </Link>
 
-            <div className="navLinkItem defaultCursor">
-               <span className="textLabel">Individuals</span>
-            </div>
-            <div className="navLinkItem defaultCursor">
-               <span className="textLabel">Businesses</span>
-            </div>
-            <div className="navLinkItem defaultCursor">
-               <span className="textLabel">Developers</span>
-            </div>
-              <div className="navLinkItem defaultCursor">
-               <span className="textLabel">Company</span>
-            </div>
+              <div className=" styledLink navLinkItem  defaultCursor">
+                <span className="textLabel">Individuals</span>
+              </div>
+              <div className="styledLink navLinkItem defaultCursor">
+                <span className="textLabel">Businesses</span>
+              </div>
+              <div className="styledLink navLinkItem defaultCursor">
+                <span className="textLabel">Developers</span>
+              </div>
+                <div className="styledLink navLinkItem defaultCursor">
+                <span className="textLabel">Company</span>
+              </div>
+            {/* </div> */}
           </nav>
 
           <div className="buttonWrapper">
@@ -69,6 +72,55 @@ export default function Header() {
                 </div>
             </div>  
         </div>
+
+         <nav className="mobileCenterWrapper">
+             {/* <div className="centerNavItems"> */}
+              <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore">
+                <div className="mobileLinkItem">
+                  <span className="textLabel">Explore</span>
+                </div>
+              </Link>
+
+              <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
+                <div className="mobileLinkItem">
+                  <span className="textLabel">Web3</span>
+                </div>
+              </Link>
+
+                <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
+                <div className="mobileLinkItem">
+                  <span className="textLabel">Learn</span>
+                </div>
+              </Link>
+
+              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                <span className="textLabel">Individuals</span>
+              </div>
+              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                <span className="textLabel">Businesses</span>
+              </div>
+              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                <span className="textLabel">Developers</span>
+              </div>
+              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                <span className="textLabel">Company</span>
+              </div>
+
+          
+
+              <div className="mobileButtonWrapper">
+                <Link className="styledLink" to='/signup'>
+                  <button className="mobileInteractableButton">Sign up</button>
+                </Link>
+                <Link className="styledLink" to ="/login">
+                  <button className="mobileInteractableButton">Sign in</button>
+                </Link>
+              </div>
+            {/* </div> */}
+        </nav>
+       
     </header>
+    
+        </>
   )
 }
