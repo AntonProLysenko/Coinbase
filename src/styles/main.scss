@@ -231,8 +231,17 @@ $spacing-10: 80px;
 
     button{
         @extend.interactableButton;
-            width: 100%;
+        width: 100%;
+        height: 56px;
+        border-radius: 56px;
+
     }
+        .mobileSignInInteractableButton{
+            background-color: $background;
+            border:1px solid rgba(91,97,110,0.2);;
+            color:rgb(23, 23, 23)
+
+        }
 }
 
 // .mobileInteractableButton{

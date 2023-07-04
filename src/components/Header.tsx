@@ -113,7 +113,7 @@ export default function Header() {
                   <button className="mobileInteractableButton">Sign up</button>
                 </Link>
                 <Link className="styledLink" to ="/login">
-                  <button className="mobileInteractableButton">Sign in</button>
+                  <button className="mobileInteractableButton mobileSignInInteractableButton">Sign in</button>
                 </Link>
               </div>
             {/* </div> */}
