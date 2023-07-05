@@ -1,7 +1,6 @@
 .mainNav_wrapper {
   position: fixed;
   width: 100%;
-  top: 0px;
   background: rgb(255, 255, 255);
   z-index: 2;
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
@@ -146,8 +145,8 @@
 }
 
 .mobileNavContainer {
-  min-height: 10vh;
   display: none;
+  height: 10px;
 }
 
 .mobileCenterWrapper {
@@ -166,6 +165,10 @@
   overflow: scroll;
   background: rgb(255, 255, 255);
   z-index: -1;
+}
+.mobileCenterWrapper ::-webkit-scrollbar ::-webkit-scrollbar-thumb ::-webkit-scrollbar-track {
+  width: 0px;
+  border: none;
 }
 .mobileCenterWrapper .navLinkItem {
   margin: 0;
@@ -187,6 +190,31 @@
 .mobileLinkItem span {
   font-weight: 640;
   line-height: 3px;
+}
+
+.mobileMenuSubLinkWrapper {
+  display: none;
+  padding: 20px 24px;
+  background: rgb(241, 243, 245);
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.mobileMenuSubLinkWrapper.active {
+  display: block;
+}
+
+.mobileMenuSubLink {
+  padding: 17px 0px;
+}
+
+.mobileSubLinkItem {
+  color: rgb(5, 15, 25);
+  margin-bottom: 15px;
+}
+
+.mobileSubLinkTextLabel {
+  margin: 0;
 }
 
 .mobileButtonWrapper {
