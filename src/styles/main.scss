@@ -11,10 +11,13 @@ $spacing-7: 56px;
 $spacing-8: 64px;
 $spacing-9: 72px;
 $spacing-10: 80px;
-
+.lorem{
+    max-width: 90px;
+}
 .mainNav_wrapper{
     position: fixed;
-    width: 100%;
+    min-width: 100dvw;
+    max-width: 100dvw;
     // top: 0px;
     background: rgb(255, 255, 255);
     z-index: 2;
@@ -24,8 +27,8 @@ $spacing-10: 80px;
 .banner{
     background-color: $primary;
 
-    min-height: 37px;
-    padding-bottom: 4px;
+    min-height: 39px;
+    padding-bottom: 3.5px;
     transform: translateY(-40px);
 
     position: relative;
@@ -51,38 +54,56 @@ $spacing-10: 80px;
     color:$background;
     // padding: 10px;
 
-    span{
-        font-size: 16px;
-        line-height: 19px;
-        font-weight: 500;
-    }   
+    // span{
+    //     // font-size: 16px;
+    //     // line-height: 19px;
+    //     // font-weight: 500;
+    // }   
 }
 
-// .bannerStyledLink{
-//     font-weight: 650;
-// }
+.banerStyledLink{
+    font-weight: 550;
+    font-size: 16px;
+    // line-height: 19px;
+    sup{
+        font-size: 12px;
+    }
+}
 
 .mainNavContainer{
     width:100%;
     border-bottom: 1px solid rgb(236, 239, 241);
+    background:white
 }
 
 .mainNav{
-    max-width: 1180px;
-    margin: -5px auto;
-    display: flex;
-    align-items: stretch;
-    padding: 0px 20px;
-    box-sizing: content-box;
-    min-height: 44px;
+    // max-width: 1180px;
+    // margin: 2px auto;
+    // display: flex;
+    // align-items: stretch;
+    // padding: 0px 20px;
+    // box-sizing: content-box;
+    // min-height: 44px;
+
+        max-width: 1180px;
+        margin: 0px auto;
+        display: flex;
+        align-items: stretch;
+        padding: 0px 20px;
+        box-sizing: content-box;
+        min-height: 66px;
 }
 
 .logoWrapper{
+    // display: flex;
+    // align-items: center;
+    // padding-bottom: 3px;
+    // flex: 2 1 0%;
+    
     display: flex;
-    align-items: center;
-    padding-bottom: 3px;
-    flex: 2 1 0%;
-    margin: 8px 0px 0px 1px;
+        align-items: center;
+        padding-bottom: 3px;
+        flex: 2 1 0%;
 }
 
 .logo{
@@ -97,7 +118,8 @@ $spacing-10: 80px;
 .centerWrapper{
     display: flex;
     // flex: 6 1 0%;
-    justify-content: center;
+    justify-content: stretch;
+    // padding-left:25px
 }
 
 .centerNavItems{
@@ -112,13 +134,15 @@ $spacing-10: 80px;
     display: inline-flex;
     // justify-content: center;
     align-items: center;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .textLabel{
     text-align: center;
     font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 500;
-    font-size: 14px    ;
+    // font-weight: 500;
+    // font-size: 14px    ;
     line-height: 16px ;
     color: rgb(5, 15, 25);
     margin: 0px;
@@ -172,6 +196,7 @@ $spacing-10: 80px;
 }
 
 .mobileMenuToggleWrapper{
+    display: none;
     position: relative;
         width: 18px;
         height: 17px;
@@ -219,7 +244,7 @@ $spacing-10: 80px;
         display: flex;
         align-items: center;
         font-size: 16px;
-        font-weight: 850;
+        // font-weight: 850;
         line-height: 13px;
     }
 }
@@ -227,10 +252,12 @@ $spacing-10: 80px;
 .mobileLinkItem{
     display: flex;
     justify-content: space-between;
-    span{
-        font-weight: 640;
-        line-height: 3px;
-    }
+    font-weight: 500;
+    font-size: 16px;
+    // span{
+    //     // font-weight: 640;
+    //     // line-height: 3px;
+    // }
 }
 
 .mobileMenuIconWrapper{
@@ -244,7 +271,7 @@ $spacing-10: 80px;
 
 .mobileMenuSubLinkWrapper{
     display: none;
-    padding: 20px 24px;
+    padding: 17px 24px;
     background: rgb(241, 243, 245);
     border-top: 1px solid rgb(255, 255, 255);
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -263,7 +290,8 @@ $spacing-10: 80px;
     
 }
 .mobileSubLinkTextLabel{
-    margin:0
+    margin:0;
+    font-weight: 400;
 }
 
 .mobileButtonWrapper{
@@ -310,7 +338,7 @@ $spacing-10: 80px;
 }
 
 .mobileMenuToggle{
-    display:none;
+    display:flex;
 
     position: relative;
     width: 18px;
@@ -371,10 +399,23 @@ $spacing-10: 80px;
 
 
   @media(max-width: 1050px){
+    .banner{
+        max-height: 40.5px;
+        padding-bottom: 1.5px;
+    }
     .banerStyledLink {
-            span,sup {font-size: 13px;
-                font-weight: 650;
+        
+            span {font-size: 14px;
+                font-weight: 550;
             }
+        
+    }
+    .mainNav{
+        margin: -3px auto;
+    }
+    .logoWrapper {
+        padding-bottom: 13px;
+        margin: 8px 0px 0px 1px;
     }
     .centerWrapper{
         display: none;
@@ -387,15 +428,15 @@ $spacing-10: 80px;
             display:none;
         }
     }
-    .mobileMenuToggle{
+    .mobileMenuToggleWrapper{
         display:flex
     }
 
     .mobileCenterWrapper{
         display:flex;
 
-        .navLinkItem{
-            font-weight: 500;
+        .mobileLinkItem{
+            // font-weight: 300;
             flex: 1 1 0%;
         }
     }

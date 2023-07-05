@@ -1,6 +1,11 @@
+.lorem {
+  max-width: 90px;
+}
+
 .mainNav_wrapper {
   position: fixed;
-  width: 100%;
+  min-width: 100dvw;
+  max-width: 100dvw;
   background: rgb(255, 255, 255);
   z-index: 2;
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
@@ -8,8 +13,8 @@
 
 .banner {
   background-color: rgb(0, 82, 250);
-  min-height: 37px;
-  padding-bottom: 4px;
+  min-height: 39px;
+  padding-bottom: 3.5px;
   transform: translateY(-40px);
   position: relative;
   display: flex;
@@ -32,25 +37,29 @@
   font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: rgb(255, 255, 255);
 }
-.styledLink span {
+
+.banerStyledLink {
+  font-weight: 550;
   font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
+}
+.banerStyledLink sup {
+  font-size: 12px;
 }
 
 .mainNavContainer {
   width: 100%;
   border-bottom: 1px solid rgb(236, 239, 241);
+  background: white;
 }
 
 .mainNav {
   max-width: 1180px;
-  margin: -5px auto;
+  margin: 0px auto;
   display: flex;
   align-items: stretch;
   padding: 0px 20px;
   box-sizing: content-box;
-  min-height: 44px;
+  min-height: 66px;
 }
 
 .logoWrapper {
@@ -58,7 +67,6 @@
   align-items: center;
   padding-bottom: 3px;
   flex: 2 1 0%;
-  margin: 8px 0px 0px 1px;
 }
 
 .logo {
@@ -72,7 +80,7 @@
 
 .centerWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
 }
 
 .centerNavItems {
@@ -86,13 +94,13 @@
   line-height: 15px;
   display: inline-flex;
   align-items: center;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .textLabel {
   text-align: center;
   font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
   color: rgb(5, 15, 25);
   margin: 0px;
@@ -140,6 +148,7 @@
 }
 
 .mobileMenuToggleWrapper {
+  display: none;
   position: relative;
   width: 18px;
   height: 17px;
@@ -183,17 +192,14 @@
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-weight: 850;
   line-height: 13px;
 }
 
 .mobileLinkItem {
   display: flex;
   justify-content: space-between;
-}
-.mobileLinkItem span {
-  font-weight: 640;
-  line-height: 3px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .mobileMenuIconWrapper {
@@ -207,7 +213,7 @@
 
 .mobileMenuSubLinkWrapper {
   display: none;
-  padding: 20px 24px;
+  padding: 17px 24px;
   background: rgb(241, 243, 245);
   border-top: 1px solid rgb(255, 255, 255);
   border-bottom: 1px solid rgb(255, 255, 255);
@@ -228,6 +234,7 @@
 
 .mobileSubLinkTextLabel {
   margin: 0;
+  font-weight: 400;
 }
 
 .mobileButtonWrapper {
@@ -262,7 +269,7 @@
   }
 }
 .mobileMenuToggle {
-  display: none;
+  display: flex;
   position: relative;
   width: 18px;
   height: 17px;
@@ -315,9 +322,20 @@
 }
 
 @media (max-width: 1050px) {
-  .banerStyledLink span, .banerStyledLink sup {
-    font-size: 13px;
-    font-weight: 650;
+  .banner {
+    max-height: 40.5px;
+    padding-bottom: 1.5px;
+  }
+  .banerStyledLink span {
+    font-size: 14px;
+    font-weight: 550;
+  }
+  .mainNav {
+    margin: -3px auto;
+  }
+  .logoWrapper {
+    padding-bottom: 13px;
+    margin: 8px 0px 0px 1px;
   }
   .centerWrapper {
     display: none;
@@ -325,14 +343,13 @@
   .buttonWrapper .navLinkItem {
     display: none;
   }
-  .mobileMenuToggle {
+  .mobileMenuToggleWrapper {
     display: flex;
   }
   .mobileCenterWrapper {
     display: flex;
   }
-  .mobileCenterWrapper .navLinkItem {
-    font-weight: 500;
+  .mobileCenterWrapper .mobileLinkItem {
     flex: 1 1 0%;
   }
   .mobileNavContainer.active {

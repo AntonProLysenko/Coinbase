@@ -6,6 +6,7 @@ export default function Header() {
 
 let [isActive,setisActive] = useState(false)
 
+//submenus activation
 let[exploreActive, setExploreActive] = useState(false)
 let[learnActive, setLearnActive] = useState(false)
 let[individualsActive, setIndividualsActive] = useState(false)
@@ -97,7 +98,7 @@ const showSubMenu=(evt:any)=>{
         <div className="mainNavContainer">
           <div className="mainNav">
             <div className="logoWrapper">
-                <Link className="styledLink" to = "/" >
+                <Link className="styledLink" style={{height:"20px"}} to = "/" >
                   <img src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg" height="20" width="112" alt="Coinbase Logo" className="logo"></img>
                 </Link>
             </div>
@@ -228,7 +229,7 @@ const showSubMenu=(evt:any)=>{
                   </div>
                    <div className="mobileMenuSubLink">
                     <Link to="/learn/crypto-basics" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Crypto basis</p>
+                        <p className="mobileSubLinkTextLabel">Crypto basics</p>
                     </Link>
                   </div>
 
