@@ -13,6 +13,7 @@ $spacing-9: 72px;
 $spacing-10: 80px;
 .lorem{
     max-width: 90px;
+    display: none;
 }
 .mainNav_wrapper{
     position: fixed;
@@ -150,6 +151,25 @@ $spacing-10: 80px;
     // padding: 10px;
 }
 
+.mainSubMenuContainer{
+        padding: 40px 45px;
+            background: rgb(230, 0, 0);
+            transition: all 150ms linear 0s, box-shadow 0ms linear 0s;
+            text-align: left;
+            // opacity: 0;
+            // visibility: hidden;
+            // pointer-events: none;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0px;
+
+            z-index: 2;
+
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgb(236, 239, 241);
+}
+
 .buttonWrapper{
     display: flex;
     padding: 0 $spacing-2;
@@ -194,6 +214,7 @@ $spacing-10: 80px;
     background-color: rgb(1, 72, 221);
     opacity: 0.86;
 }
+
 
 .mobileMenuToggleWrapper{
     display: none;

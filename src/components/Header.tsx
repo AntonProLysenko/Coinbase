@@ -110,6 +110,9 @@ const showSubMenu=(evt:any)=>{
                     <span className="textLabel">Explore</span>
                   </div>
                 </Link>
+                <section className="mainSubMenuContainer">
+
+                </section>
 
                 <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
                   <div className="">
