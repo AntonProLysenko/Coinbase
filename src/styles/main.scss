@@ -177,9 +177,14 @@ $spacing-10: 80px;
         margin: 14px -10px 10px 20px;
 }
 
+.mobileNavContainer{
+    min-height: 10vh;
+    display: none;
+
+}
 .mobileCenterWrapper{
 
-    display:none;
+    display:flex;
     flex-direction: column;
     width:100vw;
 
@@ -211,6 +216,8 @@ $spacing-10: 80px;
 }
 
 .mobileLinkItem{
+    display: flex;
+    justify-content: space-between;
     span{
         font-weight: 640;
         line-height: 3px;
@@ -220,7 +227,7 @@ $spacing-10: 80px;
 .mobileButtonWrapper{
     display: flex;
     padding: 20px 24px;
-    flex: 1 1 0%;
+    // flex: 1 1 0%;
     gap: 10px;;
     justify-content: center;
     max-width: 100dvw;
@@ -346,6 +353,10 @@ $spacing-10: 80px;
             flex: 1 1 0%;
         }
     }
+
+        .mobileNavContainer.active{
+            display: block;
+        }
 
   }
 

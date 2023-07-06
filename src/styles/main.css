@@ -145,8 +145,13 @@
   margin: 14px -10px 10px 20px;
 }
 
-.mobileCenterWrapper {
+.mobileNavContainer {
+  min-height: 10vh;
   display: none;
+}
+
+.mobileCenterWrapper {
+  display: flex;
   flex-direction: column;
   width: 100vw;
   animation: 300ms cubic-bezier(0.6, 0, 0.15, 1) 0s 1 normal forwards running ivqFUA;
@@ -175,6 +180,10 @@
   line-height: 13px;
 }
 
+.mobileLinkItem {
+  display: flex;
+  justify-content: space-between;
+}
 .mobileLinkItem span {
   font-weight: 640;
   line-height: 3px;
@@ -183,7 +192,6 @@
 .mobileButtonWrapper {
   display: flex;
   padding: 20px 24px;
-  flex: 1 1 0%;
   gap: 10px;
   justify-content: center;
   max-width: 100dvw;
@@ -271,6 +279,9 @@
   .mobileCenterWrapper .navLinkItem {
     font-weight: 500;
     flex: 1 1 0%;
+  }
+  .mobileNavContainer.active {
+    display: block;
   }
 }
 @media (max-width: 767px) {

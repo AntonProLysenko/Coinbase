@@ -1,6 +1,16 @@
 import {Link} from "react-router-dom"
+import { useState } from "react";
 
 export default function Header() {
+// const toggleButton = document.querySelector(".mobileMenuToggleWrapper") as HTMLElement ;
+const mobileNavContainer = document.querySelector(".mobileNavContainer") as HTMLElement  ;
+
+
+let [isActive,setisActive] = useState(false)
+let showHide=() => {
+  setisActive(!isActive);
+};
+
   return (
     <>
     <header className='mainNav_wrapper'>
@@ -64,7 +74,7 @@ export default function Header() {
                 </Link>
           </div>
 
-           <div className="mobileMenuToggleWrapper">
+           <div className="mobileMenuToggleWrapper" onClick={showHide}>
               <div className="mobileMenuToggle">
                   <span className="bar"></span>
                   {/* <span className="bar"></span> */}
@@ -73,51 +83,84 @@ export default function Header() {
             </div>  
         </div>
 
-         <nav className="mobileCenterWrapper">
-             {/* <div className="centerNavItems"> */}
-              <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore">
-                <div className="mobileLinkItem">
-                  <span className="textLabel">Explore</span>
-                </div>
-              </Link>
 
-              <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
-                <div className="mobileLinkItem">
-                  <span className="textLabel">Web3</span>
-                </div>
-              </Link>
-
-                <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
-                <div className="mobileLinkItem">
-                  <span className="textLabel">Learn</span>
-                </div>
-              </Link>
-
-              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
-                <span className="textLabel">Individuals</span>
-              </div>
-              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
-                <span className="textLabel">Businesses</span>
-              </div>
-              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
-                <span className="textLabel">Developers</span>
-              </div>
-              <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
-                <span className="textLabel">Company</span>
-              </div>
-
+        <div className={isActive?"mobileNavContainer active":"mobileNavContainer"}>
           
+          <nav className="mobileCenterWrapper">
+              {/* <div className="centerNavItems"> */}
+                <Link className="styledLink navLinkItem mobileLinkItem" title="Explore" aria-expanded="false" to="/explore">
+                  <div className="mobileLinkItem">
+                    <span className="textLabel">Explore</span>
+                  </div>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
+                </Link>
 
-              <div className="mobileButtonWrapper">
-                <Link className="styledLink" to='/signup'>
-                  <button className="mobileInteractableButton">Sign up</button>
+                <Link className="styledLink navLinkItem mobileLinkItem" title="Web3" aria-expanded="false" to="/web3">
+                  <div className="mobileLinkItem">
+                    <span className="textLabel">Web3</span>
+                  </div>
+                  
                 </Link>
-                <Link className="styledLink" to ="/login">
-                  <button className="mobileInteractableButton mobileSignInInteractableButton">Sign in</button>
+
+                  <Link className="styledLink navLinkItem mobileLinkItem" title="Learn" aria-expanded="false" to="/learn">
+                  <div className="mobileLinkItem">
+                    <span className="textLabel">Learn</span>
+                  </div>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
                 </Link>
-              </div>
-            {/* </div> */}
-        </nav>
+
+                <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                  <span className="textLabel">Individuals</span>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                  <span className="textLabel">Businesses</span>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                  <span className="textLabel">Developers</span>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div className="styledLink navLinkItem defaultCursor mobileLinkItem">
+                  <span className="textLabel">Company</span>
+                  <div className="mobileMenuIconWrapper">
+                    <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="mobileButtonWrapper">
+                  <Link className="styledLink" to='/signup'>
+                    <button className="mobileInteractableButton">Sign up</button>
+                  </Link>
+                  <Link className="styledLink" to ="/login">
+                    <button className="mobileInteractableButton mobileSignInInteractableButton">Sign in</button>
+                  </Link>
+                </div>
+              {/* </div> */}
+          </nav>
+      </div>
        
     </header>
     
