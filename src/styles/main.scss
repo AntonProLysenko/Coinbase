@@ -240,11 +240,13 @@ $spacing-10: 80px;
 }
 .mobileMenuSubLink{
     padding: 17px 0px;
+    max-height: 50px;
     
 }
 .mobileSubLinkItem{
     color: rgb(5, 15, 25);
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
+    
 }
 .mobileSubLinkTextLabel{
     margin:0

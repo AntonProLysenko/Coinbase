@@ -201,7 +201,7 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </div>
                 <div className={learnActive?"mobileMenuSubLinkWrapper active":"mobileMenuSubLinkWrapper"}>
-                  <div className="mobileMenuSubLink">
+                  {/* <div className="mobileMenuSubLink">
                       <Link className="styledLink  mobileLinkItem mobileSubLinkItem" to="/learn/tips-and-tutorials">
                         <p className="mobileSubLinkTextLabel">Tips & Tutorials</p>
                       </Link>
@@ -215,6 +215,22 @@ const showSubMenu=(evt:any)=>{
 
                   <div className="mobileMenuSubLink">
                     <Link to="/learn/crypto-basics" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                        <p className="mobileSubLinkTextLabel">Update the system</p>
+                    </Link>
+                  </div> */}
+                   <div className="mobileMenuSubLink">
+                    <Link to="/learn/tips-and-tutorials" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                        <p className="mobileSubLinkTextLabel">Tips & Tutorials</p>
+                    </Link>
+                  </div>
+                   <div className="mobileMenuSubLink">
+                    <Link to="/learn/crypto-basics" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                        <p className="mobileSubLinkTextLabel">Crypto basis</p>
+                    </Link>
+                  </div>
+
+                  <div className="mobileMenuSubLink">
+                    <Link to="/updatethesystem" className="styledLink  mobileLinkItem mobileSubLinkItem">
                         <p className="mobileSubLinkTextLabel">Update the system</p>
                     </Link>
                   </div>
@@ -259,71 +275,71 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </div>
                   <div className={individualsActive?"mobileMenuSubLinkWrapper active":"mobileMenuSubLinkWrapper"}>
-                  <div className="mobileMenuSubLink">
-                      <Link className="styledLink  mobileLinkItem mobileSubLinkItem" to="/signup">
-                        <p className="mobileSubLinkTextLabel">Buy and sell</p>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/signup" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Buy and sell</p>
                       </Link>
-                  </div>
+                    </div>
 
-                  <div className="mobileMenuSublink">
-                    <Link to="/advanced-trade" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel"> Advanced</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/advanced-trade" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Advanced</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/wallet" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Wallet</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/wallet" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Wallet</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/earn" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Earn</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/earn" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Earn</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/card" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Card</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/card" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Card</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/private-client" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Private Client</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/private-client" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Private Client</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/borrow" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Borrow</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/borrow" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Borrow</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/rewards" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Rewards</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/rewards" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Rewards</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/learning-rewards" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Learning rewards</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/learning-rewards" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Learning rewards</p>
+                      </Link>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <a href="https://nft.coinbase.com/" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">NFT</p>
-                    </a>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <a href="https://nft.coinbase.com/" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">NFT</p>
+                      </a>
+                    </div>
 
-                  <div className="mobileMenuSubLink">
-                    <Link to="/one" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Coinbase One</p>
-                    </Link>
-                  </div>
+                    <div className="mobileMenuSubLink">
+                      <Link to="/one" className="styledLink  mobileLinkItem mobileSubLinkItem">
+                          <p className="mobileSubLinkTextLabel">Coinbase One</p>
+                      </Link>
+                    </div>
                 </div>
 
                 
