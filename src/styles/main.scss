@@ -61,6 +61,11 @@ $spacing-10: 80px;
 // .bannerStyledLink{
 //     font-weight: 650;
 // }
+
+.mainNavContainer{
+    width:100%;
+    border-bottom: 1px solid rgb(236, 239, 241);
+}
 .mainNav{
     max-width: 1180px;
     margin: -5px auto;
@@ -69,7 +74,7 @@ $spacing-10: 80px;
     padding: 0px 20px;
     box-sizing: content-box;
     min-height: 44px;
-    border-bottom: 1px solid rgb(236, 239, 241);
+   
 }
 
 .logoWrapper{
