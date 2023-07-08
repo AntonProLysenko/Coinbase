@@ -196,6 +196,15 @@
   line-height: 3px;
 }
 
+.mobileMenuIconWrapper {
+  transition: transform 0.15s ease-out 0s;
+}
+
+.mobileMenuIconWrapper.active {
+  transition: transform 0.15s ease-out 0s;
+  transform: rotate(180deg);
+}
+
 .mobileMenuSubLinkWrapper {
   display: none;
   padding: 20px 24px;

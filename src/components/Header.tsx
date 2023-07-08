@@ -166,7 +166,7 @@ const showSubMenu=(evt:any)=>{
                   <div className="mobileLinkItem" title="Explore">
                     <span className="textLabel">Explore</span>
                   </div>
-                  <div className="mobileMenuIconWrapper" title="Explore">
+                  <div className={exploreActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Explore">
                     <svg  width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
@@ -197,7 +197,7 @@ const showSubMenu=(evt:any)=>{
                   <div className="mobileLinkItem">
                     <span className="textLabel">Learn</span>
                   </div>
-                  <div className="mobileMenuIconWrapper" title="Learn">
+                  <div className={learnActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Learn">
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
@@ -271,7 +271,7 @@ const showSubMenu=(evt:any)=>{
 
                 <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title="Individuals" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel">Individuals</span>
-                  <div className= "mobileMenuIconWrapper">
+                  <div className= {individualsActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}>
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
@@ -348,7 +348,7 @@ const showSubMenu=(evt:any)=>{
                 
                 <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title = "Businesses" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel">Businesses</span>
-                  <div className="mobileMenuIconWrapper">
+                  <div className={businessesActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}>
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
@@ -392,7 +392,7 @@ const showSubMenu=(evt:any)=>{
 
                 <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title = "Developers" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel">Developers</span>
-                  <div className="mobileMenuIconWrapper">
+                  <div className={developersActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}>
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
@@ -442,7 +442,7 @@ const showSubMenu=(evt:any)=>{
                 </div>
                 <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title="Company" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel">Company</span>
-                  <div className="mobileMenuIconWrapper">
+                  <div className={companyActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}>
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.007 8L11.9 2.107 9.793 0 6.007 3.786 2.221 0 .114 2.107 6.007 8z" fill="#050F19"></path>
                     </svg>
