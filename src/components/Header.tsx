@@ -149,7 +149,7 @@ const showSubMenu=(evt:any)=>{
 
             <div className="mobileMenuToggleWrapper" onClick={showHide}>
                 <div className="mobileMenuToggle">
-                    <span className="bar"></span>
+                    <span className={isActive?"bar active":"bar"}></span>
                     {/* <span className="bar"></span> */}
                     {/* <span className="bar"></span> */}
                   </div>
