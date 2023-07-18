@@ -119,25 +119,43 @@ const showSubMenu=(evt:any)=>{
                     <span className="textLabel">Web3</span>
                   </div>
                 </Link>
+                 <section className="mainSubMenuContainer">
+
+                </section>
 
                   <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
                   <div className="">
                     <span className="textLabel">Learn</span>
                   </div>
                 </Link>
+                 <section className="mainSubMenuContainer">
+
+                </section>
 
                 <div className=" styledLink navLinkItem  defaultCursor">
                   <span className="textLabel">Individuals</span>
                 </div>
+                 <section className="mainSubMenuContainer">
+
+                </section>
                 <div className="styledLink navLinkItem defaultCursor">
                   <span className="textLabel">Businesses</span>
                 </div>
+                 <section className="mainSubMenuContainer">
+
+                </section>
                 <div className="styledLink navLinkItem defaultCursor">
                   <span className="textLabel">Developers</span>
                 </div>
+                 <section className="mainSubMenuContainer">
+
+                </section>
                   <div className="styledLink navLinkItem defaultCursor">
                   <span className="textLabel">Company</span>
                 </div>
+                 <section className="mainSubMenuContainer">
+
+                </section>
               {/* </div> */}
             </nav>
 
@@ -208,23 +226,6 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </div>
                 <div className={learnActive?"mobileMenuSubLinkWrapper active":"mobileMenuSubLinkWrapper"}>
-                  {/* <div className="mobileMenuSubLink">
-                      <Link className="styledLink  mobileLinkItem mobileSubLinkItem" to="/learn/tips-and-tutorials">
-                        <p className="mobileSubLinkTextLabel">Tips & Tutorials</p>
-                      </Link>
-                  </div>
-
-                  <div className="mobileMenuSublink">
-                    <Link to="/learn/crypto-basics" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Crypto basics</p>
-                    </Link>
-                  </div>
-
-                  <div className="mobileMenuSubLink">
-                    <Link to="/learn/crypto-basics" className="styledLink  mobileLinkItem mobileSubLinkItem">
-                        <p className="mobileSubLinkTextLabel">Update the system</p>
-                    </Link>
-                  </div> */}
                    <div className="mobileMenuSubLink">
                     <Link to="/learn/tips-and-tutorials" className="styledLink  mobileLinkItem mobileSubLinkItem">
                         <p className="mobileSubLinkTextLabel">Tips & Tutorials</p>
