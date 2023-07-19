@@ -23,6 +23,7 @@ const showHide=() => {
 
 
 const showSubMenu=(evt:any)=>{
+  // evt.stopPropagation()
   switch(evt.title){
     case "Explore":
       setExploreActive(!exploreActive)
@@ -72,6 +73,16 @@ const showSubMenu=(evt:any)=>{
       setDevelopersActive(false)
       setLearnActive(false)
       break;
+    default:
+      setCompanyActive(false)
+      setExploreActive(false)
+      setIndividualsActive(false)
+      setBusinessesActive(false)
+      setDevelopersActive(false)
+      setLearnActive(false)
+      break;
+    // case "Web3":
+
   }
 
 
@@ -91,9 +102,9 @@ const showSubMenu=(evt:any)=>{
         </div>
 
 
-        <div className="mainNavContainer">
-          <div className="mainNav">
-            <div className="logoWrapper">
+        <div className="mainNavContainer" >
+          <div className="mainNav" >
+            <div className="logoWrapper" onMouseOver={evt=>showSubMenu(evt.target)}>
                 <Link className="styledLink" style={{height:"20px"}} to = "/" >
                   <img src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg" height="20" width="112" alt="Coinbase Logo" className="logo"></img>
                 </Link>
@@ -106,48 +117,54 @@ const showSubMenu=(evt:any)=>{
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
                 </Link>
-                <section className="mainSubMenuContainer">
+                <section className={exploreActive?"mainSubMenuContainer active":"mainSubMenuContainer"} title="Explore"  onMouseLeave={evt=>showSubMenu(evt.target)}>
                       <h1>Explore</h1>
                 </section>
 
-                <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3">
+                <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3" onMouseOver={evt=>showSubMenu(evt.target)}>
                   <div className="">
-                    <span className="textLabel">Web3</span>
+                    <span className="textLabel" title="Web3">Web3</span>
                   </div>
                 </Link>
                 
 
-                  <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn">
-                  <div className="">
-                    <span className="textLabel">Learn</span>
+                <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                  <div className="" title="Learn">
+                    <span className="textLabel" title="Learn">Learn</span>
                   </div>
                 </Link>
-                 <section className="mainSubMenuContainer">
+                 <section className={learnActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                      <h1>Learn</h1>
                 </section>
 
-                <div className=" styledLink navLinkItem  defaultCursor">
-                  <span className="textLabel">Individuals</span>
+                <div className=" styledLink navLinkItem  defaultCursor" title="Individuals" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                  <span className="textLabel" title="Individuals">Individuals</span>
                 </div>
-                 <section className="mainSubMenuContainer">
+                 <section className={individualsActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Individuals</h1>
                 </section>
-                <div className="styledLink navLinkItem defaultCursor">
-                  <span className="textLabel">Businesses</span>
+
+
+                <div className="styledLink navLinkItem defaultCursor" title="Businesses" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                  <span className="textLabel" title="Businesses">Businesses</span>
                 </div>
-                 <section className="mainSubMenuContainer">
+                 <section className={businessesActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Businesses</h1>
                 </section>
-                <div className="styledLink navLinkItem defaultCursor">
+
+
+                <div className="styledLink navLinkItem defaultCursor" title="Developers" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel">Developers</span>
                 </div>
-                 <section className="mainSubMenuContainer">
+                 <section className={developersActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Developers</h1>
                 </section>
-                  <div className="styledLink navLinkItem defaultCursor">
+
+
+                <div className="styledLink navLinkItem defaultCursor" title="Company" onMouseEnter={evt=>showSubMenu(evt.target)}> 
                   <span className="textLabel">Company</span>
                 </div>
-                 <section className="mainSubMenuContainer">
+                 <section className={companyActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Company</h1>
                 </section>
               {/* </div> */}
