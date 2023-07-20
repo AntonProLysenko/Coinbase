@@ -83,11 +83,22 @@
   display: flex;
   justify-content: stretch;
 }
-
-.centerNavItems {
-  display: flex;
-  flex: 6 1 0%;
-  justify-content: center;
+.centerWrapper a {
+  padding-bottom: 3px;
+}
+.centerWrapper a:hover {
+  border-bottom: 3px solid rgb(0, 82, 250);
+  padding-bottom: 0px;
+}
+.centerWrapper a:hover div {
+  border-bottom: none;
+}
+.centerWrapper div {
+  padding-bottom: 3px;
+}
+.centerWrapper div:hover {
+  padding-bottom: 0px;
+  border-bottom: 3px solid rgb(0, 82, 250);
 }
 
 .navLinkItem {
@@ -109,6 +120,7 @@
 }
 
 .mainSubMenuContainer {
+  display: none;
   padding: 40px 45px;
   background: rgb(230, 0, 0);
   transition: all 150ms linear 0s, box-shadow 0ms linear 0s;
@@ -120,6 +132,10 @@
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(236, 239, 241);
+}
+
+.mainSubMenuContainer.active {
+  display: block;
 }
 
 .buttonWrapper {

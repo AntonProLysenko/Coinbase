@@ -114,7 +114,7 @@ const showSubMenu=(evt:any)=>{
               {/* <div className="centerNavItems"> */}
 
                 <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore" onMouseEnter={evt=>showSubMenu(evt.target)}>
-                  <div className="" title="Explore">
+                  <div className="mainNavItem" title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
                 </Link>
@@ -197,7 +197,7 @@ const showSubMenu=(evt:any)=>{
           
           <nav className="mobileCenterWrapper">
               {/* <div className="centerNavItems"> */}
-                <div className="styledLink navLinkItem mobileLinkItem" title="Explore" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  mobileLinkItem" title="Explore" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
                   <div className="mobileLinkItem" title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
@@ -222,13 +222,13 @@ const showSubMenu=(evt:any)=>{
                 </div>
                 
 
-                <Link className="styledLink navLinkItem mobileLinkItem" title="Web3" aria-expanded="false" to="/web3">
+                <Link className="styledLink  mobileLinkItem" title="Web3" aria-expanded="false" to="/web3">
                   <div className="mobileLinkItem">
                     <span className="textLabel">Web3</span>
                   </div>
                 </Link>
 
-                  <div className="styledLink navLinkItem mobileLinkItem" title="Learn" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
+                  <div className="styledLink  mobileLinkItem" title="Learn" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
                   <div className="mobileLinkItem" title="Learn">
                     <span className="textLabel" title="Learn">Learn</span>
                   </div>
@@ -287,7 +287,7 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </div>
 
-                <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title="Individuals" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  defaultCursor mobileLinkItem" title="Individuals" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel" title="Individuals">Individuals</span>
                   <div className= {individualsActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Individuals">
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +364,7 @@ const showSubMenu=(evt:any)=>{
                 </div>
 
                 
-                <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title = "Businesses" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  defaultCursor mobileLinkItem" title = "Businesses" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel"title = "Businesses" >Businesses</span>
                   <div className={businessesActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}title = "Businesses" >
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
@@ -408,7 +408,7 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </div>
 
-                <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title = "Developers" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  defaultCursor mobileLinkItem" title = "Developers" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel"title = "Developers">Developers</span>
                   <div className={developersActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"}title = "Developers">
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +458,7 @@ const showSubMenu=(evt:any)=>{
                       </Link>
                   </div>
                 </div>
-                <div className="styledLink navLinkItem defaultCursor mobileLinkItem" title="Company" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  defaultCursor mobileLinkItem" title="Company" onClick={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel" title="Company">Company</span>
                   <div className={companyActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Company">
                     <svg width="12" height="8" xmlns="http://www.w3.org/2000/svg">
