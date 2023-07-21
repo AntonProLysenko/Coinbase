@@ -92,6 +92,7 @@
 }
 .centerWrapper a:hover div {
   border-bottom: none;
+  padding-bottom: 3px;
 }
 .centerWrapper div {
   padding-bottom: 3px;
