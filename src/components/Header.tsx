@@ -103,8 +103,8 @@ const showSubMenu=(evt:any)=>{
 
 
         <div className="mainNavContainer" >
-          <div className="mainNav" >
-            <div className="logoWrapper" onMouseOver={evt=>showSubMenu(evt.target)}>
+          <div className="mainNav"onMouseEnter={evt=>showSubMenu(evt.target)} >{/*Mouse Event for hiding sub menus */}
+            <div className="logoWrapper" onMouseEnter={evt=>showSubMenu(evt.target)}>{/*Mouse Event for hiding sub menus */}
                 <Link className="styledLink" style={{height:"20px"}} to = "/" >
                   <img src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg" height="20" width="112" alt="Coinbase Logo" className="logo"></img>
                 </Link>
@@ -112,16 +112,17 @@ const showSubMenu=(evt:any)=>{
 
             <nav className="centerWrapper">
               {/* <div className="centerNavItems"> */}
-                <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore" onMouseOver={evt=>showSubMenu(evt.target)}>
+
+                <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <div className="" title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
                 </Link>
-                <section className={exploreActive?"mainSubMenuContainer active":"mainSubMenuContainer"} title="Explore"  onMouseLeave={evt=>showSubMenu(evt.target)}>
+                <section className={exploreActive?"mainSubMenuContainer active":"mainSubMenuContainer"} title="Explore" onMouseLeave={evt=>showSubMenu(evt.target)}>
                       <h1>Explore</h1>
                 </section>
 
-                <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3" onMouseOver={evt=>showSubMenu(evt.target)}>
+                <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <div className="">
                     <span className="textLabel" title="Web3">Web3</span>
                   </div>
@@ -154,7 +155,7 @@ const showSubMenu=(evt:any)=>{
 
 
                 <div className="styledLink navLinkItem defaultCursor" title="Developers" onMouseEnter={evt=>showSubMenu(evt.target)}>
-                  <span className="textLabel">Developers</span>
+                  <span className="textLabel" title="Developers">Developers</span>
                 </div>
                  <section className={developersActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Developers</h1>
@@ -162,7 +163,7 @@ const showSubMenu=(evt:any)=>{
 
 
                 <div className="styledLink navLinkItem defaultCursor" title="Company" onMouseEnter={evt=>showSubMenu(evt.target)}> 
-                  <span className="textLabel">Company</span>
+                  <span className="textLabel" title="Company" >Company</span>
                 </div>
                  <section className={companyActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
                     <h1>Company</h1>
@@ -170,7 +171,7 @@ const showSubMenu=(evt:any)=>{
               {/* </div> */}
             </nav>
 
-            <div className="buttonWrapper">
+            <div className="buttonWrapper" onMouseEnter={evt=>showSubMenu(evt.target)}>{/*Mouse Event for hiding sub menus */}
                   <Link to="/login" className="styledLink navLinkItem">
                       <span className="textLabel">Sign in</span>
                   </Link>
