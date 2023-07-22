@@ -83,24 +83,6 @@
   display: flex;
   justify-content: stretch;
 }
-.centerWrapper a {
-  padding-bottom: 3px;
-}
-.centerWrapper a:hover {
-  border-bottom: 3px solid rgb(0, 82, 250);
-  padding-bottom: 0px;
-}
-.centerWrapper a:hover div {
-  border-bottom: none;
-  padding-bottom: 3px;
-}
-.centerWrapper div {
-  padding-bottom: 3px;
-}
-.centerWrapper div:hover {
-  padding-bottom: 0px;
-  border-bottom: 3px solid rgb(0, 82, 250);
-}
 
 .navLinkItem {
   margin: 0 16px;
@@ -109,6 +91,12 @@
   align-items: center;
   font-weight: 600;
   font-size: 14px;
+  padding-bottom: 3px;
+}
+
+.navLinkItem.active {
+  border-bottom: 3px solid rgb(0, 82, 250);
+  padding-bottom: 0px;
 }
 
 .textLabel {

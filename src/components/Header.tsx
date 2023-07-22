@@ -8,6 +8,7 @@ let [isMobileActive,setisMobileActive] = useState(false)
 
 //submenus activation
 let[exploreActive, setExploreActive] = useState(false)
+let[web3Active, setWeb3Active] = useState(false)
 let[learnActive, setLearnActive] = useState(false)
 let[individualsActive, setIndividualsActive] = useState(false)
 let[businessesActive, setBusinessesActive] = useState(false)
@@ -27,6 +28,16 @@ const showSubMenu=(evt:any)=>{
   switch(evt.title){
     case "Explore":
       setExploreActive(!exploreActive)
+      setWeb3Active(false)
+      setLearnActive(false)
+      setIndividualsActive(false)
+      setBusinessesActive(false)
+      setDevelopersActive(false)
+      setCompanyActive(false)
+      break;
+    case "Web3":
+      setExploreActive(false)
+      setWeb3Active(!web3Active)
       setLearnActive(false)
       setIndividualsActive(false)
       setBusinessesActive(false)
@@ -36,6 +47,7 @@ const showSubMenu=(evt:any)=>{
     case "Learn":
       setLearnActive(!learnActive)
       setExploreActive(false)
+      setWeb3Active(false)
       setIndividualsActive(false)
       setBusinessesActive(false)
       setDevelopersActive(false)
@@ -45,6 +57,7 @@ const showSubMenu=(evt:any)=>{
       setIndividualsActive(!individualsActive)
       setExploreActive(false)
       setBusinessesActive(false)
+      setWeb3Active(false)
       setDevelopersActive(false)
       setCompanyActive(false)
       setLearnActive(false)
@@ -52,6 +65,7 @@ const showSubMenu=(evt:any)=>{
     case "Businesses":
       setBusinessesActive(!businessesActive)
       setExploreActive(false)
+      setWeb3Active(false)
       setIndividualsActive(false)
       setDevelopersActive(false)
       setCompanyActive(false)
@@ -60,6 +74,7 @@ const showSubMenu=(evt:any)=>{
     case "Developers":
       setDevelopersActive(!developersActive)
       setExploreActive(false)
+      setWeb3Active(false)
       setIndividualsActive(false)
       setBusinessesActive(false)
       setCompanyActive(false)
@@ -68,18 +83,20 @@ const showSubMenu=(evt:any)=>{
     case "Company":
       setCompanyActive(!companyActive)
       setExploreActive(false)
+      setWeb3Active(false)
       setIndividualsActive(false)
       setBusinessesActive(false)
       setDevelopersActive(false)
       setLearnActive(false)
       break;
     default:
-      setCompanyActive(false)
       setExploreActive(false)
+      setWeb3Active(false)
       setIndividualsActive(false)
       setBusinessesActive(false)
       setDevelopersActive(false)
       setLearnActive(false)
+      setCompanyActive(false)
       break;
     // case "Web3":
 
@@ -102,7 +119,7 @@ const showSubMenu=(evt:any)=>{
         </div>
 
 
-        <div className="mainNavContainer" >
+        <div className="mainNavContainer" onMouseLeave={evt=>showSubMenu(evt.target)}>
           <div className="mainNav"onMouseEnter={evt=>showSubMenu(evt.target)} >{/*Mouse Event for hiding sub menus */}
             <div className="logoWrapper" onMouseEnter={evt=>showSubMenu(evt.target)}>{/*Mouse Event for hiding sub menus */}
                 <Link className="styledLink" style={{height:"20px"}} to = "/" >
@@ -113,8 +130,8 @@ const showSubMenu=(evt:any)=>{
             <nav className="centerWrapper">
               {/* <div className="centerNavItems"> */}
 
-                <Link className="styledLink navLinkItem" title="Explore" aria-expanded="false" to="/explore" onMouseEnter={evt=>showSubMenu(evt.target)}>
-                  <div className="mainNavItem" title="Explore">
+                <Link className={exploreActive?"styledLink navLinkItem  active":"styledLink navLinkItem "} title="Explore" aria-expanded="false" to="/explore" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                  <div className="mainNavItem" >
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
                 </Link>
@@ -122,14 +139,14 @@ const showSubMenu=(evt:any)=>{
                       <h1>Explore</h1>
                 </section>
 
-                <Link className="styledLink navLinkItem" title="Web3" aria-expanded="false" to="/web3" onMouseEnter={evt=>showSubMenu(evt.target)}>
-                  <div className="">
+                <Link className={web3Active?"styledLink navLinkItem active":"styledLink navLinkItem"} title="Web3" aria-expanded="false" to="/web3" onMouseEnter={evt=>showSubMenu(evt.target)} onMouseLeave={evt=>showSubMenu(evt.target)}>
+                  <div className="" title="Web3">
                     <span className="textLabel" title="Web3">Web3</span>
                   </div>
                 </Link>
                 
 
-                <Link className="styledLink navLinkItem" title="Learn" aria-expanded="false" to="/learn" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                <Link className={learnActive?"styledLink navLinkItem active":"styledLink navLinkItem"} title="Learn" aria-expanded="false" to="/learn" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <div className="" title="Learn">
                     <span className="textLabel" title="Learn">Learn</span>
                   </div>
@@ -138,7 +155,7 @@ const showSubMenu=(evt:any)=>{
                      <h1>Learn</h1>
                 </section>
 
-                <div className=" styledLink navLinkItem  defaultCursor" title="Individuals" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                <div className={individualsActive?"styledLink navLinkItem active defaultCursor ":"styledLink navLinkItem  defaultCursor"} title="Individuals" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel" title="Individuals">Individuals</span>
                 </div>
                  <section className={individualsActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
@@ -146,7 +163,7 @@ const showSubMenu=(evt:any)=>{
                 </section>
 
 
-                <div className="styledLink navLinkItem defaultCursor" title="Businesses" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                <div className={businessesActive?"styledLink navLinkItem active defaultCursor ":"styledLink navLinkItem  defaultCursor"} title="Businesses" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel" title="Businesses">Businesses</span>
                 </div>
                  <section className={businessesActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
@@ -154,7 +171,7 @@ const showSubMenu=(evt:any)=>{
                 </section>
 
 
-                <div className="styledLink navLinkItem defaultCursor" title="Developers" onMouseEnter={evt=>showSubMenu(evt.target)}>
+                <div className={developersActive?"styledLink navLinkItem active defaultCursor ":"styledLink navLinkItem  defaultCursor"} title="Developers" onMouseEnter={evt=>showSubMenu(evt.target)}>
                   <span className="textLabel" title="Developers">Developers</span>
                 </div>
                  <section className={developersActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
@@ -162,7 +179,7 @@ const showSubMenu=(evt:any)=>{
                 </section>
 
 
-                <div className="styledLink navLinkItem defaultCursor" title="Company" onMouseEnter={evt=>showSubMenu(evt.target)}> 
+                <div className={companyActive?"styledLink navLinkItem active defaultCursor ":"styledLink navLinkItem  defaultCursor"} title="Company" onMouseEnter={evt=>showSubMenu(evt.target)}> 
                   <span className="textLabel" title="Company" >Company</span>
                 </div>
                  <section className={companyActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
