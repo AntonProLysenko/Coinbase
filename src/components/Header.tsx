@@ -136,7 +136,23 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </Link>
                 <section className={exploreActive?"mainSubMenuContainer active":"mainSubMenuContainer"} title="Explore" onMouseLeave={evt=>showSubMenu(evt.target)}>
-                      <h1>Explore</h1>
+                  <h1>Explore</h1>
+                  <div className="SubMenuContainer_InnerWrapper">
+                    <div className="dropdownIndividuals">
+
+                      <Link to="/explore">
+                        <div className="dropdownIconWrapper"></div>
+                        <div className="dropdownTextWrapper"></div>
+                      </Link>
+
+                      <Link to="https://profile.coinbase.com/">
+                        <div className="dropdownIconWrapper"></div>
+                        <div className="dropdownTextWrapper"></div>
+                      </Link>
+                      
+                    </div>
+                  </div>
+
                 </section>
 
                 <Link className={web3Active?"styledLink navLinkItem active":"styledLink navLinkItem"} title="Web3" aria-expanded="false" to="/web3" onMouseEnter={evt=>showSubMenu(evt.target)} onMouseLeave={evt=>showSubMenu(evt.target)}>
