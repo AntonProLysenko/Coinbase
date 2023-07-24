@@ -141,7 +141,7 @@ const showSubMenu=(evt:any)=>{
                     <div className="dropdownIndividuals">
                       <div className="columnWrapper">
 
-                        <Link to="/explore" className="dropdownLink">
+                        <Link to="/explore" title="Coinbase Explore - Explore the cryptoeconomy" className="dropdownLink">
                           <div className="dropdownIconWrapper">
                             <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2jaq2lDZhtxo16FOlRvRbu/fce2cf12493d2b8146a09df10dedd901/chart-0.svg"  alt="two vertical bars and a horizontal bar forming a graph"></img>
                           </div>
@@ -151,7 +151,7 @@ const showSubMenu=(evt:any)=>{
                           </div>
                         </Link>
 
-                        <Link to="https://profile.coinbase.com/" className="dropdownLink">
+                        <Link to="https://profile.coinbase.com/" title="Coinbase ENS - Discorver ENS Profiles and CB.ID" className="dropdownLink">
                           <div className="dropdownIconWrapper">
                             <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4oZULOcKHY1JHPxHf1b8EC/ef5c707eef45d2c4d86e20d9ab217edd/decentralizedIdentity-0.svg" alt="user avatar and a checkmark forming a verified identity"></img>
                           </div>
@@ -184,7 +184,7 @@ const showSubMenu=(evt:any)=>{
                       <div className="dropdownIndividuals">
                         <div className="columnWrapper">
 
-                          <Link to="/learn/tips-and-tutorials" className="dropdownLink">
+                          <Link to="/learn/tips-and-tutorials" title="Tips & Tutorials" className="dropdownLink">
                             <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -196,7 +196,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/learn/crypto-basics" className="dropdownLink">
+                          <Link to="/learn/crypto-basics" title="Crypto basics" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -208,7 +208,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/learn/updatethesystem" className="dropdownLink">
+                          <Link to="/learn/updatethesystem" title="Update the System" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -220,7 +220,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/wallet/learn-web3" className="dropdownLink">
+                          <Link to="/wallet/learn-web3" title = "Web3" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -232,7 +232,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/learn/market-updates" className="dropdownLink">
+                          <Link to="/learn/market-updates" title = "Market Updates" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -244,7 +244,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/bytes" className="dropdownLink">
+                          <Link to="/bytes" title = "Newsletter" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -256,7 +256,7 @@ const showSubMenu=(evt:any)=>{
                             </span>
                           </Link>
 
-                          <Link to="/public-policy" className="dropdownLink">
+                          <Link to="/public-policy" title="Crypto Policy" className="dropdownLink">
                               <span className="DropdownItemWrapper">
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
@@ -272,7 +272,7 @@ const showSubMenu=(evt:any)=>{
                         <div className="dropdownDescriptionWrapper">
                           <h4 className="dropdownDescriptionHeadline">Crypto questions, answered</h4>
                           <p className="dropdownDescriptionBody">Guides and explainers for your crypto questions</p>
-                          <Link to ="/learn" className="dropdownDescriptionLink">
+                          <Link to ="/learn" title="See all articles" className="dropdownDescriptionLink">
                             <h4>See all articles</h4>
                           </Link>
                         </div>
@@ -410,9 +410,6 @@ const showSubMenu=(evt:any)=>{
 
                         </div>
                       </div>
-
-
-
                     
                 </section>
 
@@ -421,7 +418,84 @@ const showSubMenu=(evt:any)=>{
                   <span className="textLabel" title="Businesses">Businesses</span>
                 </div>
                  <section className={businessesActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
-                    <h1>Businesses</h1>
+                     <div className="SubMenuContainer_InnerWrapper">
+                      <div className="dropdownIndividuals">
+                        <div className="columnWrapper">
+
+                            <Link to="/institutional" title="Solutions for institutional investors" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/6rjjBsuUFcTNro1OviDdDC/fafc347876b5fede9d19d3dabc26fa0a/new-institutional-icon.svg"  alt="Institutional Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4 >Institutional</h4>
+                                <p>Solutions for institutional investors</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/prime" title="Cryptocurrency trading for institutions" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/59sLic8xsGkkCUuHfqn4wc/7e46b201f78bcd4664333d19733fb5f8/new-prime-icon.svg" alt="Coinbase Prime Trade Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Prime</h4>
+                                <p>The prime brokerage platform</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/commerce" title="Coinbase Commerce - Start accepting cryptocurrency payments" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/1FEdoR9yiNRC5hCCWsa5L2/61c31cd86e8a9e36f4282454b6e19cb9/new-commerce-icon.svg" alt="Coinbase Commerce Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Commerce</h4>
+                                <p>Accept crypto from anyone</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/assethub" title="List your asset on Coinbase" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4sGoc9vBSbsR5hFqSixQsh/f0ef61797bb1d30ba32394b2816669be/new-assetHub-icon.svg" alt="Asset Hub Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Asset Hub</h4>
+                                <p>List your asset on Coinbase</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/exchange" title="Direct access to our exchange" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/VZpxxgYHNWXtyzq0tE2vt/a1f11b07a5bbfc256bcdd7a4506da4b4/new-exchange-icon.svg" alt="Exchange Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Exchange</h4>
+                                <p>Direct access to our exchange</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/derivatives" title="Trade an accessible futures market" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/FkpxYKh8E3bCvOkM2buz3/7914de9d8ce7657ad72af6fb1af8fe92/derivativesNavigation__1_.svg" alt="Coinbase Derivatives Exchange Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Derivatives Exchange</h4>
+                                <p>Trade an accessible futures market</p>
+                              </div>
+                            </Link>
+                          </div>
+
+                            
+
+                          <div className="dropdownDescriptionWrapper">
+                            <h4 className="dropdownDescriptionHeadline">Built for businesses and institutions</h4>
+                            <p className="dropdownDescriptionBody">Crypto solutions for institutional investors, family offices, and businesses</p>
+                            <Link to ="/products" title="See all products" className="dropdownDescriptionLink">
+                              <h4>See all products</h4>
+                            </Link>
+                          </div>
+
+                        </div>
+                      </div>
+                    
                 </section>
 
 
@@ -429,7 +503,131 @@ const showSubMenu=(evt:any)=>{
                   <span className="textLabel" title="Developers">Developers</span>
                 </div>
                  <section className={developersActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
-                    <h1>Developers</h1>
+                     <div className="SubMenuContainer_InnerWrapper">
+                      <div className="dropdownIndividuals">
+                        <div className="columnWrapper">
+
+                            <Link to="/cloud" title="Cloud" className="Cloud">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/6xvB0yE6s3SBLlUw0TVQgV/b5d1936d738e25e43a484a0615bb4c0c/cloud-icon.svg"  alt="cloud icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4 >Cloud</h4>
+                                <p>Developer tools and APIs</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/cloud/products/pay-sdk" title="Easy, secure fiat-to-crypto solution" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/1gvNK5eS7b2XF2URxTotha/5406957e6d27cc51ccdd28c2e8954645/PaySDK.svg" alt="Pay SDK Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Pay SDK</h4>
+                                <p>A secure fiat-to-crypto solution</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/cloud/products/waas" title="Wallet as a Service" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://static-assets.coinbase.com/coinbase/globalnav/waas/Frame.png" alt="waas icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Wallet as a Service</h4>
+                                <p>Onboard your users to web3</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/cloud/products/allet-sdk"  className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/6p26wqrFCoNdZDIGyGzFKH/2387448b61bc821fc229800824bc93df/Earn-asset-logged-out.svg" alt="Coinbase Earn Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Earn</h4>
+                                <p>Earn rewards on your crypto</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/card" title="Coinbase Card - Spend crypto anywhere" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2OUJoRinjmzcv3L4oEvD8C/68d9a0ea281708d0b859c6fd7d909a1a/new-card-icon.svg" alt="Coinbase Card Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Card</h4>
+                                <p>Spend crypto, earn crypto rewards</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/private-client" title="Coinbase Private Client - For trusts, family offices, and UHNWIs" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/1CmcG8xD5BPT3DYJnl0DXG/6135743862720cdd53a5a9077c64e0af/new-private-client-icon.svg" alt="Coinbase Private Client Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Private Client</h4>
+                                <p>For trusts, family offices, UHNWIs</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/borrow" title="Coinbase Borrow - Borrow cash using Bitcoin as collateral" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/26W7tWrpDU6eLcgKiuL7U7/887617ce48666f87365d1f4fe0675cc3/new-borrow-icon.svg" alt="Coinbase Borrow Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Borrow</h4>
+                                <p>Borrow cash using Bitcoin as collateral</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/rewards" title="Coinbase Rewards - Earn crypto, win crypto"className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4aimnFIF9r1DhebxFhYaEm/fe83638dae90ae49bf41e4a00f2372c6/new-rewards-icon.svg" alt="Coinbase Rewards Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Rewards</h4>
+                                <p>Earn crypto, win crypto</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/learning-rewards" title="Coinbase learning rewards - Learn about crypto and get rewards" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2R68T7CC9SMNPZ0qlBT27C/2b101f95e5b201bf99216dafe14c5d1a/new-earn-icon.svg" alt="Coinbase Learning Rewards Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Learning rewards</h4>
+                                <p>Learn and earn crypto</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="https://nft.coinbase.com" title="Create, collect, connect" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/MnTi2c0sf1SMl2j4rQgew/e9bd7ce56171576923eac474a862fcd0/NFT.svg" alt="Coinbase NFT Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>NFT</h4>
+                                <p>Create, collect, connect</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/one" title="Get more out of crypto" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/PFIb0wMktAxwbH75ottHF/faa45fc58125a8a365c4403a4f38fd8e/cb1_new_logo_1.svg" alt="Coinbase One Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Coinbase One</h4>
+                                <p>Get more out of crypto</p>
+                              </div>
+                            </Link>
+                          </div>
+
+                          <div className="dropdownDescriptionWrapper">
+                            <h4 className="dropdownDescriptionHeadline">Crypto tools for everyone</h4>
+                            <p className="dropdownDescriptionBody">Buy, sell, and spend crypto on the world's most trusted crypto exchange</p>
+                            <Link to ="/products" title="See all products" className="dropdownDescriptionLink">
+                              <h4>See all products</h4>
+                            </Link>
+                          </div>
+
+                        </div>
+                      </div>
                 </section>
 
 
