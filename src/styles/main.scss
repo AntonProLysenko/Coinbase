@@ -228,8 +228,7 @@ $spacing-10: 80px;
         display: flex;
         justify-content: center;
     }
-    .columvWrapper{
-
+    .columnWrapper{
         flex: 0 1 0%;
         display: grid;
         grid-template-columns: repeat(2, max-content);
@@ -274,11 +273,21 @@ $spacing-10: 80px;
         };
         p{
             margin-top: 4px;
-                display: inline-block;
-                color: rgba(17, 51, 83, 0.6);
-                line-height: 20px;
-            }
+            display: inline-block;
+            color: rgba(17, 51, 83, 0.6);
+            line-height: 20px;
+        }
         
+    }
+    .dropdownLink:hover{
+        .dropdownTextWrapper{
+            h4{
+                color:$primary
+            }
+            p{
+                color: rgb(5, 15, 25);
+            }
+        }
     }
 
 }
