@@ -719,7 +719,7 @@ const showSubMenu=(evt:any)=>{
           <nav className="mobileCenterWrapper">
               {/* <div className="centerNavItems"> */}
                 <div className="styledLink  mobileLinkItem" title="Explore" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
-                  <div className="mobileLinkItem" title="Explore">
+                  <div  title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>
                   <div className={exploreActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Explore">
@@ -744,13 +744,13 @@ const showSubMenu=(evt:any)=>{
                 
 
                 <Link className="styledLink  mobileLinkItem" title="Web3" aria-expanded="false" to="/web3">
-                  <div className="mobileLinkItem">
+                  <div >
                     <span className="textLabel">Web3</span>
                   </div>
                 </Link>
 
                   <div className="styledLink  mobileLinkItem" title="Learn" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
-                  <div className="mobileLinkItem" title="Learn">
+                  <div  title="Learn">
                     <span className="textLabel" title="Learn">Learn</span>
                   </div>
                   <div className={learnActive?"mobileMenuIconWrapper active":"mobileMenuIconWrapper"} title="Learn">
