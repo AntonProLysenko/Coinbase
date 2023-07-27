@@ -180,7 +180,104 @@ const showSubMenu=(evt:any)=>{
                   </div>
                 </Link>
                  <section className={learnActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
-                     <h1>Learn</h1>
+                    <div className="SubMenuContainer_InnerWrapper">
+                      <div className="dropdownIndividuals">
+                        <div className="columnWrapper">
+
+                          <Link to="/learn/tips-and-tutorials" className="dropdownLink">
+                            <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Tips & Tutorials</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/learn/crypto-basics" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Crypto basics</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/learn/updatethesystem" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Update the System</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/wallet/learn-web3" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Web3</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/learn/market-updates" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Market Updates</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/bytes" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Newsletter</span>
+                            </div>
+                          </Link>
+
+                          <Link to="/public-policy" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+                            </span>
+
+                            <div className="DropdownItem">
+                              <span className="DropdownText">Crypto Policy</span>
+                            </div>
+                          </Link>
+                        </div>
+
+                        <div className="dropdownDescriptionWrapper">
+                          <h4 className="dropdownDescriptionHeadline">Crypto questions, answered</h4>
+                          <p className="dropdownDescriptionBody">Guides and explainers for your crypto questions</p>
+                          <Link to ="/learn" className="dropdownDescriptionLink">
+                            <h4>See all articles</h4>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                 </section>
 
                 <div className={individualsActive?"styledLink navLinkItem active defaultCursor ":"styledLink navLinkItem  defaultCursor"} title="Individuals" onMouseEnter={evt=>showSubMenu(evt.target)}>

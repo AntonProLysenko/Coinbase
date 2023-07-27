@@ -32,7 +32,7 @@
     transform: translateY(0px);
   }
 }
-.styledLink {
+.styledLink, .dropdownDescriptionWrapper .dropdownDescriptionLink {
   text-decoration: none;
   cursor: pointer;
   font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -144,7 +144,7 @@
   display: flex;
   justify-content: center;
 }
-.mainSubMenuContainer .columvWrapper {
+.mainSubMenuContainer .columnWrapper {
   flex: 0 1 0%;
   display: grid;
   grid-template-columns: repeat(2, max-content);
@@ -189,6 +189,59 @@
   display: inline-block;
   color: rgba(17, 51, 83, 0.6);
   line-height: 20px;
+}
+.mainSubMenuContainer .dropdownLink:hover .dropdownTextWrapper h4 {
+  color: rgb(0, 82, 250);
+}
+.mainSubMenuContainer .dropdownLink:hover .dropdownTextWrapper p {
+  color: rgb(5, 15, 25);
+}
+
+.DropdownItemWrapper {
+  display: inline-flex;
+}
+.DropdownItemWrapper .DropdownArrow {
+  margin-right: 18px;
+  margin-top: 2px;
+}
+
+.DropdownItem {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 316px;
+}
+.DropdownItem .DropdownText, .DropdownItem .dropdownDescriptionWrapper .dropdownDescriptionBody, .dropdownDescriptionWrapper .DropdownItem .dropdownDescriptionBody, .DropdownItem .dropdownDescriptionWrapper .dropdownDescriptionHeadline, .dropdownDescriptionWrapper .DropdownItem .dropdownDescriptionHeadline {
+  font-weight: 500;
+  line-height: 16px;
+  color: rgb(5, 15, 25);
+  margin: 0;
+  font-size: 16px;
+  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.dropdownDescriptionWrapper {
+  flex: 1 1 0%;
+  max-width: 320px;
+}
+.dropdownDescriptionWrapper .dropdownDescriptionHeadline {
+  font-weight: 500;
+}
+.dropdownDescriptionWrapper .dropdownDescriptionBody {
+  margin-top: 8px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.dropdownDescriptionWrapper .dropdownDescriptionLink {
+  color: rgb(0, 82, 250);
+}
+.dropdownDescriptionWrapper .dropdownDescriptionLink h4 {
+  font-weight: 550;
+  line-height: 16px;
+  display: inline-flex;
+  margin-top: 22px;
+}
+.dropdownDescriptionWrapper .dropdownDescriptionLink:hover {
+  color: rgb(49, 116, 251);
 }
 
 .mainSubMenuContainer.active {
@@ -335,7 +388,7 @@
   justify-content: center;
   max-width: 100dvw;
 }
-.mobileButtonWrapper .styledLink {
+.mobileButtonWrapper .styledLink, .mobileButtonWrapper .dropdownDescriptionWrapper .dropdownDescriptionLink, .dropdownDescriptionWrapper .mobileButtonWrapper .dropdownDescriptionLink {
   width: 100%;
 }
 .mobileButtonWrapper button {
