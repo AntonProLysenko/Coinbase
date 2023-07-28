@@ -288,6 +288,8 @@ $spacing-10: 80px;
             p{
                 color: rgb(5, 15, 25);
             }
+
+            
         }
     }
 }
@@ -297,6 +299,10 @@ $spacing-10: 80px;
     .DropdownArrow{
         margin-right: 18px;
         margin-top: 2px;
+        svg{
+
+            color:green
+        }
     }
 }
 
@@ -314,6 +320,13 @@ $spacing-10: 80px;
         font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     }
 }
+.DropdownItemWrapper:hover{
+    .DropdownText, .DropdownArrow>path{
+        color:rgba(22,82,240,0.8);
+        fill:rgba(22,82,240,0.8);
+    }
+}
+
 
 .dropdownDescriptionWrapper{
     flex: 1 1 0%;

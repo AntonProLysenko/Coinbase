@@ -189,11 +189,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Tips & Tutorials</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Tips & Tutorials</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/learn/crypto-basics" className="dropdownLink">
@@ -201,11 +201,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Crypto basics</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Crypto basics</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/learn/updatethesystem" className="dropdownLink">
@@ -213,11 +213,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Update the System</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Update the System</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/wallet/learn-web3" className="dropdownLink">
@@ -225,11 +225,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Web3</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Web3</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/learn/market-updates" className="dropdownLink">
@@ -237,11 +237,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Market Updates</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Market Updates</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/bytes" className="dropdownLink">
@@ -249,11 +249,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Newsletter</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Newsletter</span>
+                              </div>
+                            </span>
                           </Link>
 
                           <Link to="/public-policy" className="dropdownLink">
@@ -261,11 +261,11 @@ const showSubMenu=(evt:any)=>{
                               <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
                               </svg>
-                            </span>
 
-                            <div className="DropdownItem">
-                              <span className="DropdownText">Crypto Policy</span>
-                            </div>
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Crypto Policy</span>
+                              </div>
+                            </span>
                           </Link>
                         </div>
 
