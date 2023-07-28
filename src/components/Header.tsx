@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 
 export default function Header() {
   return (
-    <div className='mainNav_wrapper'>
+    <header className='mainNav_wrapper'>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className="styledLink" to = "/signup" >
@@ -69,6 +69,6 @@ export default function Header() {
                 </div>
             </div>  
         </div>
-    </div>
+    </header>
   )
 }
