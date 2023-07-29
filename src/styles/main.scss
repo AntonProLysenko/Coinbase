@@ -444,8 +444,8 @@ $spacing-10: 80px;
     max-width: 100dvw;
 
     max-height: fit-content;
-    // height: calc(100vh - 93px);
-    height: 100dvh;
+    height: calc(100dvh - 93px);
+    // height: 100dvh;
     overflow: scroll;
     background: rgb(255, 255, 255);
     z-index: -1;
