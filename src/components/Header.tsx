@@ -308,7 +308,89 @@ const showSubMenu=(evt:any)=>{
                   <span className="textLabel" title="Company" >Company</span>
                 </div>
                  <section className={companyActive?"mainSubMenuContainer active":"mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
-                    <h1>Company</h1>
+                    <div className="SubMenuContainer_InnerWrapper">
+                      <div className="dropdownIndividuals">
+                        <div className="columnWrapper">
+
+                          <Link to="/about" title="Learn more about the company" className="dropdownLink">
+                            <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">About</span>
+                              </div>
+                            </span>
+                          </Link>
+
+                          <Link to="/careers" title="Work at Coinbase" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Careers</span>
+                              </div>
+                            </span>
+                          </Link>
+
+                          <Link to="/affiliates" title="Earn money becoming an affiliate" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Affiliates</span>
+                              </div>
+                            </span>
+                          </Link>
+
+                          <Link to="https://help.coinbase.com" title="Our help center" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Support</span>
+                              </div>
+                            </span>
+                          </Link>
+
+                          <Link to="/blog" title="Blog" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Blog</span>
+                              </div>
+                            </span>
+                          </Link>
+
+                          <Link to="/security" title="Security" className="dropdownLink">
+                              <span className="DropdownItemWrapper">
+                              <svg className="DropdownArrow" width="8" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.172 5.773L2.257.823.5 2.593l3.157 3.18L.5 8.953l1.757 1.77 4.915-4.95z" fill="#050F19"></path>
+                              </svg>
+
+                              <div className="DropdownItem">
+                                <span className="DropdownText">Security</span>
+                              </div>
+                            </span>
+                          </Link>
+                        </div>
+
+                        <div className="dropdownDescriptionWrapper">
+                          <h4 className="dropdownDescriptionHeadline">Learn all about Coinbase</h4>
+                          <p className="dropdownDescriptionBody">We're building an open financial system for the world.</p>
+                        </div>
+                      </div>
+                    </div>
                 </section>
               {/* </div> */}
             </nav>

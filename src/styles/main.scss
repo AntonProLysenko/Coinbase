@@ -312,7 +312,7 @@ $spacing-10: 80px;
     max-width: 316px;
 
     .DropdownText {
-        font-weight: 500;
+        font-weight: 600;
         line-height: 16px;
         color: rgb(5, 15, 25);
         margin: 0;
@@ -330,10 +330,10 @@ $spacing-10: 80px;
 
 .dropdownDescriptionWrapper{
     flex: 1 1 0%;
-    max-width: 320px;
+    max-width: 290px;
     .dropdownDescriptionHeadline{
        @extend .DropdownText;
-       font-weight: 500;
+       font-weight: 550;
     }
     .dropdownDescriptionBody{
         @extend .DropdownText;
