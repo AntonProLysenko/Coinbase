@@ -1,7 +1,8 @@
 .mainNav_wrapper {
-  position: fixed;
+  position: static;
   min-width: 100dvw;
   max-width: 100dvw;
+  height: 104px;
   background: rgb(255, 255, 255);
   z-index: 2;
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;

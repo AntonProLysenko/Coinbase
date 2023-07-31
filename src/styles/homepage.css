@@ -1,0 +1,54 @@
+.SectionCenter {
+  justify-content: center;
+}
+
+.SectionFlex {
+  display: flex;
+}
+
+.SectionRow {
+  flex-direction: row;
+}
+
+.SectionMaxWidthHundred {
+  max-width: 100%;
+}
+
+.PageLayoutWrapper {
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+}
+
+.FirstWrapper {
+  max-width: 1180px;
+  width: 100%;
+}
+.FirstWrapper .TextWrapper {
+  min-width: auto;
+  z-index: 1;
+  padding: 0px 24px 0px 8px;
+}
+.FirstWrapper .TextWrapper .TitleWrapper {
+  padding-bottom: 64px;
+}
+.FirstWrapper .TextWrapper .TitleWrapper h1 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 400px;
+}
+
+.ImageContainer {
+  min-width: 636px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NextGenImage {
+  width: 100%;
+}
+.NextGenImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=homepage.css.map */

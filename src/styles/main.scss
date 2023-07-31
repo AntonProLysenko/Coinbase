@@ -1,7 +1,8 @@
 $primary: #0052fa;
 $background: rgb(255,255,255);
 
-
+$spacing-0: 0px;
+$spacing-1: 8px;
 $spacing-2: 16px;
 $spacing-3: 24px;
 $spacing-4: 32px;
@@ -12,9 +13,5 @@ $spacing-8: 64px;
 $spacing-9: 72px;
 $spacing-10: 80px;
 
-@import "navbar"
-// .lorem{
-//     max-width: 90px;
-//     display: none;
-// }
-
+@import "navbar";
+@import "homepage";

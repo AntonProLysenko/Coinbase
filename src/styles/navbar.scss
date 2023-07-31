@@ -4,10 +4,11 @@ $background: rgb(255, 255, 255);
 
 $spacing-2: 16px;
 $spacing-4: 32px;
-.mainNav_wrapper {
-    position: fixed;
+.mainNav_wrapper {//has to be changed on scroll of 104px from top
+    position: static;
     min-width: 100dvw;
     max-width: 100dvw;
+    height:104px;
     // top: 0px;
     background: rgb(255, 255, 255);
     z-index: 2;

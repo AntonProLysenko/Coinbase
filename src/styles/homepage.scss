@@ -1,0 +1,74 @@
+$spacing-0: 0px;
+$spacing-1: 8px;
+$spacing-2: 16px;
+$spacing-3: 24px;
+$spacing-4: 32px;
+$spacing-5: 40px;
+$spacing-6: 48px;
+$spacing-7: 56px;
+$spacing-8: 64px;
+$spacing-9: 72px;
+$spacing-10: 80px;
+
+
+
+.SectionCenter{
+    justify-content: center;
+}
+.SectionFlex{
+    display: flex;
+}
+.SectionRow{
+    flex-direction: row;
+}
+
+.SectionMaxWidthHundred{
+    max-width: 100%;
+}
+
+
+
+
+
+.PageLayoutWrapper {
+    border-bottom: 1px solid var(--line);
+    width: 100%;
+}
+
+.FirstWrapper {
+    max-width: 1180px;
+    width: 100%;
+
+    .TextWrapper {
+        min-width: auto;
+        z-index: 1;
+        padding: $spacing-0 $spacing-3 $spacing-0 $spacing-1;
+
+        .TitleWrapper{
+            padding-bottom: $spacing-8;
+
+            h1{
+                    font-size: 64px;
+                        line-height: 72px; 
+                        font-weight: 400px;
+
+            }
+        }
+    }
+}
+
+.ImageContainer{
+    min-width: 636px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.NextGenImage{
+    width: 100%;
+    img{
+        object-fit: cover;
+    }
+}
+
+
