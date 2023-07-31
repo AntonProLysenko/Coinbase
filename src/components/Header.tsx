@@ -284,7 +284,46 @@ const showSubMenu=(evt:any)=>{
                   <span className="textLabel" title="Individuals">Individuals</span>
                 </div>
                  <section className={individualsActive?"mainSubMenuContainer active": "mainSubMenuContainer"} onMouseLeave={evt=>showSubMenu(evt.target)}>
-                    <h1>Individuals</h1>
+                   
+                    <div className="SubMenuContainer_InnerWrapper">
+                      <div className="dropdownIndividuals">
+                        <div className="columnWrapper">
+
+                            <Link to="/explore" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2jaq2lDZhtxo16FOlRvRbu/fce2cf12493d2b8146a09df10dedd901/chart-0.svg"  alt="two vertical bars and a horizontal bar forming a graph"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4 >Crypto</h4>
+                                <p>View crypto prices and charts</p>
+                              </div>
+                            </Link>
+
+                            <Link to="https://profile.coinbase.com/" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4oZULOcKHY1JHPxHf1b8EC/ef5c707eef45d2c4d86e20d9ab217edd/decentralizedIdentity-0.svg" alt="user avatar and a checkmark forming a verified identity"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4> ENS Profiles</h4>
+                                <p> Build your web3 presence today</p>
+                              </div>
+                            </Link>
+                          </div>
+                          
+                          <div className="dropdownDescriptionWrapper">
+                            <h4 className="dropdownDescriptionHeadline">Crypto tools for everyone</h4>
+                            <p className="dropdownDescriptionBody">Buy, sell, and spend crypto on the world's most trusted crypto exchange</p>
+                            <Link to ="/products" title="See all products" className="dropdownDescriptionLink">
+                              <h4>See all products</h4>
+                            </Link>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                    
                 </section>
 
 
