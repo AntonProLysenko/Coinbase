@@ -26,18 +26,33 @@ function App() {
     setWindowWidth(window.innerWidth)
   }
 
+  let homePageCoinData={
+    topHomepageCoins:[],
+    topGainers:[],
+    lastAdded:[]
+  }
+
  const getHomepageCoinData = async()=>{  
   const topSixSymbols=["BTC","ETH","USDT","XRP","USDC"]
-        try{
-          let topSixCoins = await axios.get(`${BASIC_URL}/api/topSix`,{ headers: {top:topSixSymbols}})
-          console.log("TopSix", topSixCoins.data)
+    try{
+      let topSixCoins = await axios.get(`${BASIC_URL}/api/topSix`,{ headers: {top:topSixSymbols}})
+      homePageCoinData.topHomepageCoins=topSixCoins.data
+      console.log("TopSix", topSixCoins.data)
 
-          let topGainers = await axios.get(`${BASIC_URL}/api/topgainers`,)            
-          console.log("TopGainers",topGainers.data);
-        }catch(e){
-            console.error(e)
-        }
-     }
+      let topGainers = await axios.get(`${BASIC_URL}/api/topgainers`)  
+        topGainers.data.forEach((coin:never)=>{
+          homePageCoinData.topGainers.push(coin)
+        })
+      console.log("TopGainers",homePageCoinData);
+
+      let coinbase = await axios.get(`${BASIC_URL}/api/new`)
+      console.log("Coinbase", coinbase.data);
+      homePageCoinData.lastAdded=coinbase.data.recentlyAddedAssets[0]
+      console.log("homePageData",homePageCoinData);
+    }catch(e){
+        console.error(e)
+    }
+  }
   useEffect(()=>{
     window.addEventListener("resize", handleResize)
     const headerObserver = new IntersectionObserver((entries)=>{
