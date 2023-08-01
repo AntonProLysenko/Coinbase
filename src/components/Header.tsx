@@ -289,27 +289,117 @@ const showSubMenu=(evt:any)=>{
                       <div className="dropdownIndividuals">
                         <div className="columnWrapper">
 
-                            <Link to="/explore" className="dropdownLink">
+                            <Link to="/signup" title="Signup for Coinbase" className="dropdownLink">
                               <div className="dropdownIconWrapper">
-                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2jaq2lDZhtxo16FOlRvRbu/fce2cf12493d2b8146a09df10dedd901/chart-0.svg"  alt="two vertical bars and a horizontal bar forming a graph"></img>
+                                <img src="https://images.ctfassets.net/q5ulk4bp65r7/1rFQCqoq8hipvVJSKdU3fQ/21ab733af7a8ab404e29b873ffb28348/coinbase-icon2.svg"  alt="Coinbase Icon"></img>
                               </div>
                               <div className="dropdownTextWrapper">
-                                <h4 >Crypto</h4>
-                                <p>View crypto prices and charts</p>
+                                <h4 >Buy and sell</h4>
+                                <p>Buy, sell and use crypto</p>
                               </div>
                             </Link>
 
-                            <Link to="https://profile.coinbase.com/" className="dropdownLink">
+                            <Link to="/advanced-trade" title="Coinbase Advanced – Professional-grade tools for trading" className="dropdownLink">
                               <div className="dropdownIconWrapper">
-                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4oZULOcKHY1JHPxHf1b8EC/ef5c707eef45d2c4d86e20d9ab217edd/decentralizedIdentity-0.svg" alt="user avatar and a checkmark forming a verified identity"></img>
+                                <img src="https://static-assets.coinbase.com/assethub/coinbase-advanced-trade-icon.png" alt="Advanced Trade Icon"></img>
                               </div>
                               <div className="dropdownTextWrapper">
-                                <h4> ENS Profiles</h4>
-                                <p> Build your web3 presence today</p>
+                                <h4>Advanced</h4>
+                                <p>Buy, sell and use crypto</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/wallet" title="Coinbase Wallet - Store your cryptocurrency" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/3BD4LmMLr49DnQJBr8qFdw/ab5cbe4289ff12e7d610acc8baa3dd32/coinbase_wallet_logo_bg.svg" alt="Coinbase Wallet Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Wallet</h4>
+                                <p>The best self-hosted crypto wallet</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/earn" title="Coinbase Earn - Earn interest on your crypto" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/6p26wqrFCoNdZDIGyGzFKH/2387448b61bc821fc229800824bc93df/Earn-asset-logged-out.svg" alt="Coinbase Earn Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Earn</h4>
+                                <p>Earn rewards on your crypto</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/card" title="Coinbase Card - Spend crypto anywhere" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2OUJoRinjmzcv3L4oEvD8C/68d9a0ea281708d0b859c6fd7d909a1a/new-card-icon.svg" alt="Coinbase Card Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Card</h4>
+                                <p>Spend crypto, earn crypto rewards</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/private-client" title="Coinbase Private Client - For trusts, family offices, and UHNWIs" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/1CmcG8xD5BPT3DYJnl0DXG/6135743862720cdd53a5a9077c64e0af/new-private-client-icon.svg" alt="Coinbase Private Client Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Private Client</h4>
+                                <p>For trusts, family offices, UHNWIs</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/borrow" title="Coinbase Borrow - Borrow cash using Bitcoin as collateral" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/26W7tWrpDU6eLcgKiuL7U7/887617ce48666f87365d1f4fe0675cc3/new-borrow-icon.svg" alt="Coinbase Borrow Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Borrow</h4>
+                                <p>Borrow cash using Bitcoin as collateral</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/rewards" title="Coinbase Rewards - Earn crypto, win crypto"className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/4aimnFIF9r1DhebxFhYaEm/fe83638dae90ae49bf41e4a00f2372c6/new-rewards-icon.svg" alt="Coinbase Rewards Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Rewards</h4>
+                                <p>Earn crypto, win crypto</p>
+                              </div>
+                            </Link>
+
+                            <Link to="/learning-rewards" title="Coinbase learning rewards - Learn about crypto and get rewards" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/2R68T7CC9SMNPZ0qlBT27C/2b101f95e5b201bf99216dafe14c5d1a/new-earn-icon.svg" alt="Coinbase Learning Rewards Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Learning rewards</h4>
+                                <p>Learn and earn crypto</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="https://nft.coinbase.com" title="Create, collect, connect" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/MnTi2c0sf1SMl2j4rQgew/e9bd7ce56171576923eac474a862fcd0/NFT.svg" alt="Coinbase NFT Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>NFT</h4>
+                                <p>Create, collect, connect</p>
+                              </div>
+                            </Link>
+                            
+                            <Link to="/one" title="Get more out of crypto" className="dropdownLink">
+                              <div className="dropdownIconWrapper">
+                                <img src="https://images.ctfassets.net/c5bd0wqjc7v0/PFIb0wMktAxwbH75ottHF/faa45fc58125a8a365c4403a4f38fd8e/cb1_new_logo_1.svg" alt="Coinbase One Icon"></img>
+                              </div>
+                              <div className="dropdownTextWrapper">
+                                <h4>Coinbase One</h4>
+                                <p>Get more out of crypto</p>
                               </div>
                             </Link>
                           </div>
-                          
+
                           <div className="dropdownDescriptionWrapper">
                             <h4 className="dropdownDescriptionHeadline">Crypto tools for everyone</h4>
                             <p className="dropdownDescriptionBody">Buy, sell, and spend crypto on the world's most trusted crypto exchange</p>
