@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import'./styles/fonts/HKGrotesk2.41/TTF'
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 

@@ -21,11 +21,13 @@ $spacing-10: 80px;
 .SectionRow{
     flex-direction: row;
 }
+.SectionColumn{
+    flex-direction: column;
+}
 
 .SectionMaxWidthHundred{
     max-width: 100%;
 }
-
 
 
 
@@ -43,15 +45,20 @@ $spacing-10: 80px;
         min-width: auto;
         z-index: 1;
         padding: $spacing-0 $spacing-3 $spacing-0 $spacing-1;
+        justify-content: center;
 
         .TitleWrapper{
             padding-bottom: $spacing-8;
 
             h1{
                     font-size: 64px;
-                        line-height: 72px; 
-                        font-weight: 400px;
-
+                    line-height: 72px; 
+                    font-weight: 400px;
+                    // font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                font-family: "HKGrotesk";
+            }
+            span{
+                height: $spacing-2;
             }
         }
     }
@@ -68,6 +75,8 @@ $spacing-10: 80px;
     width: 100%;
     img{
         object-fit: cover;
+        height: 100%;
+        width:100%;
     }
 }
 

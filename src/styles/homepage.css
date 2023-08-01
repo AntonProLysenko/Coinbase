@@ -10,6 +10,10 @@
   flex-direction: row;
 }
 
+.SectionColumn {
+  flex-direction: column;
+}
+
 .SectionMaxWidthHundred {
   max-width: 100%;
 }
@@ -27,6 +31,7 @@
   min-width: auto;
   z-index: 1;
   padding: 0px 24px 0px 8px;
+  justify-content: center;
 }
 .FirstWrapper .TextWrapper .TitleWrapper {
   padding-bottom: 64px;
@@ -35,6 +40,10 @@
   font-size: 64px;
   line-height: 72px;
   font-weight: 400px;
+  font-family: "HKGrotesk";
+}
+.FirstWrapper .TextWrapper .TitleWrapper span {
+  height: 16px;
 }
 
 .ImageContainer {
@@ -51,4 +60,6 @@
 .NextGenImage img {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=homepage.css.map */

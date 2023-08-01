@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main id="main" className='PageLayoutWrapper'>
         <div className="SectionCenter SectionFlex">
-            <div className="FirstWrapper">
+            <div className="FirstWrapper SectionFlex SectionRow ">
 
                 <div className="ImageContainer">
                     <picture className="NextGenImage">
@@ -12,10 +12,14 @@ export default function HomePage() {
                     </picture>
                 </div>
 
-                <div className="TextWrapper SectionFlex SectionCenter">
-                    <div className='TitleWrapper SectionFlex SectionRow'>
+                <div className="TextWrapper SectionFlex SectionColumn SectionCenter">
+                    <div className='TitleWrapper SectionFlex SectionColumn'>
                         <div className="SectionFlex SectionMaxWidthHundred">
                             <h1>The future of money is here</h1>
+                        </div>
+                        <span></span>
+                        <div>
+                            <p>We're the most trusted place for people and businesses to buy, sell, and manage crypto.</p>
                         </div>
 
                     </div>
