@@ -48,12 +48,13 @@ $spacing-10: 80px;
         justify-content: center;
 
         .TitleWrapper{
+            font-family: "HKGrotesk";
             padding-bottom: $spacing-8;
 
             h1{
                     font-size: 64px;
                     line-height: 72px; 
-                    font-weight: 400px;
+                    font-weight: 100px;
                     // font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
                 font-family: "HKGrotesk";
             }

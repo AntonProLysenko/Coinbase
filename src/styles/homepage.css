@@ -34,12 +34,13 @@
   justify-content: center;
 }
 .FirstWrapper .TextWrapper .TitleWrapper {
+  font-family: "HKGrotesk";
   padding-bottom: 64px;
 }
 .FirstWrapper .TextWrapper .TitleWrapper h1 {
   font-size: 64px;
   line-height: 72px;
-  font-weight: 400px;
+  font-weight: 100px;
   font-family: "HKGrotesk";
 }
 .FirstWrapper .TextWrapper .TitleWrapper span {
