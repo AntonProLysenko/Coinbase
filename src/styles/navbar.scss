@@ -5,14 +5,16 @@ $background: rgb(255, 255, 255);
 $spacing-2: 16px;
 $spacing-4: 32px;
 .mainNav_wrapper {//has to be changed on scroll of 104px from top
-    // position: fixed;
+    position: fixed;
     min-width: 100dvw;
     max-width: 100dvw;
     height:104px;
-    // top: 0px;
+    top: 0px;
     background: rgb(255, 255, 255);
     z-index: 2;
     box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
+
+    // position: static;
 }
 
 .banner {
@@ -67,7 +69,8 @@ $spacing-4: 32px;
 .mainNavContainer {
     width: 100%;
     border-bottom: 1px solid rgb(236, 239, 241);
-    background: white
+    background: white;
+    position:relative;
 }
 
 .mainNav {
@@ -86,6 +89,7 @@ $spacing-4: 32px;
     padding: 0px 20px;
     box-sizing: content-box;
     min-height: 66px;
+
 }
 
 .logoWrapper {
@@ -113,6 +117,7 @@ $spacing-4: 32px;
     display: flex;
     // flex: 6 1 0%;
     justify-content: stretch;
+    // position:relative;
     // padding-left:25px
     // a{
     //     padding-bottom: 3px;
@@ -203,8 +208,8 @@ $spacing-4: 32px;
     pointer-events: all;
 
     padding: 45px;
-    opacity: 1;
-    visibility: visible;
+    // opacity: 1;
+    // visibility: visible;
     transition: position 150ms linear 0s;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 10px;
 

@@ -1,7 +1,9 @@
 .mainNav_wrapper {
+  position: fixed;
   min-width: 100dvw;
   max-width: 100dvw;
   height: 104px;
+  top: 0px;
   background: rgb(255, 255, 255);
   z-index: 2;
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
@@ -46,6 +48,7 @@
   width: 100%;
   border-bottom: 1px solid rgb(236, 239, 241);
   background: white;
+  position: relative;
 }
 
 .mainNav {
@@ -121,8 +124,6 @@
   border-bottom: 1px solid rgb(236, 239, 241);
   pointer-events: all;
   padding: 45px;
-  opacity: 1;
-  visibility: visible;
   transition: position 150ms linear 0s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 10px;
 }
