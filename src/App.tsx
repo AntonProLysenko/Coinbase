@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
+        {/* send email on first Wrapper to sign up page  */}
         <Route path="/" element = {<HomePage/>}/>
         <Route path="/signup" element={<SignUpPage/>}/> 
       </Routes>

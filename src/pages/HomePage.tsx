@@ -13,6 +13,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="TextWrapper SectionFlex SectionColumn SectionCenter">
+
                     <div className='TitleWrapper SectionFlex SectionColumn'>
                         <div className="SectionFlex SectionMaxWidthHundred">
                             <h1>The future of money is here</h1>
@@ -21,9 +22,24 @@ export default function HomePage() {
                         <div>
                             <p>We're the most trusted place for people and businesses to buy, sell, and manage crypto.</p>
                         </div>
-
                     </div>
+
+
+                    <div className="FormWrapper">
+                    <form className='SignupForm'>
+                        <div className="InputContainer">
+                            <input type="email" placeholder="satoshi@nakamoto.com" aria-label="satoshi@nakamoto.com" name="email" className="InputField" />
+                        </div>
+                        
+                        <button className="interactableButton">
+                            SignUp
+                        </button>
+
+                    </form>
                 </div>
+                </div>
+
+                
 
             </div>
 

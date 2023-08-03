@@ -49,17 +49,91 @@ $spacing-10: 80px;
 
         .TitleWrapper{
             font-family: "HKGrotesk";
+            text-align: start;
             padding-bottom: $spacing-8;
 
             h1{
-                    font-size: 64px;
-                    line-height: 72px; 
-                    font-weight: 100px;
-                    // font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-family: "HKGrotesk";
+                font-size: 64px;
+                line-height: 72px; 
+                font-weight: 150px;
             }
+
             span{
                 height: $spacing-2;
+            }
+            p{
+                // display: block;
+                // margin-block-start: 1em;
+                // margin-block-end: 1em;
+                // margin-inline-start: 0px;
+                // margin-inline-end: 0px;
+
+                font-size: 34px;
+                line-height:44px;
+                font-weight: 620;
+            }
+        }
+    }
+    .FormWrapper {
+        max-width: 472px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: $spacing-3;
+
+        .SignupForm{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            padding-right:$spacing-2;
+            gap: 16px;
+
+            .InputContainer{
+                display: flex;
+                flex: 1 1 auto;
+                flex-direction: row;
+
+                position: relative;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgba(91,97,110,0.2);
+                border-radius: 8px;
+                transition: all 0.15s ease 0s;
+                background: white;
+
+                input{
+                    padding: 17px;
+                    border: 1px solid transparent;
+                    overflow: visible;
+
+                    z-index: 0;
+                    flex: 1 1 0px;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 20px;
+                    border-radius: 3px;
+                    background: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: rgb(255,255,255);
+                    border: 1px solid transparent;
+                    font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                }
+            }
+            .interactableButton {
+                height: 56px;
+                border-radius: 56px;
+                transform: scale(1);        
+            }
+
+            .interactableButton:hover{
+                background-color: rgb(1,76,236);
+                opacity: 1;
+            }
+
+            .interactableButton:active{
+                opacity: 1;
+                transform: scale(.98);
+                background-color: rgb(1, 72, 221);;
             }
         }
     }
