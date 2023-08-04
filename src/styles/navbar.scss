@@ -5,7 +5,7 @@ $background: rgb(255, 255, 255);
 $spacing-2: 16px;
 $spacing-4: 32px;
 .mainNav_wrapper {//has to be changed on scroll of 104px from top
-    position: fixed;
+    // position: fixed;
     min-width: 100dvw;
     max-width: 100dvw;
     height:104px;
@@ -14,7 +14,17 @@ $spacing-4: 32px;
     z-index: 2;
     box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
 
-    // position: static;
+    position: static;
+}
+
+.mainNav_wrapper.sliding{
+ position:fixed;
+transform: translateY(-40px);
+    animation: slide_down 100ms ease-in-out 0.133s 1 normal forwards running;
+
+ .banner{
+   
+ }
 }
 
 .banner {
@@ -22,14 +32,16 @@ $spacing-4: 32px;
 
     min-height: 39px;
     padding-bottom: 3.5px;
-    transform: translateY(-40px);
+   
 
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    transform: translateY(-40px);
     animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
+
+    
 }
 
 @keyframes slide_down {

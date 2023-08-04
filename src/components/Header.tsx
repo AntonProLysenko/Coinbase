@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
-import { useState } from "react";
+import { useState, useRef,useEffect  } from "react";
+
 
 export default function Header() {
 
@@ -15,6 +16,21 @@ let[businessesActive, setBusinessesActive] = useState(false)
 let[developersActive, setDevelopersActive] = useState(false)
 let[companyActive, setCompanyActive] = useState(false)
 
+let[slidingHeader, setSlidingHeader] = useState(false)
+
+const header = useRef<any>()
+useEffect(()=>{
+        console.log(header)
+        const observer = new IntersectionObserver((entries)=>{
+            const entry= entries[0]
+
+            if (!entry.isIntersecting){
+              setSlidingHeader(true)
+            }
+            
+        })
+        observer.observe(header.current)
+    },[])
 
 
 
@@ -104,12 +120,12 @@ const showSubMenu=(evt:any)=>{
 
 
   let click = evt.title
-  console.log(click);
+  // console.log(click);
 }
 
   return (
     <>
-    <header className='mainNav_wrapper'>
+    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper"} ref = {header}>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className=" styledLink banerStyledLink" to = "/signup" >
