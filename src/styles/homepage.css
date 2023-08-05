@@ -45,6 +45,11 @@
 }
 .FirstWrapper .TextWrapper .TitleWrapper span {
   height: 16px;
+  font-family: sans-serif;
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
 }
 .FirstWrapper .TextWrapper .TitleWrapper p {
   font-size: 34px;
@@ -89,7 +94,7 @@
   background: none;
   font-size: 18px;
   font-weight: 400;
-  color: rgb(255, 255, 255);
+  color: rgb(10, 11, 13);
   border: 1px solid transparent;
   font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }

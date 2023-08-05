@@ -34,9 +34,14 @@ export default function HomePage() {
                         <button className="interactableButton">
                             SignUp
                         </button>
-
                     </form>
-                </div>
+                    </div>
+
+                    <div className='TitleWrapper'>
+                        <span>
+                            Sign up and get up to $200 in crypto¹
+                        </span>
+                    </div>
                 </div>
 
                 
