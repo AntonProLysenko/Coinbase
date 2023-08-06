@@ -1,8 +1,20 @@
 import React from 'react'
+import { useRef,useEffect } from 'react'
 
 export default function HomePage() {
+    const homePage = useRef<HTMLDivElement | any>()
+    useEffect(()=>{
+        console.log(homePage)
+        const observer = new IntersectionObserver((entries)=>{
+            const entry= entries[0]
+
+            console.log("entry",entry);
+            
+        })
+        observer.observe(homePage.current)
+    },[])
   return (
-    <main id="main" className='PageLayoutWrapper'>
+    <main id="main" ref={homePage} className='PageLayoutWrapper'>
         <div className="SectionCenter SectionFlex">
             <div className="FirstWrapper SectionFlex SectionRow ">
 
