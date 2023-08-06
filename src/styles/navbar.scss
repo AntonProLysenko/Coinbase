@@ -18,13 +18,28 @@ $spacing-4: 32px;
 }
 
 .mainNav_wrapper.sliding{
- position:fixed;
-transform: translateY(-40px);
+    position:fixed;
+    // transform: translateY(-40px);
     animation: slide_down 100ms ease-in-out 0.133s 1 normal forwards running;
+}
 
- .banner{
-   
- }
+.slideDetector{
+    // display:none;
+    height:0px;
+    margin:0;
+}
+.slideDetector.active{
+    height:105px;//due to the height of the whole header(66px + 39px(baner))
+    margin: 0;
+    // display:block;
+}
+
+.homePageCheckr{
+    display:none;
+    height: 0px;
+}
+.homePageCheckr.active{
+    display: block;
 }
 
 .banner {

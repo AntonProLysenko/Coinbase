@@ -2,7 +2,15 @@ import {Link} from "react-router-dom"
 import { useState, useRef,useEffect  } from "react";
 
 
-export default function Header() {
+type SlidingProps = {
+   //React declares type by itself in states if we are passing the default value
+    slidingHeader:React.SetStateAction<boolean>//I took the type from the declaration on the usestate
+    // homePageCheckr:React.RefObject<HTMLDivElement>
+    headerCheckr:React.RefObject<HTMLDivElement>
+}
+
+
+export default function Header({headerCheckr, slidingHeader}:SlidingProps) {
 
 
 let [isMobileActive,setisMobileActive] = useState(false)
@@ -16,21 +24,11 @@ let[businessesActive, setBusinessesActive] = useState(false)
 let[developersActive, setDevelopersActive] = useState(false)
 let[companyActive, setCompanyActive] = useState(false)
 
-let[slidingHeader, setSlidingHeader] = useState(false)
 
-const header = useRef<any>()
-useEffect(()=>{
-        console.log(header)
-        const observer = new IntersectionObserver((entries)=>{
-            const entry= entries[0]
 
-            if (!entry.isIntersecting){
-              setSlidingHeader(true)
-            }
-            
-        })
-        observer.observe(header.current)
-    },[])
+
+
+
 
 
 
@@ -117,15 +115,14 @@ const showSubMenu=(evt:any)=>{
     // case "Web3":
 
   }
-
-
-  let click = evt.title
+  // let click = evt.title
   // console.log(click);
 }
 
   return (
     <>
-    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper"} ref = {header}>
+    <div className={slidingHeader?'slideDetector active':'slideDetector'}></div>
+    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper"} ref = {headerCheckr}>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className=" styledLink banerStyledLink" to = "/signup" >

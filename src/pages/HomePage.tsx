@@ -1,20 +1,17 @@
 import React from 'react'
-import { useRef,useEffect } from 'react'
 
-export default function HomePage() {
-    const homePage = useRef<HTMLDivElement | any>()
-    useEffect(()=>{
-        console.log(homePage)
-        const observer = new IntersectionObserver((entries)=>{
-            const entry= entries[0]
 
-            console.log("entry",entry);
-            
-        })
-        observer.observe(homePage.current)
-    },[])
+type SlidingProps = {
+   //React declares type by itself in states if we are passing the default value
+    slidingHeader:React.SetStateAction<boolean>//I took the type from the declaration on the usestate
+    homePageCheckr:React.RefObject<HTMLDivElement>
+}
+
+export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
+ 
   return (
-    <main id="main" ref={homePage} className='PageLayoutWrapper'>
+    <main id="main" className='PageLayoutWrapper'>
+        <div className={!slidingHeader?"homePageCheckr":"homePageCheckr active"} ref = {homePageCheckr}></div>
         <div className="SectionCenter SectionFlex">
             <div className="FirstWrapper SectionFlex SectionRow ">
 
