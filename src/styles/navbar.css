@@ -1,5 +1,4 @@
 .mainNav_wrapper {
-  position: fixed;
   min-width: 100dvw;
   max-width: 100dvw;
   height: 104px;
@@ -9,16 +8,47 @@
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
 }
 
+.mainNav_wrapper.notSliding {
+  position: static;
+}
+.mainNav_wrapper.notSliding .banner {
+  transform: translateY(-40px);
+  animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
+}
+
+.mainNav_wrapper.sliding {
+  position: fixed;
+  transform: translateY(-40px);
+  animation: slide_down 200ms ease-in 0s 1 normal forwards running;
+}
+
+.headerUnderlay {
+  height: 0px;
+  margin: 0;
+}
+
+.headerUnderlay.sliding {
+  height: 105px;
+  margin: 0;
+}
+
+.homePageCheckr {
+  display: none;
+  height: 0px;
+}
+
+.homePageCheckr.sliding {
+  display: block;
+}
+
 .banner {
   background-color: #0052fa;
   min-height: 39px;
   padding-bottom: 3.5px;
-  transform: translateY(-40px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
 }
 
 @keyframes slide_down {

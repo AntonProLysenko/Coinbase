@@ -11,7 +11,7 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
  
   return (
     <main id="main" className='PageLayoutWrapper'>
-        <div className={!slidingHeader?"homePageCheckr":"homePageCheckr active"} ref = {homePageCheckr}></div>
+        <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
         <div className="SectionCenter SectionFlex">
             <div className="FirstWrapper SectionFlex SectionRow ">
 

@@ -1,23 +1,52 @@
-.mainNav_wrapper {
-  position: static;
+.mainNav_wrapper.notSliding {
   min-width: 100dvw;
   max-width: 100dvw;
   height: 104px;
+  top: 0px;
   background: rgb(255, 255, 255);
   z-index: 2;
   box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
+  position: static;
+}
+.mainNav_wrapper.notSliding .banner {
+  transform: translateY(-40px);
+  animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
+}
+
+.mainNav_wrapper.sliding {
+  position: fixed;
+  transform: translateY(-40px);
+  animation: 200ms cubic-bezier(0.6, 0, 0.15, 1) 0s 1 normal none running iCpjnP;
+  animation: slide_down 100ms ease-in-out 0.133s 1 normal forwards running;
+}
+
+.slideDetector {
+  height: 0px;
+  margin: 0;
+}
+
+.slideDetector.active {
+  height: 105px;
+  margin: 0;
+}
+
+.homePageCheckr {
+  display: none;
+  height: 0px;
+}
+
+.homePageCheckr.active {
+  display: block;
 }
 
 .banner {
   background-color: #0052fa;
   min-height: 39px;
   padding-bottom: 3.5px;
-  transform: translateY(-40px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
 }
 
 @keyframes slide_down {
@@ -47,6 +76,7 @@
   width: 100%;
   border-bottom: 1px solid rgb(236, 239, 241);
   background: white;
+  position: relative;
 }
 
 .mainNav {
@@ -122,8 +152,6 @@
   border-bottom: 1px solid rgb(236, 239, 241);
   pointer-events: all;
   padding: 45px;
-  opacity: 1;
-  visibility: visible;
   transition: position 150ms linear 0s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 10px;
 }
@@ -551,15 +579,83 @@
   justify-content: center;
 }
 .FirstWrapper .TextWrapper .TitleWrapper {
+  font-family: "HKGrotesk";
+  text-align: start;
   padding-bottom: 64px;
 }
 .FirstWrapper .TextWrapper .TitleWrapper h1 {
   font-size: 64px;
   line-height: 72px;
-  font-weight: 400px;
+  font-weight: 150px;
 }
 .FirstWrapper .TextWrapper .TitleWrapper span {
   height: 16px;
+  font-family: sans-serif;
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.FirstWrapper .TextWrapper .TitleWrapper p {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 620;
+}
+.FirstWrapper .FormWrapper {
+  max-width: 472px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.FirstWrapper .FormWrapper .SignupForm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-right: 16px;
+  gap: 16px;
+}
+.FirstWrapper .FormWrapper .SignupForm .InputContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(91, 97, 110, 0.2);
+  border-radius: 8px;
+  transition: all 0.15s ease 0s;
+  background: white;
+}
+.FirstWrapper .FormWrapper .SignupForm .InputContainer input {
+  padding: 17px;
+  border: 1px solid transparent;
+  overflow: visible;
+  z-index: 0;
+  flex: 1 1 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+  border-radius: 3px;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(10, 11, 13);
+  border: 1px solid transparent;
+  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.FirstWrapper .FormWrapper .SignupForm .interactableButton, .FirstWrapper .FormWrapper .SignupForm .mobileButtonWrapper button, .mobileButtonWrapper .FirstWrapper .FormWrapper .SignupForm button {
+  height: 56px;
+  border-radius: 56px;
+  transform: scale(1);
+}
+.FirstWrapper .FormWrapper .SignupForm .interactableButton:hover, .FirstWrapper .FormWrapper .SignupForm .mobileButtonWrapper button:hover, .mobileButtonWrapper .FirstWrapper .FormWrapper .SignupForm button:hover {
+  background-color: rgb(1, 76, 236);
+  opacity: 1;
+}
+.FirstWrapper .FormWrapper .SignupForm .interactableButton:active, .FirstWrapper .FormWrapper .SignupForm .mobileButtonWrapper button:active, .mobileButtonWrapper .FirstWrapper .FormWrapper .SignupForm button:active {
+  opacity: 1;
+  transform: scale(0.98);
+  background-color: rgb(1, 72, 221);
 }
 
 .ImageContainer {
@@ -578,6 +674,38 @@
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.interactableButton, .mobileButtonWrapper button {
+  display: inline-flex;
+  cursor: pointer;
+  height: 40px;
+  min-width: 100px;
+  border-radius: 40px;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.15;
+  padding: 0 32px;
+  white-space: nowrap;
+  background-color: #0052fa;
+  color: rgb(255, 255, 255);
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-weight: 600;
+  font-size: 100%;
+}
+
+.interactableButton:hover, .mobileButtonWrapper button:hover {
+  background-color: rgb(1, 76, 236);
+  opacity: 0.92;
+}
+
+.interactableButton:active, .mobileButtonWrapper button:active {
+  background-color: rgb(1, 72, 221);
+  opacity: 0.86;
 }
 
 * {

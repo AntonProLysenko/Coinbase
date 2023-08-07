@@ -121,8 +121,8 @@ const showSubMenu=(evt:any)=>{
 
   return (
     <>
-    <div className={slidingHeader?'slideDetector active':'slideDetector'}></div>
-    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper"} ref = {headerCheckr}>
+    <div className={slidingHeader?'headerUnderlay sliding':'headerUnderlay'}></div>
+    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper notSliding"} ref = {headerCheckr}>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className=" styledLink banerStyledLink" to = "/signup" >
