@@ -8,13 +8,14 @@ $spacing-4: 32px;
 
 
 .mainNav_wrapper{
-min-width: 100dvw;
-    max-width: 100dvw;
+    min-width: 100%;
+    max-width: 100%;
     height: 104px;
     top: 0px;
     background: rgb(255, 255, 255);
     z-index: 2;
-    box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
+    // box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
+    overflow-x: none;
 }
 
 .mainNav_wrapper.notSliding {//has to be changed on scroll of 104px from top
@@ -668,6 +669,9 @@ min-width: 100dvw;
 
 
 @media(max-width: 1050px) {
+    .App {
+            min-width: 100dvw;
+        }
     .banner {
         max-height: 40.5px;
         padding-bottom: 1.5px;
@@ -729,6 +733,7 @@ min-width: 100dvw;
 }
 
 @media (max-width:767px) {
+    
     .mobileButtonWrapper {
         flex-direction: column;
     }

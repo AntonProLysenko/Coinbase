@@ -53,15 +53,16 @@ $spacing-10: 80px;
             padding-bottom: $spacing-8;
 
             h1{
-                font-size: 64px;
-                line-height: 72px; 
-                font-weight: 150px;
+                font-size: 60px;
+                line-height: 65px; 
+                font-weight: bold;
+                margin-top:50px
             }
 
             span{
                 height: $spacing-2;
                 font-family: sans-serif;
-                margin-bottom: 24px;
+                // margin-bottom: 24px;
                 font-size: 20px;
                     line-height: 36px;
                     font-weight: 400;
@@ -73,7 +74,7 @@ $spacing-10: 80px;
                 // margin-inline-start: 0px;
                 // margin-inline-end: 0px;
 
-                font-size: 34px;
+                font-size: 32px;
                 line-height:44px;
                 font-weight: 620;
             }
@@ -82,7 +83,8 @@ $spacing-10: 80px;
     .FormWrapper {
         max-width: 472px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        
         padding-bottom: $spacing-3;
 
         .SignupForm{
@@ -91,6 +93,7 @@ $spacing-10: 80px;
             width: 100%;
             padding-right:$spacing-2;
             gap: 16px;
+            align-items: center;
 
             .InputContainer{
                 display: flex;
@@ -118,6 +121,7 @@ $spacing-10: 80px;
                     border-radius: 3px;
                     background: none;
                     font-size: 18px;
+                    height: 15px;
                     font-weight: 400;
                     color: rgb(10,11,13);
                     border: 1px solid transparent;
@@ -158,6 +162,14 @@ $spacing-10: 80px;
         height: 100%;
         width:100%;
     }
+}
+
+
+
+.FirstWrapperMobile{
+    max-width: 768px;
+    // width:100%;
+    padding: $spacing-3 $spacing-7;
 }
 
 

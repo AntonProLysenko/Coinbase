@@ -39,27 +39,27 @@
   padding-bottom: 64px;
 }
 .FirstWrapper .TextWrapper .TitleWrapper h1 {
-  font-size: 64px;
-  line-height: 72px;
-  font-weight: 150px;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: bold;
+  margin-top: 50px;
 }
 .FirstWrapper .TextWrapper .TitleWrapper span {
   height: 16px;
   font-family: sans-serif;
-  margin-bottom: 24px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 400;
 }
 .FirstWrapper .TextWrapper .TitleWrapper p {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 44px;
   font-weight: 620;
 }
 .FirstWrapper .FormWrapper {
   max-width: 472px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-bottom: 24px;
 }
 .FirstWrapper .FormWrapper .SignupForm {
@@ -68,6 +68,7 @@
   width: 100%;
   padding-right: 16px;
   gap: 16px;
+  align-items: center;
 }
 .FirstWrapper .FormWrapper .SignupForm .InputContainer {
   display: flex;
@@ -93,6 +94,7 @@
   border-radius: 3px;
   background: none;
   font-size: 18px;
+  height: 15px;
   font-weight: 400;
   color: rgb(10, 11, 13);
   border: 1px solid transparent;
@@ -129,4 +131,9 @@
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.FirstWrapperMobile {
+  max-width: 768px;
+  padding: 24px 56px;
 }/*# sourceMappingURL=homepage.css.map */

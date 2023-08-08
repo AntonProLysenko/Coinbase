@@ -12,8 +12,8 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
   return (
     <main id="main" className='PageLayoutWrapper'>
         <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
-        <div className="SectionCenter SectionFlex">
-            <div className="FirstWrapper SectionFlex SectionRow ">
+        {/*  <div className="SectionCenter SectionFlex">
+           <div className="FirstWrapper SectionFlex SectionRow ">
 
                 <div className="ImageContainer">
                     <picture className="NextGenImage">
@@ -55,7 +55,15 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
 
                 
 
+            </div> 
+            
+
+        </div> */}
+        <div className="FirstWrapperMobile SectionFlex">
+            <div className="SectionFlex SectionRow SectionCenter">
+                
             </div>
+
 
         </div>
 
