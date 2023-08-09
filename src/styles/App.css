@@ -718,6 +718,7 @@
   width: 100%;
 }
 .FirstWrapperMobile .contentWrapper .formWrapper .inputWrapper {
+  flex: 1 1 auto;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(91, 97, 110, 0.2);
@@ -739,10 +740,41 @@
   font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 .FirstWrapperMobile .contentWrapper .formWrapper .buttonWrapper {
-  margin-top: 8px;
-  margin-left: 0px;
+  margin-left: 16px;
+  margin-top: 0;
+  max-width: 160px;
+  min-width: 160px;
+}
+.FirstWrapperMobile .contentWrapper .formWrapper .buttonWrapper button {
+  width: 100%;
+  border-radius: 4px;
+  padding: 34px;
+  font-size: 16px;
 }
 
+@media screen and (max-width: 1090px) {
+  .FirstWrapper {
+    max-width: 1180px;
+    width: 100%;
+  }
+  .FirstWrapper .TextWrapper {
+    min-width: 40%;
+  }
+  .FirstWrapper .TextWrapper .TitleWrapper h1 {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 200;
+  }
+  .FirstWrapper .TextWrapper .TitleWrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400px;
+  }
+  .ImageContainer {
+    min-width: auto;
+    height: 680px;
+  }
+}
 @media screen and (max-width: 560px) {
   .FirstWrapperMobile {
     padding: 24px;
@@ -758,6 +790,13 @@
   }
   .FirstWrapperMobile .contentWrapper .formWrapper {
     flex-direction: column;
+  }
+  .FirstWrapperMobile .contentWrapper .formWrapper .buttonWrapper {
+    margin-top: 8px;
+    margin-left: 0px;
+    display: block;
+    padding: 0;
+    max-width: 100%;
   }
 }
 .interactableButton, .mobileButtonWrapper button {
@@ -806,10 +845,4 @@
   min-height: -webkit-fill-available;
   height: 100%;
   background-color: transparent;
-}
-
-@media (max-width: 1368px) {
-  .App {
-    max-width: 100dvw;
-  }
 }/*# sourceMappingURL=App.css.map */
