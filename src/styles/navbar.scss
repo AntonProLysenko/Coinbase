@@ -12,7 +12,7 @@ $spacing-4: 32px;
     max-width: 100%;
     height: 104px;
     top: 0px;
-    background: rgb(255, 255, 255);
+    // background: rgb(255, 255, 255);
     z-index: 2;
     // box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
     overflow-x: none;
@@ -669,9 +669,7 @@ $spacing-4: 32px;
 
 
 @media(max-width: 1050px) {
-    .App {
-            min-width: 100dvw;
-        }
+ 
     .banner {
         max-height: 40.5px;
         padding-bottom: 1.5px;
