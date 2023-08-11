@@ -10,6 +10,8 @@ $spacing-8: 64px;
 $spacing-9: 72px;
 $spacing-10: 80px;
 
+$primary: rgb(0, 82, 250);
+
 
 
 .SectionCenter{
@@ -170,6 +172,22 @@ $spacing-10: 80px;
     max-width: 768px;
     // width:100%;
     padding: $spacing-3 $spacing-7;
+
+    .contentWrapper{
+        flex: 1 1 0px;
+        align-items: flex-start;
+        padding:$spacing-10 0;
+
+        .linkWrapper{
+            color: $primary;
+            font-weight: 500;
+
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
 }
 
 
