@@ -64,7 +64,7 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
         </div> */}
         <div className="FirstWrapperMobile SectionFlex">
             <div className="SectionFlex SectionRow SectionCenter">
-                <div className="contentWrapper SectionFlex SectionColumn">
+                <div className="contentWrapper">
                     <div className="linkWrapper" onClick={()=>navigation("/signup")}>
                         
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,11 +78,15 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
                         </svg>
                     </div>
 
-                    <div>
+                    <div className='TitleWrapper'>
                         <h1>Jump start your crypto portfolio</h1>
                     </div>
 
                     <h3>Coinbase is the easiest place to buy and sell cryptocurrency. Sign up and get started today.</h3>
+
+                    <div className="formWrapper">
+                        
+                    </div>
 
                 </div>
             </div>
