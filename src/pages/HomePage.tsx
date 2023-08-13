@@ -14,62 +14,60 @@ export default function HomePage({windowWidth,slidingHeader,homePageCheckr}:Slid
     const navigation = useNavigate();
 
 
-    let desctop=( 
-        <main id="main" className='PageLayoutWrapper'>
-        <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
+    let firstSectionDesctop=( 
+ 
         <div className="SectionCenter SectionFlex">
             <div className="FirstWrapper SectionFlex SectionRow ">
 
-                    <div className="ImageContainer">
-                        <picture className="NextGenImage">
-                            <img src="https://images.ctfassets.net/c5bd0wqjc7v0/5oEZBTPlhzKLA5OrNpRmsl/763c828277bea2afdb4c981441dd700f/HeroImg.webp?fl=progressive&q=100&w=1180" alt="" />
-                        </picture>
-                    </div>
+                <div className="ImageContainer">
+                    <picture className="NextGenImage">
+                        <img src="https://images.ctfassets.net/c5bd0wqjc7v0/5oEZBTPlhzKLA5OrNpRmsl/763c828277bea2afdb4c981441dd700f/HeroImg.webp?fl=progressive&q=100&w=1180" alt="" />
+                    </picture>
+                </div>
 
-                    <div className="TextWrapper SectionFlex SectionColumn SectionCenter">
+                <div className="TextWrapper SectionFlex SectionColumn SectionCenter">
 
-                        <div className='TitleWrapper SectionFlex SectionColumn'>
-                            <div className="SectionFlex SectionMaxWidthHundred">
-                                <h1>The future of money is here</h1>
-                            </div>
-                            <span></span>
-                            <div>
-                                <p>We're the most trusted place for people and businesses to buy, sell, and manage crypto.</p>
-                            </div>
+                    <div className='TitleWrapper SectionFlex SectionColumn'>
+                        <div className="SectionFlex SectionMaxWidthHundred">
+                            <h1>The future of money is here</h1>
                         </div>
-
-
-                        <div className="FormWrapper">
-                        <form className='SignupForm'>
-                            <div className="InputContainer">
-                                <input type="email" placeholder="satoshi@nakamoto.com" aria-label="satoshi@nakamoto.com" name="email" className="InputField" />
-                            </div>
-                            
-                            <button className="interactableButton">
-                                SignUp
-                            </button>
-                        </form>
-                        </div>
-
-                        <div className='TitleWrapper'>
-                            <span>
-                                Sign up and get up to $200 in crypto¹
-                            </span>
+                        <span></span>
+                        <div>
+                            <p>We're the most trusted place for people and businesses to buy, sell, and manage crypto.</p>
                         </div>
                     </div>
+
+
+                    <div className="FormWrapper">
+                    <form className='SignupForm'>
+                        <div className="InputContainer">
+                            <input type="email" placeholder="satoshi@nakamoto.com" aria-label="satoshi@nakamoto.com" name="email" className="InputField" />
+                        </div>
+                        
+                        <button className="interactableButton">
+                            SignUp
+                        </button>
+                    </form>
+                    </div>
+
+                    <div className='TitleWrapper'>
+                        <span>
+                            Sign up and get up to $200 in crypto¹
+                        </span>
+                    </div>
+                </div>
 
                     
 
-                </div> 
+            </div> 
                 
 
-            </div>
-        </main>
+        </div>
+        
         )
 
-    let mobile = ( 
-        <main id="main" className='PageLayoutWrapper'>
-        <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
+    let firstSectionMobile = ( 
+      
             <div className="FirstWrapperMobile SectionFlex">
                 <div className="SectionFlex SectionRow SectionCenter">
                     <div className="contentWrapper">
@@ -111,12 +109,48 @@ export default function HomePage({windowWidth,slidingHeader,homePageCheckr}:Slid
 
 
             </div>
-        </main>
+        
         )
 
     return(
-        windowWidth<=768? mobile
-        : desctop
+        <>
+            <main id="main" className='PageLayoutWrapper'>
+                <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
+
+                {windowWidth<=768? 
+                firstSectionMobile
+                :firstSectionDesctop
+                }
+
+                <div className='SecondWrapper'>
+                    <div className="contentWrapper">
+
+                        <div className="imageWrapper">
+                            <img src="https://images.ctfassets.net/c5bd0wqjc7v0/5vYeJAh3qUqQPsDsHIAfMT/d7a5e7b70fa6a3226e18c8b192ab33a5/browseDecentralizedApps-2.png?fl=progressive&q=100&w=1180" alt="Decentralized Identity" />
+                        </div>
+
+                        <div className="textWrapper">
+                            <div className="titleWrapper">
+                                <h1>Explore Web3 Profiles</h1>
+                                <div className="subTextWrapper">
+                                    <p>Customize your profile with an ENS username, check out other profiles, explore popular NFT collections, and more.</p>
+                                </div>
+                            </div>
+
+                            <div className="buttonWrapper">
+                                <button className='interactableButton'>Learn More -</button>
+                            </div>
+
+                        </div>
+
+                    
+                    </div>
+                </div>
+            </main>
+        </>
+
+
+
     )
 
     //  return( ):return desctop

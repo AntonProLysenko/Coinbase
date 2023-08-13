@@ -700,7 +700,7 @@
 }
 .FirstWrapperMobile .contentWrapper .TitleWrapper h1 {
   text-align: start;
-  font-size: 62px;
+  font-size: 65px;
   line-height: 1.15;
   margin-top: 8px;
   margin-bottom: 16px;
@@ -763,7 +763,7 @@
   .FirstWrapper .TextWrapper .TitleWrapper h1 {
     font-size: 34px;
     line-height: 44px;
-    font-weight: 200;
+    font-weight: 400;
   }
   .FirstWrapper .TextWrapper .TitleWrapper p {
     font-size: 16px;

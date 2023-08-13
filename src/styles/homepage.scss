@@ -193,7 +193,7 @@ $primary: rgb(0, 82, 250);
         .TitleWrapper {
             h1 {
                 text-align: start;
-                font-size: 62px;
+                font-size: 65px;
                 // font-weight: 500;
                 line-height: 1.15;
                 margin-top: $spacing-1;
@@ -202,7 +202,7 @@ $primary: rgb(0, 82, 250);
         }
 
         h3{
-            font-size: 20px;
+            font-size: 23px;
             line-height: 1.4;
             margin-bottom: $spacing-4;
             text-align: start;
@@ -261,6 +261,115 @@ $primary: rgb(0, 82, 250);
     }
 }
 
+
+
+
+.SecondWrapper{
+    // height:200px;
+    width:100%;
+    background-color: rgb(10,11,13);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    // align-items: center;
+
+    .contentWrapper{
+        max-width: 1180px;
+        width: 100%;
+        display:flex;
+        align-items: center;
+
+        .imageWrapper{
+            height: 100%;
+            display: flex;
+            align-self: center;
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textWrapper{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+            width:100%;
+            padding:$spacing-3 $spacing-0 $spacing-3 $spacing-6;
+
+            .titleWrapper{
+                display: flex;
+                flex-direction: column;
+                padding-right: $spacing-2;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-with:1280px) {
+
+    .SecondWrapper {
+    
+    
+            .contentWrapper {
+
+                .textWrapper{
+                    padding: $spacing-2 $spacing-0 $spacing-2 $spacing-3;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    align-content: flex-start;
+                    justify-content: space-between;
+                }
+            }
+        }
+        
+}
+
 @media screen and (max-width:1090px) {
 
     .FirstWrapper {
@@ -277,14 +386,10 @@ $primary: rgb(0, 82, 250);
                     h1 {
                         font-size: 34px;
                         line-height: 44px;
-                        font-weight: 200;
+                        font-weight: 600;
                     }
     
-                    span {
-                        
-
-                    
-                    }
+                
     
                     p {
                     font-size: 16px;
@@ -298,6 +403,23 @@ $primary: rgb(0, 82, 250);
     .ImageContainer{
             min-width: auto;
                 height: 680px;
+    }
+
+    .SecondWrapper {
+      
+
+        .contentWrapper {
+       
+
+            .imageWrapper {
+                height: auto;
+
+                img {
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 
 }

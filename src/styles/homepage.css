@@ -154,13 +154,13 @@
 }
 .FirstWrapperMobile .contentWrapper .TitleWrapper h1 {
   text-align: start;
-  font-size: 62px;
+  font-size: 65px;
   line-height: 1.15;
   margin-top: 8px;
   margin-bottom: 16px;
 }
 .FirstWrapperMobile .contentWrapper h3 {
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.4;
   margin-bottom: 32px;
   text-align: start;
@@ -206,6 +206,53 @@
   font-size: 16px;
 }
 
+.SecondWrapper {
+  width: 100%;
+  background-color: rgb(10, 11, 13);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.SecondWrapper .contentWrapper {
+  max-width: 1180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.SecondWrapper .contentWrapper .imageWrapper {
+  height: 100%;
+  display: flex;
+  align-self: center;
+}
+.SecondWrapper .contentWrapper .imageWrapper img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.SecondWrapper .contentWrapper .textWrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 0px 24px 48px;
+}
+.SecondWrapper .contentWrapper .textWrapper .titleWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  align-items: flex-start;
+}
+
+@media screen and (max-with: 1280px) {
+  .SecondWrapper .contentWrapper .textWrapper {
+    padding: 16px 0px 16px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 1090px) {
   .FirstWrapper {
     max-width: 1180px;
@@ -217,7 +264,7 @@
   .FirstWrapper .TextWrapper .TitleWrapper h1 {
     font-size: 34px;
     line-height: 44px;
-    font-weight: 200;
+    font-weight: 600;
   }
   .FirstWrapper .TextWrapper .TitleWrapper p {
     font-size: 16px;
@@ -227,6 +274,14 @@
   .ImageContainer {
     min-width: auto;
     height: 680px;
+  }
+  .SecondWrapper .contentWrapper .imageWrapper {
+    height: auto;
+  }
+  .SecondWrapper .contentWrapper .imageWrapper img {
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (max-width: 560px) {
