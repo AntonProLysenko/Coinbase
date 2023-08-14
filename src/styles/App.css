@@ -352,7 +352,7 @@
   max-width: 100dvw;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  height: calc(100vh - 93px);
+  min-height: calc(100vh - 93px);
   overflow: scroll;
   background: rgb(255, 255, 255);
   z-index: -1;
@@ -838,7 +838,7 @@
 
 .App {
   text-align: center;
-  max-width: 99dvw;
+  max-width: 99.9dvw;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
