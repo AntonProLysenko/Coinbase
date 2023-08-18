@@ -3,7 +3,6 @@
   max-width: 100%;
   height: 104px;
   top: 0px;
-  background: rgb(255, 255, 255);
   z-index: 2;
   overflow-x: none;
 }
@@ -353,7 +352,7 @@
   max-width: 100dvw;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  height: calc(100dvh - 93px);
+  height: calc(100vh - 93px);
   overflow: scroll;
   background: rgb(255, 255, 255);
   z-index: -1;
@@ -502,9 +501,6 @@
 }
 
 @media (max-width: 1050px) {
-  .App {
-    min-width: 100dvw;
-  }
   .banner {
     max-height: 40.5px;
     padding-bottom: 1.5px;
@@ -687,7 +683,83 @@
   max-width: 768px;
   padding: 24px 56px;
 }
+.FirstWrapperMobile .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0px;
+  align-items: flex-start;
+  padding: 80px 0;
+}
+.FirstWrapperMobile .contentWrapper .linkWrapper {
+  color: rgb(0, 82, 250);
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: row;
+}
+.FirstWrapperMobile .contentWrapper .TitleWrapper h1 {
+  text-align: start;
+  font-size: 62px;
+  line-height: 1.15;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.FirstWrapperMobile .contentWrapper h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  text-align: start;
+  font-weight: 600;
+}
+.FirstWrapperMobile .contentWrapper .formWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.FirstWrapperMobile .contentWrapper .formWrapper .inputWrapper {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(91, 97, 110, 0.2);
+  border-radius: 4px;
+  transition: all 0.15s ease 0s;
+  background: white;
+}
+.FirstWrapperMobile .contentWrapper .formWrapper .inputWrapper input {
+  z-index: 0;
+  width: 100%;
+  margin: 0px;
+  padding: 20px;
+  border-radius: 3px;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  box-sizing: border-box;
+  font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.FirstWrapperMobile .contentWrapper .formWrapper .buttonWrapper {
+  margin-top: 8px;
+  margin-left: 0px;
+}
 
+@media screen and (max-width: 560px) {
+  .FirstWrapperMobile {
+    padding: 24px;
+  }
+  .FirstWrapperMobile .contentWrapper .TitleWrapper h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .FirstWrapperMobile .contentWrapper h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .FirstWrapperMobile .contentWrapper .formWrapper {
+    flex-direction: column;
+  }
+}
 .interactableButton, .mobileButtonWrapper button {
   display: inline-flex;
   cursor: pointer;
@@ -700,7 +772,7 @@
   line-height: 1.15;
   padding: 0 32px;
   white-space: nowrap;
-  background-color: #0052fa;
+  background-color: rgb(0, 82, 250);
   color: rgb(255, 255, 255);
   outline: 0;
   justify-content: center;

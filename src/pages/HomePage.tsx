@@ -85,7 +85,17 @@ export default function HomePage({slidingHeader,homePageCheckr}:SlidingProps) {
                     <h3>Coinbase is the easiest place to buy and sell cryptocurrency. Sign up and get started today.</h3>
 
                     <div className="formWrapper">
-                        
+                        {/* <form action=""> */}
+
+                        <div className="inputWrapper">
+                            <input type="text" placeholder='Email address' />
+                        </div>
+
+                        <div className="buttonWrapper">
+                            <button className='interactableButton'>Sign Up</button>
+                        </div>
+                        {/* </form> */}
+
                     </div>
 
                 </div>

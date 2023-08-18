@@ -208,6 +208,53 @@ $primary: rgb(0, 82, 250);
             text-align: start;
             font-weight: 600;
         }
+        .formWrapper{
+            display: flex;
+            flex-direction: row;
+            width:100%;
+
+            .inputWrapper{
+                // position: relative;
+                    flex: 1 1 auto;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: rgba(91,97,110,0.2);
+                    border-radius: 4px;
+                    transition: all 0.15s ease 0s;
+                    background: white;
+
+                input{
+                    z-index: 0;
+                    // flex: 1 1 0px;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 20px;
+                    border-radius: 3px;
+                    background: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    // color: rgb(10,11,13);
+                    border: none;
+                    box-sizing: border-box;
+                    font-family: CoinbaseSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                }
+            }
+
+            .buttonWrapper {
+                margin-left: $spacing-2;
+                margin-top: 0;
+                max-width:160px;
+                min-width: 160px;
+                
+            
+            button {
+                    width: 100%;
+                    border-radius: 4px;
+                    padding: 34px;
+                    font-size: 16px;
+                }
+            }
+        }
      
         
 
@@ -217,6 +264,7 @@ $primary: rgb(0, 82, 250);
 
 @media screen and (max-width:560px) {
     .FirstWrapperMobile{
+        padding: $spacing-3;
         .contentWrapper{
             .TitleWrapper{
                 h1 {
@@ -228,6 +276,19 @@ $primary: rgb(0, 82, 250);
                 font-size: 16px;
                     line-height: 24px;
                     font-weight: 400;
+            }
+            .formWrapper{
+                flex-direction: column;
+
+                .buttonWrapper {
+                        margin-top: $spacing-1;
+                        margin-left: 0px;
+                        display: block;
+                        padding: 0;
+                        max-width: 100%;         
+                    }
+
+                
             }
         }
     }
