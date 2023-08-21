@@ -131,14 +131,14 @@ export default function HomePage({windowWidth,slidingHeader,homePageCheckr}:Slid
 
                         <div className="textWrapper">
                             <div className="titleWrapper">
-                                <h1>Explore Web3 Profiles</h1>
+                                <h2>Explore Web3 Profiles</h2>
                                 <div className="subTextWrapper">
                                     <p>Customize your profile with an ENS username, check out other profiles, explore popular NFT collections, and more.</p>
                                 </div>
                             </div>
 
                             <div className="buttonWrapper">
-                                <button className='interactableButton'>Learn More -</button>
+                                <button className='interactableButton'>Learn More <span>→</span></button>
                             </div>
 
                         </div>

@@ -217,7 +217,6 @@
   max-width: 1180px;
   width: 100%;
   display: flex;
-  align-items: center;
 }
 .SecondWrapper .contentWrapper .imageWrapper {
   height: 100%;
@@ -226,16 +225,21 @@
 }
 .SecondWrapper .contentWrapper .imageWrapper img {
   height: 100%;
+  max-width: 198px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .SecondWrapper .contentWrapper .textWrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  position: relative;
   width: 100%;
   padding: 24px 0px 24px 48px;
+  color: white;
 }
 .SecondWrapper .contentWrapper .textWrapper .titleWrapper {
   display: flex;
@@ -243,14 +247,58 @@
   padding-right: 16px;
   align-items: flex-start;
 }
+.SecondWrapper .contentWrapper .textWrapper .titleWrapper h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  text-align: start;
+}
+.SecondWrapper .contentWrapper .textWrapper .titleWrapper .subTextWrapper {
+  max-width: 700px;
+  text-align: start;
+  padding: 16px 8px 16px 0px;
+}
+.SecondWrapper .contentWrapper .textWrapper .titleWrapper .subTextWrapper p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: start;
+}
+.SecondWrapper .contentWrapper .textWrapper .buttonWrapper {
+  min-width: 205px;
+  display: flex;
+  padding: 0px;
+  flex: 0 0;
+  justify-content: center;
+  align-items: center;
+}
+.SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  color: rgb(10, 11, 13);
+}
+.SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton span {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
 
-@media screen and (max-with: 1280px) {
+@media screen and (max-width: 1280px) {
+  .SecondWrapper .contentWrapper .imageWrapper img {
+    max-width: unset;
+  }
   .SecondWrapper .contentWrapper .textWrapper {
     padding: 16px 0px 16px 24px;
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
     justify-content: space-between;
+  }
+  .SecondWrapper .contentWrapper .textWrapper .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+    align-items: flex-start;
   }
 }
 @media screen and (max-width: 1090px) {
@@ -282,6 +330,32 @@
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .SecondWrapper .contentWrapper .imageWrapper img {
+    max-width: unset;
+  }
+  .SecondWrapper .contentWrapper .textWrapper .titleWrapper h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .SecondWrapper .contentWrapper .textWrapper .titleWrapper .subTextWrapper p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .SecondWrapper .contentWrapper .textWrapper .buttonWrapper {
+    padding-right: 16px;
+    width: 95%;
+  }
+  .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton {
+    height: 40px;
+    width: 100%;
+    color: rgb(10, 11, 13);
+  }
+  .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton span {
+    font-size: 35px;
+    margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 560px) {
