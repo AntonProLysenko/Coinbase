@@ -350,8 +350,6 @@
   position: relative;
   width: 100%;
   max-width: 100dvw;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
   min-height: calc(100vh - 93px);
   overflow: scroll;
   background: rgb(255, 255, 255);

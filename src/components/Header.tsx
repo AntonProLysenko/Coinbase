@@ -1,19 +1,23 @@
 import {Link} from "react-router-dom"
 import { useState, useRef,useEffect  } from "react";
 
+// import{Props} from"./Types/propTypes"
 
-type SlidingProps = {
+
+ type Props = {
    //React declares type by itself in states if we are passing the default value
     slidingHeader:React.SetStateAction<boolean>//I took the type from the declaration on the usestate
-    // homePageCheckr:React.RefObject<HTMLDivElement>
     headerCheckr:React.RefObject<HTMLDivElement>
+    
+    isMobileActive:React.SetStateAction<boolean>
+    setMobileActive:React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
-export default function Header({headerCheckr, slidingHeader}:SlidingProps) {
+export default function Header({slidingHeader, headerCheckr, isMobileActive,setMobileActive}:Props) {
 
 
-let [isMobileActive,setisMobileActive] = useState(false)
+// let [isMobileActive,setisMobileActive] = useState(false)
 
 //submenus activation
 let[exploreActive, setExploreActive] = useState(false)
@@ -33,7 +37,7 @@ let[companyActive, setCompanyActive] = useState(false)
 
 
 const showHide=() => {
-  setisMobileActive(!isMobileActive);
+  setMobileActive(!isMobileActive);
 };
 
 
@@ -724,6 +728,32 @@ const showSubMenu=(evt:any)=>{
               </div>  
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {/*MOBILE */}

@@ -511,57 +511,54 @@ $primary: rgb(0, 82, 250);
     .SecondWrapper {
     
     
-            .contentWrapper {
-    
-    
-                .imageWrapper {
-    
-                    img {
-                        max-width: unset;
-    
-                    }
-    
+        .contentWrapper {
+
+
+            .imageWrapper {
+
+                img {
+                    max-width: unset;
+
                 }
-    
-                .textWrapper {
-                
-    
-                    .titleWrapper {
-                        h2{
-                            font-size: 28px;
-                            line-height: 36px;
-                        }
+            }
 
-                        .subTextWrapper {
-                
-
-                            p {
-                                font-size: 14px;
-                                line-height: 20px;
-                            }
-                        }
-                        // .subTextWrapper {}
+            .textWrapper {
+                .titleWrapper {
+                    h2{
+                        font-size: 28px;
+                        line-height: 36px;
                     }
+                    .subTextWrapper {
+            
 
-                    .buttonWrapper {
-                        padding-right: 16px;
-                        width: 95%;
+                        p {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    // .subTextWrapper {}
+                }
 
-                        .interactableButton{
-                            height:40px;
-                            width:100%;
-                            color:rgb(10,11,13);
-                            span{
-                                font-size: 35px;
-                                margin-bottom: 5px;
-                            }
+                .buttonWrapper {
+                    padding-right: 16px;
+                    width: 95%;
+
+                    .interactableButton{
+                        height:40px;
+                        width:100%;
+                        color:rgb(10,11,13);
+                        span{
+                            font-size: 35px;
+                            margin-bottom: 5px;
                         }
                     }
                 }
             }
         }
-
+    }
 }
+
+
 @media screen and (max-width:560px) {
     .FirstWrapperMobile{
         padding: $spacing-3;

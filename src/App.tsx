@@ -16,6 +16,7 @@ function App() {
   const headerCheckr = useRef<HTMLDivElement>(null)
 
   let[slidingHeader, setSlidingHeader] = useState(false)
+  let [isMobileActive,setMobileActive] = useState(false)
 
   const handleResize=()=>{
     setWindowWidth(window.innerWidth)
@@ -38,10 +39,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header slidingHeader={slidingHeader} headerCheckr={headerCheckr} />
+      <Header slidingHeader={slidingHeader} headerCheckr={headerCheckr} isMobileActive={isMobileActive} setMobileActive={setMobileActive} />
       <Routes>
         {/* send email on first Wrapper to sign up page  */}
-        <Route path="/" element = {<HomePage windowWidth={windowWidth} slidingHeader={slidingHeader} homePageCheckr={homePageCheckr}/>}/>
+        <Route path="/" element = {<HomePage windowWidth={windowWidth} slidingHeader={slidingHeader} isMobileActive={isMobileActive} setMobileActive={setMobileActive}  homePageCheckr={homePageCheckr}/>}/>
         <Route path="/signup" element={<SignUpPage/>}/> 
       </Routes>
      
