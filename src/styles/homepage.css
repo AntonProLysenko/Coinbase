@@ -225,6 +225,7 @@
 }
 .SecondWrapper .contentWrapper .imageWrapper img {
   height: 100%;
+  width: 100%;
   max-width: 198px;
   -o-object-fit: cover;
      object-fit: cover;

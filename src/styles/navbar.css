@@ -351,6 +351,7 @@
   width: 100%;
   max-width: 100dvw;
   min-height: calc(100vh - 93px);
+  min-height: 100vh;
   overflow: scroll;
   background: rgb(255, 255, 255);
   z-index: -1;
@@ -358,6 +359,11 @@
 .mobileCenterWrapper ::-webkit-scrollbar ::-webkit-scrollbar-thumb ::-webkit-scrollbar-track {
   width: 0px;
   border: none;
+}
+.mobileCenterWrapper .centerNavItems {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
 }
 .mobileCenterWrapper .navLinkItem {
   margin: 0;

@@ -483,7 +483,7 @@ $spacing-4: 32px;
 
     // max-height: fit-content;
     min-height: calc(100vh - 93px);
-    
+    min-height: 100vh;
     // height: 100dvh;
     overflow: scroll;
     background: rgb(255, 255, 255);
@@ -492,6 +492,10 @@ $spacing-4: 32px;
     ::-webkit-scrollbar ::-webkit-scrollbar-thumb ::-webkit-scrollbar-track {
         width: 0px;
         border: none;
+    }
+    .centerNavItems{
+        height: fit-content;
+        overflow-y: scroll;
     }
 
 

@@ -760,7 +760,7 @@ const showSubMenu=(evt:any)=>{
         <div className={isMobileActive?"mobileNavContainer active":"mobileNavContainer"}>
           
           <nav className="mobileCenterWrapper">
-              {/* <div className="centerNavItems"> */}
+              <div className="centerNavItems">
                 <div className="styledLink  mobileLinkItem" title="Explore" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
                   <div  title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
@@ -1071,7 +1071,7 @@ const showSubMenu=(evt:any)=>{
                     <button className="mobileInteractableButton mobileSignInInteractableButton">Sign in</button>
                   </Link>
                 </div>
-              {/* </div> */}
+              </div>
           </nav>
       </div>
        
