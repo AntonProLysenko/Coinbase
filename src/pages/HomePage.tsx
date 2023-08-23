@@ -127,8 +127,8 @@ export default function HomePage({slidingHeader,homePageCheckr,windowWidth,isMob
 
     return(
         <>
-            <main id="main" className='PageLayoutWrapper'>
-                <div className={!slidingHeader?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
+            <main id="main" className={isMobileActive?'PageLayoutWrapper no-scroll':"PageLayoutWrapper"}>
+                <div className={!slidingHeader||isMobileActive?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
 
                 {windowWidth<=768? 
                 firstSectionMobile

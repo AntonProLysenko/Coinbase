@@ -125,8 +125,8 @@ const showSubMenu=(evt:any)=>{
 
   return (
     <>
-    <div className={slidingHeader?'headerUnderlay sliding':'headerUnderlay'}></div>
-    <header className={ slidingHeader?'mainNav_wrapper sliding': "mainNav_wrapper notSliding"} ref = {headerCheckr}>
+    <div className={slidingHeader&&!isMobileActive?'headerUnderlay sliding':isMobileActive?'headerUnderlay':"headerUnderlay"}></div>
+    <header className={ slidingHeader&&!isMobileActive?'mainNav_wrapper sliding':isMobileActive? "mainNav_wrapper notSliding":"mainNav_wrapper notSliding"} ref = {headerCheckr}>
         <div className='bannerWrapper'>
             <div className='banner'>
                 <Link className=" styledLink banerStyledLink" to = "/signup" >
@@ -761,7 +761,7 @@ const showSubMenu=(evt:any)=>{
           
           <nav className="mobileCenterWrapper">
               <div className="centerNavItems">
-                <div className="styledLink  mobileLinkItem" title="Explore" aria-expanded="false" onClick={evt=>showSubMenu(evt.target)}>
+                <div className="styledLink  mobileLinkItem" title="Explore" aria-expanded="false" onClick={(evt)=>{showSubMenu(evt.target); console.log(evt)}}>
                   <div  title="Explore">
                     <span className="textLabel" title="Explore">Explore</span>
                   </div>

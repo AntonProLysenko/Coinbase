@@ -37,6 +37,7 @@ $primary: rgb(0, 82, 250);
 .PageLayoutWrapper {
     border-bottom: 1px solid var(--line);
     width: 100%;
+    overflow-y: hidden;
 }
 
 .FirstWrapper {

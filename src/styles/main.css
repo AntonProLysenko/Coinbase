@@ -4,7 +4,6 @@
   height: 104px;
   top: 0px;
   z-index: 2;
-  overflow-x: none;
 }
 
 .mainNav_wrapper.notSliding {
@@ -337,7 +336,7 @@
 
 .mobileNavContainer {
   display: none;
-  height: 10px;
+  height: 100vh;
 }
 
 .mobileCenterWrapper {
@@ -350,16 +349,19 @@
   position: relative;
   width: 100%;
   max-width: 100dvw;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
   min-height: calc(100vh - 93px);
+  min-height: 100vh;
   overflow: scroll;
   background: rgb(255, 255, 255);
-  z-index: -1;
 }
 .mobileCenterWrapper ::-webkit-scrollbar ::-webkit-scrollbar-thumb ::-webkit-scrollbar-track {
   width: 0px;
   border: none;
+}
+.mobileCenterWrapper .centerNavItems {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
 }
 .mobileCenterWrapper .navLinkItem {
   margin: 0;
@@ -567,6 +569,7 @@
 .PageLayoutWrapper {
   border-bottom: 1px solid var(--line);
   width: 100%;
+  overflow-y: hidden;
 }
 
 .FirstWrapper {
@@ -771,6 +774,7 @@
 }
 .SecondWrapper .contentWrapper .imageWrapper img {
   height: 100%;
+  width: 100%;
   max-width: 198px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -891,8 +895,8 @@
     line-height: 20px;
   }
   .SecondWrapper .contentWrapper .textWrapper .buttonWrapper {
-    width: 100%;
     padding-right: 16px;
+    width: 95%;
   }
   .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton, .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .mobileButtonWrapper button, .mobileButtonWrapper .SecondWrapper .contentWrapper .textWrapper .buttonWrapper button {
     height: 40px;
@@ -928,6 +932,11 @@
     max-width: 100%;
   }
 }
+.no-scroll {
+  overflow: hidden;
+  height: 10px;
+}
+
 .interactableButton, .mobileButtonWrapper button {
   display: inline-flex;
   cursor: pointer;

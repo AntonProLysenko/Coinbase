@@ -15,14 +15,14 @@ $spacing-4: 32px;
     // background: rgb(255, 255, 255);
     z-index: 2;
     // box-shadow: rgb(208, 206, 206) 0px -1px 0px 1px;
-    overflow-x: none;
+    // overflow-x: none;
 }
 
 .mainNav_wrapper.notSliding {//has to be changed on scroll of 104px from top
     position: static;
     .banner{
-            transform: translateY(-40px);
-                animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
+        transform: translateY(-40px);
+        animation: slide_down 300ms ease-in-out 0.133s 1 normal forwards running;
     }
 }
 
@@ -465,7 +465,7 @@ $spacing-4: 32px;
 .mobileNavContainer {
     // min-height: 10vh;
     display: none;
-    height: 10px //whtouth small pixel value the menu doesn't scroll
+    height: 100vh //whtouth small pixel value the menu doesn't scroll
 
 }
 
@@ -487,7 +487,7 @@ $spacing-4: 32px;
     // height: 100dvh;
     overflow: scroll;
     background: rgb(255, 255, 255);
-    z-index: -1;
+    // z-index: -1;
 
     ::-webkit-scrollbar ::-webkit-scrollbar-thumb ::-webkit-scrollbar-track {
         width: 0px;

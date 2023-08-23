@@ -16,6 +16,11 @@ $spacing-10: 80px;
 @import "navbar";
 @import "homepage";
 
+.no-scroll{
+    overflow: hidden;
+    height: 10px;
+}
+
 
 
 .interactableButton {
