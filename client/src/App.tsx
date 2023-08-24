@@ -73,9 +73,6 @@ function App() {
     <>
     <div className="App">
       <Header slidingHeader={slidingHeader} headerCheckr={headerCheckr} isMobileActive={isMobileActive} setMobileActive={setMobileActive} />
-      <div style={{margin:"100px"}}>
-      <button onClick={getHomepageCoinData}>Server request</button>
-      </div>
         
 
       <Routes>
