@@ -7,6 +7,9 @@ const KEY = process.env.KEY || 3001;
 
 router.get("/coins", function (req, res) {
 
+    console.log(req);
+    
+
     var url =`https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=BTC&market=USD&apikey=${KEY}`;
     request.get(
       {
@@ -23,7 +26,7 @@ router.get("/coins", function (req, res) {
         } else {
         //   console.log(data);
           let dalyData = Object.keys(data)[1];
-          console.log(data[dalyData]);
+        //   console.log(data[dalyData]);
           res.send(data[dalyData]);
         }
       }
