@@ -36,7 +36,7 @@ function App() {
 
  const getCoin = async()=>{
         try{
-          let metric = await axios.get(`http://localhost:3001/api/coins`)            
+          let metric = await axios.get(`${BASIC_URL}/api/coins`)            
             console.log("Personal",metric.data );
 
         }catch(e){
