@@ -9,7 +9,7 @@ import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
 import SignUpPage from './pages/SignUpPage';
 
-const KEY = process.env.REACT_APP_KEY;
+
 const BASIC_URL = process.env.REACT_APP_BASIC_URL
 
 
