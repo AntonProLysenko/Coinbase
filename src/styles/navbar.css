@@ -336,7 +336,15 @@
 
 .mobileNavContainer {
   display: none;
-  height: 100vh;
+  height: 100lvh;
+  position: absolute;
+  display: none;
+  height: 100lvh;
+  z-index: 3;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  right: 0;
 }
 
 .mobileCenterWrapper {

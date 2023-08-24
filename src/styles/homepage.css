@@ -19,7 +19,6 @@
 }
 
 .PageLayoutWrapper {
-  border-bottom: 1px solid var(--line);
   width: 100%;
   overflow-y: hidden;
 }
@@ -283,6 +282,65 @@
 .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton span {
   font-size: 35px;
   margin-bottom: 5px;
+}
+
+.ThirdWrapper {
+  padding: 40px 8px 40px 8px;
+  display: flex;
+  justify-content: center;
+}
+.ThirdWrapper .ContentWrapper {
+  max-width: 1180px;
+  width: 100%;
+  padding: 0;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid rgba(91, 97, 110, 0.2);
+}
+.ThirdWrapper .ContentWrapper .TextWrapper {
+  max-width: 500px;
+  padding: 0px 24px 0px 24px;
+  display: flex;
+  align-items: flex-start;
+}
+.ThirdWrapper .ContentWrapper .TextWrapper .TextContainer {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgb(10, 11, 13);
+}
+.ThirdWrapper .ContentWrapper .TextWrapper .TextContainer h2 {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 400;
+  text-align: start;
+}
+.ThirdWrapper .ContentWrapper .TextWrapper .TextContainer span {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 16px;
+}
+.ThirdWrapper .ContentWrapper .TextWrapper .TextContainer p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: start;
+}
+.ThirdWrapper .ContentWrapper .TextWrapper .TextContainer button {
+  height: 54px;
+}
+.ThirdWrapper .ContentWrapper .ImageWrapper {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ThirdWrapper .ContentWrapper .ImageWrapper img {
+  max-width: 298px;
 }
 
 @media screen and (max-width: 1280px) {

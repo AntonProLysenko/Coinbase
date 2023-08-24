@@ -465,7 +465,15 @@ $spacing-4: 32px;
 .mobileNavContainer {
     // min-height: 10vh;
     display: none;
-    height: 100vh //whtouth small pixel value the menu doesn't scroll
+    height: 100lvh; //whtouth small pixel value the menu doesn't scroll
+        position: absolute;
+            display: none;
+            height: 100lvh;
+            z-index: 3;
+            top: auto;
+            bottom: auto;
+            left: 0;
+            right: 0;
 
 }
 
