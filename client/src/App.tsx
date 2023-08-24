@@ -29,38 +29,14 @@ function App() {
 
  
 
-const getMetric = async()=>{
-  try {
-      let metric = await axios.get(`${BASIC_URL}/metrics/asset/ETH/current`, {headers:{"X-CoinAPI-Key": `${KEY}`}})
-      console.log(metric)
-  } catch (error) {
-    
-    console.log(error);
-    
-  }
-  
-}
 
-const fetchPrice = async(coin:string)=>{
-fetch(`${BASIC_URL}/metrics/asset/${coin}/current`, {
-  headers: {
-    "X-CoinAPI-Key": `${KEY}` // Replace with your API key
-    }
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-}
+
 
 
 
  const getCoin = async()=>{
         try{
-          let metric = await axios.get(`http://localhost:3001/api/coins`)
-          
-            // const response = await fetch(`${BASIC_URL}/exchangerate/BTC/USD?apikey=${KEY}`)
-            // const data = await metric.json();
-            
+          let metric = await axios.get(`http://localhost:3001/api/coins`)            
             console.log("Personal",metric.data );
 
         }catch(e){
