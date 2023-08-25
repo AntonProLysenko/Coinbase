@@ -285,7 +285,7 @@
 }
 
 .ThirdWrapper {
-  padding: 40px 8px 40px 8px;
+  padding: 80px 24px 80px 24px;
   display: flex;
   justify-content: center;
 }
@@ -295,18 +295,17 @@
   padding: 0;
   padding-top: 64px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   border-top: 1px solid rgba(91, 97, 110, 0.2);
 }
 .ThirdWrapper .ContentWrapper .TextWrapper {
-  max-width: 500px;
-  padding: 0px 24px 0px 24px;
+  padding: 0px;
   display: flex;
   align-items: flex-start;
 }
 .ThirdWrapper .ContentWrapper .TextWrapper .TextContainer {
-  padding: 0;
+  padding: 40px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -333,8 +332,8 @@
   height: 54px;
 }
 .ThirdWrapper .ContentWrapper .ImageWrapper {
-  width: 100%;
-  padding: 40px 0 40px 0;
+  width: 40%;
+  padding-left: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -416,6 +415,23 @@
   .SecondWrapper .contentWrapper .textWrapper .buttonWrapper .interactableButton span {
     font-size: 35px;
     margin-bottom: 5px;
+  }
+  .ThirdWrapper {
+    padding: 40px 8px 40px 8px;
+  }
+  .ThirdWrapper .ContentWrapper {
+    flex-direction: column;
+  }
+  .ThirdWrapper .ContentWrapper .TextWrapper {
+    padding: 0px 24px 0px 24px;
+    max-width: 500px;
+  }
+  .ThirdWrapper .ContentWrapper .TextWrapper .TextContainer {
+    padding: 0px;
+  }
+  .ThirdWrapper .ContentWrapper .ImageWrapper {
+    width: 100%;
+    padding: 40px 0;
   }
 }
 @media screen and (max-width: 560px) {
