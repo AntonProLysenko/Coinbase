@@ -39,7 +39,7 @@ function App() {
   console.log(BASIC_URL);
   
         try{
-          let metric = await axios.get(`/api/coins`)            
+          let metric = await axios.get(`${BASIC_URL}/api/coins`)            
             console.log("Personal",metric.data );
 
         }catch(e){
