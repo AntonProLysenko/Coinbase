@@ -300,6 +300,8 @@
   border-top: 1px solid rgba(91, 97, 110, 0.2);
 }
 .ThirdWrapper .ContentWrapper .TextWrapper {
+  width: 60%;
+  max-width: 500px;
   padding: 0px;
   display: flex;
   align-items: flex-start;
@@ -424,7 +426,6 @@
   }
   .ThirdWrapper .ContentWrapper .TextWrapper {
     padding: 0px 24px 0px 24px;
-    max-width: 500px;
   }
   .ThirdWrapper .ContentWrapper .TextWrapper .TextContainer {
     padding: 0px;

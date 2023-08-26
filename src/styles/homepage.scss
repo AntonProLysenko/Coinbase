@@ -374,7 +374,8 @@ $primary: rgb(0, 82, 250);
         border-top:1px solid rgba(91,97,110,0.2);
 
         .TextWrapper{
-            // width: 100%;
+            width: 60%;
+            max-width: 500px;
             padding: $spacing-0;
             display: flex;
             align-items: flex-start;
@@ -619,7 +620,7 @@ $primary: rgb(0, 82, 250);
             flex-direction: column;
             .TextWrapper{
                 padding: $spacing-0 $spacing-3 $spacing-0 $spacing-3;
-                max-width: 500px;
+                // max-width: 500px;
                 .TextContainer{
                     padding: $spacing-0;
                 }
