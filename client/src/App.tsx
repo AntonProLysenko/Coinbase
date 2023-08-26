@@ -32,7 +32,7 @@ function App() {
  const getCoin = async()=>{  
         try{
           let metric = await axios.get(`${BASIC_URL}/api/coins`,{headers:{"coins":possibleCoins}})            
-            console.log("Personal",metric.data );
+            console.log("Personal",metric );
 
         }catch(e){
             console.error(e)
