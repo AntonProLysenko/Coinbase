@@ -21,10 +21,15 @@ import {useNavigate} from 'react-router-dom'
     isMobileActive:React.SetStateAction<boolean>
     setMobileActive:React.Dispatch<React.SetStateAction<boolean>>
     windowWidth:number
+
+    homepageData:object
 }
-export default function HomePage({slidingHeader,homePageCheckr,windowWidth,isMobileActive,setMobileActive}:Props) {
+export default function HomePage({homepageData,slidingHeader,homePageCheckr,windowWidth,isMobileActive,setMobileActive}:Props) {
 
     const navigation = useNavigate();
+
+    console.log("homepageData",homepageData);
+    
 
 
     let firstSectionDesctop=( 

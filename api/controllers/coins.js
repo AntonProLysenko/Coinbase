@@ -11,7 +11,6 @@ const gainersURL = 'https://api.coinmarketcap.com/data-api/v3/cryptocurrency/spo
     let topSixGainers = []
 
     for(let i = 0; i<6; i++){
-        console.log(typeof(data.data.gainerList));
         data.data.gainerList[i].img=`https://s2.coinmarketcap.com/static/img/coins/64x64/${data.data.gainerList[i].id}.png`
         topSixGainers.push(data.data.gainerList[i]);
     }   
