@@ -36,26 +36,24 @@ function App() {
  const getHomepageCoinData = async()=>{  
   const topSixSymbols=["BTC","ETH","USDT","XRP","USDC"]
 
-  let homePageCoinData={
-    topHomepageCoins:[],
-    topGainers:[],
-    lastAdded:{}
-  }
+  // let homePageCoinData={
+  //   topHomepageCoins:[],
+  //   topGainers:[],
+  //   lastAdded:{}
+  // }
     try{
       let topSixCoins = await axios.get(`${BASIC_URL}/api/topSix`,{ headers: {top:topSixSymbols}})
-      homePageCoinData.topHomepageCoins=topSixCoins.data
+      // homePageCoinData.topHomepageCoins=topSixCoins.data
 
 
       let topGainers = await axios.get(`${BASIC_URL}/api/topgainers`)  
-        topGainers.data.forEach((coin:never)=>{
-          homePageCoinData.topGainers.push(coin)
-        })
+        // topGainers.data.forEach((coin:never)=>{
+        //   homePageCoinData.topGainers.push(coin)
+        // })
 
       let coinbase = await axios.get(`${BASIC_URL}/api/new`)
-      console.log("Coinbase", coinbase.data);
-      homePageCoinData.lastAdded=coinbase.data.recentlyAddedAssets[0]
-      console.log("homePageData",homePageCoinData);
-      if (homePageCoinData)setHomepageData({
+      // homePageCoinData.lastAdded=coinbase.data.recentlyAddedAssets[0]
+      setHomepageData({
         topHomepageCoins:topSixCoins.data,
         topGainers:topGainers.data,
         lastAdded:coinbase.data.recentlyAddedAssets[0]
@@ -76,6 +74,7 @@ function App() {
     })
     if (headerCheckr.current)headerObserver.observe(headerCheckr.current)
     if (homePageCheckr.current)homePageObserver.observe(homePageCheckr.current)
+
     getHomepageCoinData()
   },[])
 

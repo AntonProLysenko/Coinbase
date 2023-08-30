@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 
 // import{Props} from"../components/Types/propTypes"
 
@@ -184,8 +184,25 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                 </div>
 
                 <div className="HomepageCoinDataWrapper">
-                    <h2>Explore crypto like Bitcoin, Ethereum, and Dogecoin</h2>
-                    <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/21505.png" alt="" />
+                    <div className="innerWrapper">
+                        <div className="textWrapper">
+                            <div className="innerTextWrapper">
+                                <h2>Explore crypto like Bitcoin, Ethereum, and Dogecoin</h2>
+                                <span></span>
+                                <p>Simply and securely buy, sell, and manage hundreds of cryptocurrencies.</p>
+                                <span></span>
+                                <div className="buttonWrapper">
+                                    <Link to="/explore">
+                                        <button className="interactableButton">
+                                            See more assets
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+
+                        </div>
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/21505.png" alt="" />
+                    </div>
                 </div>
 
                 

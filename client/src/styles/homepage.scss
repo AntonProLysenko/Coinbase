@@ -426,6 +426,78 @@ $primary: rgb(0, 82, 250);
 
 
 
+.HomepageCoinDataWrapper{
+    width:100%;
+    padding:$spacing-1, $spacing-5;
+    display:flex;
+    justify-content: center;
+    background-color: rgb(245,248,255);
+    .innerWrapper{
+        width:100%;
+        max-width: 1180px;
+        padding: 0, $spacing-3;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .textWrapper{
+            width: 100%;
+            padding-top:$spacing-5;
+            display: flex;
+
+            .innerTextWrapper{
+                display: flex;
+                flex-direction: column;
+                h2{
+                    font-size: 28px;
+                    line-height: 36px;
+                    font-weight: 400;
+
+                    color:rgb(10,11,13);
+                    margin: 0;
+                    text-align: start;
+                }
+
+                span{
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    height: 32px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+
+                    color: rgb(10, 11, 13);
+                    margin: 0;
+                    text-align: start;
+                }
+
+                .buttonWrapper{
+                    padding: 0;
+                    justify-content: center;
+                    flex: 0 0;
+                    .interactableButton{
+                        height: 56px;
+                        border-radius: 56px;
+                        width: 100%;
+                        min-width: 100%;
+                        white-space: normal;
+                        // padding:0  $spacing-4;
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
 
 
 
