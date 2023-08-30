@@ -56,12 +56,12 @@ fetch(`${BASIC_URL}/metrics/asset/${coin}/current`, {
 
  const getCoin = async()=>{
         try{
-          let metric = await axios.get(`http://localhost:3001/`, {headers:{customHeader: "Hello! Im header"}})
+          let metric = await axios.get(`http://localhost:3001/api/coins`)
           
             // const response = await fetch(`${BASIC_URL}/exchangerate/BTC/USD?apikey=${KEY}`)
             // const data = await metric.json();
             
-            console.log("Personal",metric);
+            console.log("Personal",metric.data );
 
         }catch(e){
             console.error(e)

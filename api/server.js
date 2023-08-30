@@ -1,18 +1,14 @@
 const express = require("express");
+const app = express();
 const cors = require("cors");
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-
-const app = express();
+const coinRouter = require("./controllers/coins")
 
 app.use(cors());
 
-app.get("/",  (req, res) =>{
-
-    console.log(req)
-  res.status(200).send({message:"Server respond"})
-});
+app.use("/api", coinRouter);
 
 
 app.listen(PORT, function () {
