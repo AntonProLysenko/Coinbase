@@ -1,5 +1,6 @@
 import {useState,useRef, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom"
+import axios from 'axios'
 
 import './styles/App.scss';
 
@@ -27,7 +28,21 @@ function App() {
 
 
  
-fetch(`${BASIC_URL}/exchangerate/BTC/USD`, {
+
+const getMetric = async()=>{
+  try {
+      let metric = await axios.get(`${BASIC_URL}/metrics/asset/ETH/current`, {headers:{"X-CoinAPI-Key": `${KEY}`}})
+      console.log(metric)
+  } catch (error) {
+    
+    console.log(error);
+    
+  }
+  
+}
+
+const fetchPrice = async(coin:string)=>{
+fetch(`${BASIC_URL}/metrics/asset/${coin}/current`, {
   headers: {
     "X-CoinAPI-Key": `${KEY}` // Replace with your API key
     }
@@ -35,15 +50,18 @@ fetch(`${BASIC_URL}/exchangerate/BTC/USD`, {
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error('Error:', error));
+}
 
 
 
  const getCoin = async()=>{
         try{
-            const response = await fetch(`${BASIC_URL}/exchangerate/BTC/USD?apikey=${KEY}`)
-            const data = await response.json();
+          let metric = await axios.get(`http://localhost:3001/`, {headers:{customHeader: "Hello! Im header"}})
+          
+            // const response = await fetch(`${BASIC_URL}/exchangerate/BTC/USD?apikey=${KEY}`)
+            // const data = await metric.json();
             
-            console.log("Personal",data);
+            console.log("Personal",metric);
 
         }catch(e){
             console.error(e)
@@ -65,9 +83,15 @@ fetch(`${BASIC_URL}/exchangerate/BTC/USD`, {
 
 
   return (
+    <>
     <div className="App">
       <Header slidingHeader={slidingHeader} headerCheckr={headerCheckr} isMobileActive={isMobileActive} setMobileActive={setMobileActive} />
-      <button onClick={getCoin}>Fetch</button>
+      <div style={{margin:"100px"}}>
+      <button onClick={getCoin}>Server request</button>
+      {/* <button onClick={()=>getMetric()}>Fetch ETH Price</button> */}
+      </div>
+        
+
       <Routes>
         {/* send email on first Wrapper to sign up page  */}
         <Route path="/" element = {<HomePage windowWidth={windowWidth} slidingHeader={slidingHeader} isMobileActive={isMobileActive} setMobileActive={setMobileActive}  homePageCheckr={homePageCheckr}/>}/>
@@ -75,7 +99,8 @@ fetch(`${BASIC_URL}/exchangerate/BTC/USD`, {
       </Routes>
      
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
