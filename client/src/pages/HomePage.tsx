@@ -199,9 +199,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="tilesWrapper">
+                            <div className="tilesHeader">
+                                <button className="interactableButton">Tradable</button>
+                                <span></span>
+                                <button className="interactableButton">Top Gainers</button>
+                            </div>
 
                         </div>
-                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/21505.png" alt="" />
                     </div>
                 </div>
 

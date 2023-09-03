@@ -455,10 +455,9 @@ $primary: rgb(0, 82, 250);
                 display: flex;
                 flex-direction: column;
                 h2{
-                    font-size: 28px;
+                    font-size: 30px;
                     line-height: 36px;
                     font-weight: 400;
-                    
 
                     color:rgb(10,11,13);
                     margin: 0;
@@ -498,6 +497,47 @@ $primary: rgb(0, 82, 250);
 
                     }
                 }
+            }
+        }
+        .tilesWrapper{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+
+            .tilesHeader{
+                width:100%;
+                padding-bottom: $spacing-4;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .interactableButton{
+                    border-radius: 16px;
+                    background: rgb(245,248,255);
+                    padding:0;
+                    min-width: unset;
+                    padding: 0px $spacing-1;
+
+                    border:none;
+                    color: rgb(10,11,13);
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 600;
+                }
+                .interactableButton.active{
+                    border: 1px solid $primary;
+                    color: $primary;
+                }
+                span{
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    width: $spacing-1
+                }
+
             }
         }
 
