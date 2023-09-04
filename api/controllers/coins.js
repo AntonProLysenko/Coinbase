@@ -29,7 +29,11 @@ router.get("/topSix", async(req,res)=>{
     try {
         const response = await axios.get(topSixURL)
         const data = response.data   
-        res.status(200).json(data.RAW);
+        res.status(200).json(Object.entries(data.RAW));
+
+
+        console.log(Object.values(data.RAW.BTC));
+        
     } catch (error) {
         console.error('Error fetching Top Six Coins data:', error);
         res.status(500).json({ error: 'An error occurred while fetching Top Six Coins data.' });

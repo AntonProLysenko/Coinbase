@@ -203,7 +203,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
                         <div className="tilesWrapper">
                             <div className="tilesHeader">
-                                <button className="interactableButton">Tradable</button>
+                                <button className="interactableButton active">Tradable</button>
                                 <span></span>
                                 <button className="interactableButton">Top Gainers</button>
                             </div>
