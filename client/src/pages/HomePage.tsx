@@ -208,6 +208,10 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 <button className="interactableButton">Top Gainers</button>
                             </div>
 
+                            <div className="tilesContainer">
+                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
