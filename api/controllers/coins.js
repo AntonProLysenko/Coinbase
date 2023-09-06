@@ -36,10 +36,11 @@ router.get("/topSix", async(req,res)=>{
         })
 
         data.RAW.ETH2=data.RAW.ETH
+        data.RAW.USDC=data.RAW.USDT
 
-         Object.keys(data.RAW).forEach((item) => {
-          console.log(item,data.RAW[item].IMAGEURL);
-        })
+        //  Object.keys(data.RAW).forEach((item) => {
+        //   console.log(item,data.RAW[item].IMAGEURL);
+        // })
 
         
 
