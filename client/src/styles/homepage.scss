@@ -544,10 +544,56 @@ $primary: rgb(0, 82, 250);
                 display: grid;
                 grid-template-columns: repeat(3, minmax(0px, 1fr));
                 grid-template-rows: repeat(2, minmax(0px, 1fr));
-                
+
                 column-gap: $spacing-2;
                 row-gap: $spacing-2;
                 width: 100%;
+
+                .tileWrapper{
+                    color: rgb(91,97,110);
+                    cursor: pointer;
+                    font-size: 16px;
+                    text-decoration: none;
+                    transition: color 0.25s ease 0s;
+
+                    .tile{
+                        height: 155px;
+                        width: 155px;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
+
+                        border-radius: 24px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 16px;
+
+                        border: 1px solid rgba(91,97,110,0.2);
+                        background-color: white;
+
+                        display: flex;
+                        box-sizing: border-box;
+
+                        .tileInnerWrapper{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            flex-grow: 1;
+
+                            .generalInfo{
+                                color: rgb(91,97,110);
+                                cursor: pointer;
+                                font-size: 16px;  
+                                
+                                display: flex;
+                                flex-direction: column;
+
+                                img{
+                                    width: 45px;
+                                    height: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -767,10 +813,19 @@ $primary: rgb(0, 82, 250);
                 max-width: 100%;
             }
             .tilesWrapper{
-           
                 .tilesContainer{
                     grid-template-columns: repeat(3, minmax(0px, 1fr));
                     grid-template-rows: repeat(2, minmax(0px, 1fr));
+                    .tile {
+                        .tileInnerWrapper {
+                            .generalInfo {                                        
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

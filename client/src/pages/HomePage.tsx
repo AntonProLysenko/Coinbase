@@ -12,6 +12,9 @@ import {useNavigate, Link} from 'react-router-dom'
 // }
 
 
+interface Object {
+    [key: string]: any
+}
 
  type Props = {
    //React declares type by itself in states if we are passing the default value
@@ -21,10 +24,15 @@ import {useNavigate, Link} from 'react-router-dom'
     isMobileActive:React.SetStateAction<boolean>
     setMobileActive:React.Dispatch<React.SetStateAction<boolean>>
     windowWidth:number
+    
 
-    homepageData:object
+    homepageData:Object;
+    // homepageData.topHomepageCoins:object;
 }
 export default function HomePage({homepageData,slidingHeader,homePageCheckr,windowWidth,isMobileActive,setMobileActive}:Props) {
+
+    console.log("HomePage",homepageData);
+    
 
     const navigation = useNavigate();
 
@@ -209,7 +217,24 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                             </div>
 
                             <div className="tilesContainer">
+                                {Object.keys(homepageData).length>0?
+                                    Object.keys(homepageData.topHomepageCoins).map((coin)=>{
+                                        return(
+                                        <Link to={`/price/${homepageData.topHomepageCoins[coin].name.replace(/\s+/g, '').toLowerCase()}`} className='tileWrapper'>
+                                            <div className="tile">
+                                                <div className="tileInnerWrapper">
+                                                    <div className="generalInfo">
+                                                        <img src={`${homepageData.topHomepageCoins[coin].IMAGEURL}`} alt="" />
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                           
+                                        </Link>)
+                                    })
                                 
+                                :<h1>Loading</h1>}
                             </div>
 
                         </div>

@@ -30,29 +30,12 @@ router.get("/topSix", async(req,res)=>{
         const response = await axios.get(topSixURL)
         const data = response.data 
        
-
         Object.keys(data.RAW).forEach((item) => {//deleting useles child Key
           data.RAW[item]=data.RAW[item].USD
         })
-
         data.RAW.ETH2=data.RAW.ETH
         data.RAW.USDC=data.RAW.USDT
-
-        //  Object.keys(data.RAW).forEach((item) => {
-        //   console.log(item,data.RAW[item].IMAGEURL);
-        // })
-
-        
-
-        // let formatedData = Object.entries(data.RAW);
-
-        // formatedData.splice(1,0,["ETH2",formatedData[1]])
-        // console.log(formatedData[1][1]);
         res.status(200).json(data.RAW);
-        
-
-        // console.log(Object.values(data.RAW.BTC));
-        
     } catch (error) {
         console.error('Error fetching Top Six Coins data:', error);
         res.status(500).json({ error: 'An error occurred while fetching Top Six Coins data.' });
