@@ -816,17 +816,20 @@ $primary: rgb(0, 82, 250);
                 .tilesContainer{
                     grid-template-columns: repeat(3, minmax(0px, 1fr));
                     grid-template-rows: repeat(2, minmax(0px, 1fr));
-                    .tile {
-                        .tileInnerWrapper {
-                            .generalInfo {                                        
-                                img {
-                                    width: 32px;
-                                    height: 32px;
+                    .tileWrapper{
+                        .tile{
+                            .tileInnerWrapper{
+                                .generalInfo{
+                                    img{
+                                        height: 32px;
+                                        width:32px
+                                    }
                                 }
                             }
                         }
                     }
                 }
+
             }
         }
     }

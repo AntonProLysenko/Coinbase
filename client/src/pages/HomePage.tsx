@@ -224,7 +224,9 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                             <div className="tile">
                                                 <div className="tileInnerWrapper">
                                                     <div className="generalInfo">
-                                                        <img src={`${homepageData.topHomepageCoins[coin].IMAGEURL}`} alt="" />
+                                                        <img src={`${homepageData.topHomepageCoins[coin].IMAGEURL}`} alt="Coin Symbol"/>
+                                                        <div className="title">{homepageData.topHomepageCoins[coin].name}</div>
+                                                        <div className="price">{homepageData.topHomepageCoins[coin].PRICE.toLocaleString("en-US", {style:"currency",currency:"USD"})}</div>
                                                     </div>
 
                                                 </div>
