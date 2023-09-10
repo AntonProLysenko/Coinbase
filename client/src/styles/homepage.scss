@@ -603,6 +603,27 @@ $primary: rgb(0, 82, 250);
                                     // align-self: flex-start;
                                 }
                             }
+                            .persentage{
+                                display: flex;
+                                flex-direction: row;
+                                // .arrowInnerWrapper{
+                                //     .arrow{
+
+                                //     }
+                                // }
+                            }
+                            .persentage.positive{
+                                color:green;
+                            }
+                            .persentage.negative{
+                                color:red;
+                                .arrowInnerWrapper {
+                                        
+                                            transform:rotate(3.142rad);
+                                        
+                                    }
+
+                            }
                         }
                     }
                 }

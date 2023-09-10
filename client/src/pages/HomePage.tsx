@@ -229,6 +229,19 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                         <div className="price">{homepageData.topHomepageCoins[coin].PRICE.toLocaleString("en-US", {style:"currency",currency:"USD"})}</div>
                                                     </div>
 
+
+                                                    <div className={homepageData.topHomepageCoins[coin].CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>
+                                                        <div className="arrowWrapper">
+                                                            <div className="arrowInnerWrapper">
+                                                                <span className="arrow">↑</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <span className="persentageValue">
+                                                            {Math.abs(homepageData.topHomepageCoins[coin].CHANGEPCTDAY/100).toLocaleString('en-US',{style: 'percent',minimumFractionDigits:2})}
+                                                        </span>
+                                                    </div>
+
                                                 </div>
 
                                             </div>
