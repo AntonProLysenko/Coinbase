@@ -606,6 +606,14 @@ $primary: rgb(0, 82, 250);
                             .persentage{
                                 display: flex;
                                 flex-direction: row;
+                                span {
+                                        font-weight: 600;
+                                        line-height: 1;
+                                    }
+                                .arrowWrapper{
+                                    padding-right: $spacing-1;
+                                 
+                                }
                                 // .arrowInnerWrapper{
                                 //     .arrow{
 
@@ -613,14 +621,12 @@ $primary: rgb(0, 82, 250);
                                 // }
                             }
                             .persentage.positive{
-                                color:green;
+                                color:rgb(9,133,81);
                             }
                             .persentage.negative{
-                                color:red;
+                                color:rgb(207,32,47);
                                 .arrowInnerWrapper {
-                                        
-                                            transform:rotate(3.142rad);
-                                        
+                                        transform:rotate(3.142rad);
                                     }
 
                             }

@@ -33,8 +33,21 @@ router.get("/topSix", async(req,res)=>{
         Object.keys(data.RAW).forEach((item) => {//deleting useles child Key
           data.RAW[item]=data.RAW[item].USD
         })
+
         data.RAW.ETH2=data.RAW.ETH
         data.RAW.USDC=data.RAW.USDT
+
+        data.RAW.BTC.priority=1;
+        data.RAW.ETH2.priority = 2;
+        data.RAW.ETH.priority = 3;
+        data.RAW.USDC.priority = 4;
+        data.RAW.USDT.priority = 5;
+        data.RAW.XRP.priority = 6;
+
+        
+
+        // let sorted =sortByPosition(data.RAW);
+
         res.status(200).json(data.RAW);
     } catch (error) {
         console.error('Error fetching Top Six Coins data:', error);
