@@ -38,96 +38,19 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
 
 
-    // const sortByPosition =  (obj:any) => {
-
-    //       const order:any = [];
-    //         order.push(homepageData.topHomepageCoins.BTC);
-    //         const res:any = {};
-
-    //        Object.keys(obj).forEach((key) => {
-    //         if (homepageData.topHomepageCoins[key].priority>homepageData.topHomepageCoins[key].priority){
-    //             order.push(homepageData.topHomepageCoins.key)
-    //         }
-
-    //         console.log(order);
-            
-    //       });
-    //     //   order.forEach((key:any) => {
-
-    //     //     console.log("order key", key);
-            
-    //     //     res[key] = obj[key];
-    //     //   });
-    //       return res;
-    //     };
-
-    //    if(Object.keys(homepageData).length>0)
-    //     {let sortedMainSix = sortByPosition(homepageData.topHomepageCoins)
-    //         console.log("sorted homepageData",sortedMainSix);
-    //     }
-
-
-
-
-const obj = {
-   "Sec": {
-      name: 'CBSSP',
-      position: 2
-   },
-   "Third": {
-      name: 'NNSSP',
-      position: 3
-   },
-   "First":{
-    name:"asd",
-    position:1
-   },
-   "Forth": {
-      name: 'SSP',
-      position: 4
-   },
-    "Six": {
-      name: 'SSP',
-      position: 6
-   },
-    "Five": {
-      name: 'SSP',
-      position: 5
-   }
-};
-// const sortByPosition = (obj:any) => {
-//    const order:any = [], res:any = {};
-//    Object.keys(obj).forEach(key => {
-//     // order.push(key)
-//     order[obj[key]['priority'] - 1] = key;
-//    });
-//    order.forEach((key:any) => {
-    
-//     console.log(key)
-//       res[key] = obj[key];
-//    });
-
-//    console.log("res",res);
    
-// //    return homepageData.topHomepageCoins=res;
+
+
+
+//     let homepageArray= Object.keys(homepageData.topHomepageCoins)
+//     if(Object.keys(homepageData).length>0){
+//     homepageArray[1]="ETH2"
+//     homepageArray[2]="ETH"
+//     homepageArray[3]="USDT"
+//     homepageArray[4]="USDC"
+//     homepageArray[5]="XRP"
 // }
-//  if(Object.keys(homepageData).length>0){
-//     console.log("test",sortByPosition(homepageData.topHomepageCoins))
-//     console.log(homepageData.topHomepageCoins.ETH.priority)}
- 
-    
 
-   let homepageArray= Object.keys(homepageData.topHomepageCoins)
-   homepageArray[1]="ETH2"
-   homepageArray[2]="ETH"
-   homepageArray[3]="USDT"
-   homepageArray[4]="USDC"
-   homepageArray[5]="XRP"
-
-
-   console.log('homepageArray', homepageArray);
-
-//    console.log();
    
 
 
@@ -310,7 +233,7 @@ const obj = {
                             <div className="tilesContainer">
                                 {Object.keys(homepageData).length>0?
                                 
-                                    homepageArray.map((coin)=>{
+                                    homepageData.topHomepageCoins.map((coin:any)=>{
                                         return(
                                         <Link to={`/price/${homepageData.topHomepageCoins[coin].name.replace(/\s+/g, '').toLowerCase()}`} className='tileWrapper'>
                                             <div className="tile">
