@@ -230,7 +230,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 <button className="interactableButton">Top Gainers</button>
                             </div>
 
-                            <div className="tilesContainer">
+                            {/* <div className="tilesContainer">
                                 {Object.keys(homepageData).length>0?
                                 
                                     homepageData.topHomepageCoins.map((coin:any)=>{
@@ -265,7 +265,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                     })
                                 
                                 :<h1>Loading</h1>}
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>

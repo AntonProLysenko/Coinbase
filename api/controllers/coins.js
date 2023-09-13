@@ -53,7 +53,6 @@ router.get("/topSix", async(req,res)=>{
         // console.log("dataWithAditions", dataWithAditions);
         
         Object.keys(dataWithAditions).forEach((key) => {
-          console.log(dataWithAditions[key].priority);
           orderedData[dataWithAditions[key].priority] = dataWithAditions[key];
         });
         
