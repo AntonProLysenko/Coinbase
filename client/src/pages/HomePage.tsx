@@ -230,22 +230,25 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 <button className="interactableButton">Top Gainers</button>
                             </div>
 
-                            {/* <div className="tilesContainer">
+                            { <div className="tilesContainer">
                                 {Object.keys(homepageData).length>0?
                                 
                                     homepageData.topHomepageCoins.map((coin:any)=>{
+
+                                        // console.log("inside",homepageData.topHomepageCoins[coin].name);
+                                        
                                         return(
-                                        <Link to={`/price/${homepageData.topHomepageCoins[coin].name.replace(/\s+/g, '').toLowerCase()}`} className='tileWrapper'>
+                                        <Link to={`/price/${coin.name.replace(/\s+/g, '').toLowerCase()}`} className='tileWrapper'>
                                             <div className="tile">
                                                 <div className="tileInnerWrapper">
                                                     <div className="generalInfo">
-                                                        <img src={`${homepageData.topHomepageCoins[coin].IMAGEURL}`} alt="Coin Symbol"/>
-                                                        <div className="title">{homepageData.topHomepageCoins[coin].name}</div>
-                                                        <div className="price">{homepageData.topHomepageCoins[coin].PRICE.toLocaleString("en-US", {style:"currency",currency:"USD"})}</div>
+                                                        <img src={`${coin.IMAGEURL}`} alt="Coin Symbol"/>
+                                                        <div className="title">{coin.name}</div>
+                                                        <div className="price">{coin.PRICE.toLocaleString("en-US", {style:"currency",currency:"USD"})}</div>
                                                     </div>
 
 
-                                                    <div className={homepageData.topHomepageCoins[coin].CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>
+                                                    <div className={coin.CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>
                                                         <div className="arrowWrapper">
                                                             <div className="arrowInnerWrapper">
                                                                 <span className="arrow">↑</span>
@@ -253,7 +256,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                         </div>
 
                                                         <span className="persentageValue">
-                                                            {Math.abs(homepageData.topHomepageCoins[coin].CHANGEPCTDAY/100).toLocaleString('en-US',{style: 'percent',minimumFractionDigits:2})}
+                                                            {Math.abs(coin.CHANGEPCTDAY/100).toLocaleString('en-US',{style: 'percent',minimumFractionDigits:2})}
                                                         </span>
                                                     </div>
 
@@ -265,7 +268,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                     })
                                 
                                 :<h1>Loading</h1>}
-                            </div> */}
+                            </div>}
 
                         </div>
                     </div>

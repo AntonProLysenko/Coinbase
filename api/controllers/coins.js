@@ -45,9 +45,9 @@ router.get("/topSix", async(req,res)=>{
         dataWithAditions.ETH2.priority = 1;
         dataWithAditions.ETH2.FROMSYMBOL="ETH2"
         dataWithAditions.ETH.priority = 2;
-        dataWithAditions.USDC.priority = 3;
+        dataWithAditions.USDT.priority = 3;
+        dataWithAditions.USDC.priority = 4;
         dataWithAditions.USDC.FROMSYMBOL = "USDC";
-        dataWithAditions.USDT.priority = 4;
         dataWithAditions.XRP.priority = 5;
 
         // console.log("dataWithAditions", dataWithAditions);
