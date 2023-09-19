@@ -374,7 +374,8 @@ $primary: rgb(0, 82, 250);
         border-top:1px solid rgba(91,97,110,0.2);
 
         .TextWrapper{
-            width: 60%;
+            width: 80%;
+            // width:100%;
             max-width: 500px;
             padding: $spacing-0;
             display: flex;
@@ -438,7 +439,7 @@ $primary: rgb(0, 82, 250);
         padding: 0 $spacing-3;
 
         display: flex;
-        flex-direction: column-reverse;
+        // flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: space-between;
 
@@ -462,6 +463,7 @@ $primary: rgb(0, 82, 250);
                     color:rgb(10,11,13);
                     margin: 0;
                     text-align: start;
+                    width:95%;
                 }
 
                 span{
@@ -847,6 +849,7 @@ $primary: rgb(0, 82, 250);
 
     .HomepageCoinDataWrapper{
         .innerWrapper{
+            flex-direction: column-reverse;
             .textWrapper{
                 width: 100%;
                 max-width: 100%;

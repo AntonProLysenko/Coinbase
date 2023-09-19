@@ -902,7 +902,7 @@
 
 .HomepageCoinDataWrapper {
   width: 100%;
-  padding: 8px, 40px;
+  padding: 40px 8px;
   display: flex;
   justify-content: center;
   background-color: rgb(245, 248, 255);
@@ -910,28 +910,33 @@
 .HomepageCoinDataWrapper .innerWrapper {
   width: 100%;
   max-width: 1180px;
-  padding: 0, 24px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
   justify-content: space-between;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper {
-  width: 100%;
-  padding-top: 40px;
   display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  max-width: 500px;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper {
+  width: 100%;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper h2 {
-  font-size: 28px;
+  font-size: 30px;
   line-height: 36px;
   font-weight: 400;
   color: rgb(10, 11, 13);
   margin: 0;
   text-align: start;
+  width: 99%;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper span {
   flex-grow: 0;
@@ -947,9 +952,13 @@
   text-align: start;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper {
+  text-decoration: none;
   padding: 0;
   justify-content: center;
   flex: 0 0;
+}
+.HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper a {
+  width: 100%;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper .interactableButton, .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper .mobileButtonWrapper button, .mobileButtonWrapper .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper button {
   height: 56px;
@@ -957,6 +966,119 @@
   width: 100%;
   min-width: 100%;
   white-space: normal;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader {
+  width: 100%;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader .interactableButton, .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader .mobileButtonWrapper button, .mobileButtonWrapper .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader button {
+  border-radius: 16px;
+  background: rgb(245, 248, 255);
+  padding: 0;
+  min-width: unset;
+  height: 38px;
+  padding: 0px 8px;
+  border: none;
+  color: rgb(10, 11, 13);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader .interactableButton.active, .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader .mobileButtonWrapper button.active, .mobileButtonWrapper .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader button.active {
+  border: 1px solid rgb(0, 82, 250);
+  color: rgb(0, 82, 250);
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesHeader span {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 8px;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 16px;
+  width: 100%;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper {
+  color: rgb(91, 97, 110);
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.25s ease 0s;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile {
+  height: 155px;
+  width: 155px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
+  border-radius: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+  border: 1px solid rgba(91, 97, 110, 0.2);
+  background-color: white;
+  display: flex;
+  box-sizing: border-box;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo {
+  color: rgb(91, 97, 110);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo img {
+  width: 45px;
+  height: 45px;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo .title {
+  padding-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(10, 11, 13);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage {
+  display: flex;
+  flex-direction: row;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage span {
+  font-weight: 600;
+  line-height: 1;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage .arrowWrapper {
+  padding-right: 8px;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage.positive {
+  color: rgb(9, 133, 81);
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage.negative {
+  color: rgb(207, 32, 47);
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage.negative .arrowInnerWrapper {
+  transform: rotate(3.142rad);
 }
 
 @media screen and (max-width: 1280px) {
@@ -1007,6 +1129,14 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    grid-template-rows: repeat(3, minmax(0px, 1fr));
+  }
 }
 @media screen and (max-width: 768px) {
   .SecondWrapper .contentWrapper .imageWrapper img {
@@ -1049,6 +1179,18 @@
     width: 100%;
     padding: 40px 0;
   }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    grid-template-rows: repeat(2, minmax(0px, 1fr));
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo img {
+    height: 32px;
+    width: 32px;
+  }
 }
 @media screen and (max-width: 560px) {
   .FirstWrapperMobile {
@@ -1072,6 +1214,14 @@
     display: block;
     padding: 0;
     max-width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    grid-template-rows: repeat(3, minmax(0px, 1fr));
   }
 }
 .no-scroll {
