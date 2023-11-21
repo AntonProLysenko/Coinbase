@@ -154,6 +154,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
     return(
         <>
+            {console.log("homepageData",homepageData)}
             <main id="main" className={isMobileActive?'PageLayoutWrapper no-scroll':"PageLayoutWrapper"}>
                 <div className={!slidingHeader||isMobileActive?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
 

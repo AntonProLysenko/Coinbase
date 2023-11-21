@@ -37,9 +37,12 @@ function App() {
     try{      
       let topSixCoins = await axios.get(`${BASIC_URL}/api/topSix`,{ headers: {top:topSixSymbols}})
       let topGainers = await axios.get(`${BASIC_URL}/api/topgainers`)  
-      let coinbase = await axios.get(`${BASIC_URL}/api/new`)
+      // let coinbase = await axios.get(`${BASIC_URL}/api/new`)
 
-console.log('coinbase', coinbase);
+      // console.log('coinbase', coinbase);
+      console.log('topGainers', topGainers);
+      console.log('topSixCoins', topSixCoins);
+
 
 
 
@@ -56,7 +59,7 @@ console.log('coinbase', coinbase);
       }
 
       Object.keys(topSixCoins.data).forEach((coin)=>{
-        getRightImage(coinbase.data.genericSearchAssets.edges, topSixCoins.data[coin].FROMSYMBOL)
+        // getRightImage(coinbase.data.genericSearchAssets.edges, topSixCoins.data[coin].FROMSYMBOL)
 
         console.log(coin);
         
@@ -72,7 +75,7 @@ console.log('coinbase', coinbase);
       setHomepageData({
         topHomepageCoins:topSixCoins.data,
         topGainers:topGainers.data,
-        lastAdded:coinbase.data.recentlyAddedAssets[0]
+        // lastAdded:coinbase.data.recentlyAddedAssets[0]
       })
     }catch(e){
         console.error(e)
