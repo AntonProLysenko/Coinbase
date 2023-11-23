@@ -236,19 +236,18 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 
                                     homepageData.topHomepageCoins.map((coin:any)=>{
 
-                                        // console.log("inside",homepageData.topHomepageCoins[coin].name);
+
                                         
                                         return(
-                                        // <Link to={`/price/${coin.name.replace(/\s+/g, '').toLowerCase()}`} 
-                                            <Link to="*"
-                                        className='tileWrapper'>
-                                            <div className="tile">
-                                                <div className="tileInnerWrapper">
-                                                    <div className="generalInfo">
-                                                        <img src={`${coin.IMAGEURL}`} alt="Coin Symbol"/>
-                                                        <div className="title">{coin.name}</div>
-                                                        <div className="price">{coin.PRICE.toLocaleString("en-US", {style:"currency",currency:"USD"})}</div>
-                                                    </div>
+                                            <Link to={`/price/${coin.FROMSYMBOL.toLowerCase() }`} className='tileWrapper'>
+                                                <div className="tile">
+                                                    <div className="tileInnerWrapper">
+                                                        
+                                                        <div className="generalInfo">
+                                                            <img src={`${coin.IMAGEURL}`} alt="Coin Symbol"/>
+                                                            <div className="title">{coin.FROMSYMBOL}</div>
+                                                            <div className="price">{coin.PRICE.toLocaleString("en-US",{style:"currency",currency:"USD"})}</div>
+                                                        </div>
 
 
                                                     <div className={coin.CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>

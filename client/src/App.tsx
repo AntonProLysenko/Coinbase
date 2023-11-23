@@ -40,8 +40,8 @@ function App() {
       // let coinbase = await axios.get(`${BASIC_URL}/api/new`)
 
       // console.log('coinbase', coinbase);
-      console.log('topGainers', topGainers);
-      console.log('topSixCoins', topSixCoins);
+      console.log('topGainers', topGainers.data);
+      console.log('topSixCoins', topSixCoins.data);
 
 
 
@@ -61,7 +61,7 @@ function App() {
       Object.keys(topSixCoins.data).forEach((coin)=>{
         // getRightImage(coinbase.data.genericSearchAssets.edges, topSixCoins.data[coin].FROMSYMBOL)
 
-        console.log(coin);
+        console.log(coin, "coin");
         
          if(topSixCoins.data[coin].FROMSYMBOL=="ETH2"){          
             topSixCoins.data[1].IMAGEURL="https://dynamic-assets.coinbase.com/9f3242d7cd65e806cc3a12b3d5c2ba3a6a1140dee43f7d1eafaad8747855065aff50fe2bda4d897076cbdada8b9b971015cb2d19c04e67b20a8145d506283287/asset_icons/4e321a458d36c0c6467b346f85e88caddde59fcc0f03444e374de32cc3def4d6.png"

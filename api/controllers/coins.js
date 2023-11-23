@@ -50,12 +50,16 @@ router.get("/topSix", async(req,res)=>{
         dataWithAditions.USDC.FROMSYMBOL = "USDC";
         dataWithAditions.XRP.priority = 5;
 
-        // console.log("dataWithAditions", dataWithAditions);
+        console.log("dataWithAditions", dataWithAditions);
         
         Object.keys(dataWithAditions).forEach((key) => {
+          console.log(key)
+          // console.log
+
           orderedData[dataWithAditions[key].priority] = dataWithAditions[key];
+
         });
-        
+         console.log("orderedData", orderedData);
         res.status(200).json(orderedData);
     } catch (error) {
         console.error('Error fetching Top Six Coins data:', error);
