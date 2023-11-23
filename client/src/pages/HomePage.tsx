@@ -239,7 +239,9 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                         // console.log("inside",homepageData.topHomepageCoins[coin].name);
                                         
                                         return(
-                                        <Link to={`/price/${coin.name.replace(/\s+/g, '').toLowerCase()}`} className='tileWrapper'>
+                                        // <Link to={`/price/${coin.name.replace(/\s+/g, '').toLowerCase()}`} 
+                                            <Link to="*"
+                                        className='tileWrapper'>
                                             <div className="tile">
                                                 <div className="tileInnerWrapper">
                                                     <div className="generalInfo">
