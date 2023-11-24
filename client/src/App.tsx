@@ -47,28 +47,25 @@ function App() {
 
 
       
-      let rightImage:string
-      let coinName:string
-      let getRightImage = (object:any, value:any) =>{
-        object.forEach((i:any)=>{
-          if(Object.values(i.node).includes(value)){
-             rightImage=i.node.imageUrl
-             coinName=i.node.name
-          }
-        })
-      }
+      // let rightImage:string
+      // let coinName:string
+      // let getRightImage = (object:any, value:any) =>{
+      //   object.forEach((i:any)=>{
+      //     if(Object.values(i.node).includes(value)){
+      //       //  rightImage=i.node.imageUrl
+      //       //  coinName=i.node.name
+      //     }
+      //   })
+      // }
 
       Object.keys(topSixCoins.data).forEach((coin)=>{
-        // getRightImage(coinbase.data.genericSearchAssets.edges, topSixCoins.data[coin].FROMSYMBOL)
-
-        console.log(coin, "coin");
-        
+        // getRightImage(coinbase.data.genericSearchAssets.edges, topSixCoins.data[coin].FROMSYMBOL)        
          if(topSixCoins.data[coin].FROMSYMBOL=="ETH2"){          
             topSixCoins.data[1].IMAGEURL="https://dynamic-assets.coinbase.com/9f3242d7cd65e806cc3a12b3d5c2ba3a6a1140dee43f7d1eafaad8747855065aff50fe2bda4d897076cbdada8b9b971015cb2d19c04e67b20a8145d506283287/asset_icons/4e321a458d36c0c6467b346f85e88caddde59fcc0f03444e374de32cc3def4d6.png"
             topSixCoins.data[1].name = "Ethereum 2"
           }else{
-            topSixCoins.data[coin].IMAGEURL=rightImage
-            topSixCoins.data[coin].name = coinName
+           topSixCoins.data[coin].IMAGEURL = `https://cryptocompare.com${topSixCoins.data[coin].IMAGEURL}`
+            // topSixCoins.data[coin].name = coinName
           }
       })
 

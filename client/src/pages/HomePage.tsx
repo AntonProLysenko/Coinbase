@@ -31,7 +31,6 @@ interface Object {
 }
 export default function HomePage({homepageData,slidingHeader,homePageCheckr,windowWidth,isMobileActive,setMobileActive}:Props) {
 
-    console.log("HomePage",homepageData);
     
 
     const navigation = useNavigate();
@@ -154,7 +153,6 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
     return(
         <>
-            {console.log("homepageData",homepageData)}
             <main id="main" className={isMobileActive?'PageLayoutWrapper no-scroll':"PageLayoutWrapper"}>
                 <div className={!slidingHeader||isMobileActive?"homePageCheckr":"homePageCheckr sliding"} ref = {homePageCheckr}></div>
 
@@ -235,38 +233,37 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 {Object.keys(homepageData).length>0?
                                 
                                     homepageData.topHomepageCoins.map((coin:any)=>{
-
-
-                                        
                                         return(
                                             <Link to={`/price/${coin.FROMSYMBOL.toLowerCase() }`} className='tileWrapper'>
                                                 <div className="tile">
                                                     <div className="tileInnerWrapper">
-                                                        
+
                                                         <div className="generalInfo">
-                                                            <img src={`${coin.IMAGEURL}`} alt="Coin Symbol"/>
+                                                            <img src={`${coin.IMAGEURL}`} alt="Coin Symbol IMG"/>
                                                             <div className="title">{coin.FROMSYMBOL}</div>
                                                             <div className="price">{coin.PRICE.toLocaleString("en-US",{style:"currency",currency:"USD"})}</div>
                                                         </div>
 
 
-                                                    <div className={coin.CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>
-                                                        <div className="arrowWrapper">
-                                                            <div className="arrowInnerWrapper">
-                                                                <span className="arrow">↑</span>
+                                                        <div className={coin.CHANGEPCT24HOUR>0?"persentage positive":"persentage negative"}>
+
+                                                            <div className="arrowWrapper">
+                                                                <div className="arrowInnerWrapper">
+                                                                    <span className="arrow">↑</span>
+                                                                </div>
                                                             </div>
+
+                                                            <span className="persentageValue">
+                                                                {Math.abs(coin.CHANGEPCTDAY/100).toLocaleString('en-US',{style: 'percent',minimumFractionDigits:2})}
+                                                            </span>
                                                         </div>
 
-                                                        <span className="persentageValue">
-                                                            {Math.abs(coin.CHANGEPCTDAY/100).toLocaleString('en-US',{style: 'percent',minimumFractionDigits:2})}
-                                                        </span>
                                                     </div>
 
                                                 </div>
-
-                                            </div>
                                            
-                                        </Link>)
+                                            </Link>
+                                        )
                                     })
                                 
                                 :<h1>Loading</h1>}
