@@ -63,6 +63,8 @@ function App() {
          if(topSixCoins.data[coin].FROMSYMBOL=="ETH2"){          
             topSixCoins.data[1].IMAGEURL="https://dynamic-assets.coinbase.com/9f3242d7cd65e806cc3a12b3d5c2ba3a6a1140dee43f7d1eafaad8747855065aff50fe2bda4d897076cbdada8b9b971015cb2d19c04e67b20a8145d506283287/asset_icons/4e321a458d36c0c6467b346f85e88caddde59fcc0f03444e374de32cc3def4d6.png"
             topSixCoins.data[1].name = "Ethereum 2"
+         } else if (topSixCoins.data[coin].FROMSYMBOL == "USDC"){
+           topSixCoins.data[4].IMAGEURL = "https://dynamic-assets.coinbase.com/3c15df5e2ac7d4abbe9499ed9335041f00c620f28e8de2f93474a9f432058742cdf4674bd43f309e69778a26969372310135be97eb183d91c492154176d455b8/asset_icons/9d67b728b6c8f457717154b3a35f9ddc702eae7e76c4684ee39302c4d7fd0bb8.png"
           }else{
            topSixCoins.data[coin].IMAGEURL = `https://cryptocompare.com${topSixCoins.data[coin].IMAGEURL}`
             // topSixCoins.data[coin].name = coinName
