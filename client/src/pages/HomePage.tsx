@@ -1,5 +1,6 @@
 import React from 'react'
 import {useNavigate, Link} from 'react-router-dom'
+import loading_logo from "../components/assets/loading_coin_logo.png"
 
 // import{Props} from"../components/Types/propTypes"
 
@@ -228,6 +229,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 <span></span>
                                 <button className="interactableButton">Top Gainers</button>
                             </div>
+                            
 
                             { <div className="tilesContainer">
                                 {Object.keys(homepageData).length>0?
@@ -266,7 +268,180 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                         )
                                     })
                                 
-                                :<h1>Loading</h1>}
+                                :
+                                <>
+                                <div className='tileWrapper'>
+                                    <div className="tile">
+                                        <div className="tileInnerWrapper">
+
+                                            <div className="generalInfo">
+                                                <img src={loading_logo}alt="Coin Symbol IMG"/>
+                                                <div className="title"> </div>
+                                                <div className="price"> </div>
+                                            </div>
+
+
+                                            <div>
+
+                                                <div className="arrowWrapper">
+                                                    <div className="arrowInnerWrapper">
+
+                                                    </div>
+                                                </div>
+
+                                                <span className="persentageValue">
+                                                   
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className='tileWrapper'>
+                                    <div className="tile">
+                                        <div className="tileInnerWrapper">
+
+                                            <div className="generalInfo">
+                                                <img src={loading_logo} alt="Coin Symbol IMG"/>
+                                                <div className="title"> </div>
+                                                <div className="price"> </div>
+                                            </div>
+
+
+                                            <div>
+
+                                                <div className="arrowWrapper">
+                                                    <div className="arrowInnerWrapper">
+
+                                                    </div>
+                                                </div>
+
+                                                <span className="persentageValue">
+                                                   
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                        <div className='tileWrapper'>
+                                            <div className="tile">
+                                                <div className="tileInnerWrapper">
+
+                                                    <div className="generalInfo">
+                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="title"> </div>
+                                                        <div className="price"> </div>
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <div className="arrowWrapper">
+                                                            <div className="arrowInnerWrapper">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <span className="persentageValue">
+
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div className='tileWrapper'>
+                                            <div className="tile">
+                                                <div className="tileInnerWrapper">
+
+                                                    <div className="generalInfo">
+                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="title"> </div>
+                                                        <div className="price"> </div>
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <div className="arrowWrapper">
+                                                            <div className="arrowInnerWrapper">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <span className="persentageValue">
+
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div className='tileWrapper'>
+                                            <div className="tile">
+                                                <div className="tileInnerWrapper">
+
+                                                    <div className="generalInfo">
+                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="title"> </div>
+                                                        <div className="price"> </div>
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <div className="arrowWrapper">
+                                                            <div className="arrowInnerWrapper">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <span className="persentageValue">
+
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div className='tileWrapper'>
+                                            <div className="tile">
+                                                <div className="tileInnerWrapper">
+
+                                                    <div className="generalInfo">
+                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="title"> </div>
+                                                        <div className="price"> </div>
+                                                    </div>
+
+
+                                                    <div>
+
+                                                        <div className="arrowWrapper">
+                                                            <div className="arrowInnerWrapper">
+
+                                                            </div>
+                                                        </div>
+
+                                                        <span className="persentageValue">
+
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </>
+                                
+                                
+                                }
                             </div>}
 
                         </div>
