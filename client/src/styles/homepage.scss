@@ -604,6 +604,13 @@ $primary: rgb(0, 82, 250);
                                     width: 45px;
                                     height: 45px;
                                 }
+                                .ImageSceleton{
+                                    width: 45px;
+                                    height: 45px;
+                                    border-radius: 50%;
+                                    background-color: lightgray;
+                                }
+                                
                                 .title{
                                     padding-top: $spacing-1;
                                     font-size: 16px;

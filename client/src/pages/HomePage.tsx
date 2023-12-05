@@ -275,7 +275,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                         <div className="tileInnerWrapper">
 
                                             <div className="generalInfo">
-                                                <img src={loading_logo}alt="Coin Symbol IMG"/>
+                                                        <div className="ImageSceleton"></div>                                                
                                                 <div className="title"> </div>
                                                 <div className="price"> </div>
                                             </div>
@@ -303,7 +303,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                         <div className="tileInnerWrapper">
 
                                             <div className="generalInfo">
-                                                <img src={loading_logo} alt="Coin Symbol IMG"/>
+                                                <div className="ImageSceleton">    </div>                                        
                                                 <div className="title"> </div>
                                                 <div className="price"> </div>
                                             </div>
@@ -331,7 +331,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
-                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="ImageSceleton" ></div>                                                        
                                                         <div className="title"> </div>
                                                         <div className="price"> </div>
                                                     </div>
@@ -359,7 +359,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
-                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="ImageSceleton"></div>                                                        
                                                         <div className="title"> </div>
                                                         <div className="price"> </div>
                                                     </div>
@@ -387,7 +387,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
-                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="ImageSceleton" ></div>                                                        
                                                         <div className="title"> </div>
                                                         <div className="price"> </div>
                                                     </div>
@@ -410,12 +410,13 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
                                             </div>
                                         </div>
+                                        
                                         <div className='tileWrapper'>
                                             <div className="tile">
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
-                                                        <img src={loading_logo}alt="Coin Symbol IMG" />
+                                                        <div className="ImageSceleton"></div>                                                        
                                                         <div className="title"> </div>
                                                         <div className="price"> </div>
                                                     </div>
