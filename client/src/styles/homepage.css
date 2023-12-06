@@ -1,3 +1,15 @@
+@keyframes skeletonLoading {
+  0% {
+    background-color: lightgray;
+  }
+  100% {
+    background-color: rgb(255, 255, 255);
+  }
+}
+.skeleton {
+  animation: skeletonLoading 2s linear 0.25s infinite alternate;
+}
+
 .SectionCenter {
   justify-content: center;
 }
@@ -369,12 +381,13 @@
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper {
   width: 100%;
   padding-top: 40px;
+  padding-right: 32px;
   display: flex;
   flex-direction: column;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper h2 {
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 48px;
+  line-height: 56px;
   font-weight: 400;
   color: rgb(10, 11, 13);
   margin: 0;
@@ -387,9 +400,10 @@
   height: 32px;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper p {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 28px;
+  line-height: 36px;
   font-weight: 400;
+  width: 90%;
   color: rgb(10, 11, 13);
   margin: 0;
   text-align: start;
@@ -397,21 +411,20 @@
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper {
   text-decoration: none;
   padding: 0;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 0 0;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper a {
-  width: 100%;
+  width: 52%;
 }
 .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper .interactableButton {
   height: 56px;
   border-radius: 56px;
   width: 100%;
-  min-width: 100%;
+  min-width: 90%;
   white-space: normal;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,14 +471,14 @@
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper {
   color: rgb(91, 97, 110);
-  cursor: pointer;
+  cursor: default;
   font-size: 16px;
   text-decoration: none;
   transition: color 0.25s ease 0s;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile {
-  height: 155px;
-  width: 155px;
+  height: 190px;
+  width: 190px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
   border-radius: 24px;
   margin-left: auto;
@@ -475,6 +488,7 @@
   background-color: white;
   display: flex;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper {
   display: flex;
@@ -494,6 +508,12 @@
   width: 45px;
   height: 45px;
 }
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo .ImageSceleton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  animation: skeletonLoading 1s linear infinite alternate;
+}
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo .title {
   padding-top: 8px;
   font-size: 16px;
@@ -506,10 +526,12 @@
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage {
   display: flex;
   flex-direction: row;
+  font-size: 24px;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage span {
-  font-weight: 600;
-  line-height: 1;
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 28px;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage .arrowWrapper {
   padding-right: 8px;
@@ -573,12 +595,24 @@
        object-fit: cover;
   }
   .HomepageCoinDataWrapper .innerWrapper .textWrapper {
-    width: 100%;
-    max-width: 100%;
+    width: 50%;
+    max-width: 50%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper {
+    padding-right: 0px;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper h2 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 400;
   }
   .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
     grid-template-columns: repeat(2, minmax(0px, 1fr));
     grid-template-rows: repeat(3, minmax(0px, 1fr));
+    cursor: default;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper {
+    cursor: default;
   }
 }
 @media screen and (max-width: 768px) {
@@ -622,16 +656,49 @@
     width: 100%;
     padding: 40px 0;
   }
+  .HomepageCoinDataWrapper {
+    width: unset;
+  }
   .HomepageCoinDataWrapper .innerWrapper {
     flex-direction: column-reverse;
   }
   .HomepageCoinDataWrapper .innerWrapper .textWrapper {
-    width: 100%;
+    width: 50%;
     max-width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper {
+    padding-right: 0px;
+    width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    text-wrap: balance;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper a {
+    width: 100%;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .textWrapper .innerTextWrapper .buttonWrapper .interactableButton {
+    min-width: 100%;
   }
   .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     grid-template-rows: repeat(2, minmax(0px, 1fr));
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile {
+    height: 155px;
+    width: 155px;
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage span {
+    font-size: 20px;
+    font-weight: 600;
   }
   .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .generalInfo img {
     height: 32px;
@@ -665,8 +732,15 @@
     width: 100%;
     max-width: 100%;
   }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper {
+    width: 100%;
+  }
   .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer {
     grid-template-columns: repeat(2, minmax(0px, 1fr));
     grid-template-rows: repeat(3, minmax(0px, 1fr));
+  }
+  .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile {
+    height: 155px;
+    width: 155px;
   }
 }/*# sourceMappingURL=homepage.css.map */

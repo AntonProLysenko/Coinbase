@@ -271,7 +271,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                 :
                                 <>
                                 <div className='tileWrapper'>
-                                    <div className="tile">
+                                            <div className="tile skeleton">
                                         <div className="tileInnerWrapper">
 
                                             <div className="generalInfo">
@@ -299,7 +299,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                     </div>
                                 </div>
                                 <div className='tileWrapper'>
-                                    <div className="tile">
+                                    <div className="tile skeleton">
                                         <div className="tileInnerWrapper">
 
                                             <div className="generalInfo">
@@ -327,7 +327,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                     </div>
                                 </div>
                                         <div className='tileWrapper'>
-                                            <div className="tile">
+                                            <div className="tile skeleton">
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
@@ -355,7 +355,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                             </div>
                                         </div>
                                         <div className='tileWrapper'>
-                                            <div className="tile">
+                                            <div className="tile skeleton">
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
@@ -383,7 +383,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                             </div>
                                         </div>
                                         <div className='tileWrapper'>
-                                            <div className="tile">
+                                            <div className="tile skeleton">
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
@@ -410,9 +410,9 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
 
                                             </div>
                                         </div>
-                                        
+
                                         <div className='tileWrapper'>
-                                            <div className="tile">
+                                            <div className="tile skeleton">
                                                 <div className="tileInnerWrapper">
 
                                                     <div className="generalInfo">
