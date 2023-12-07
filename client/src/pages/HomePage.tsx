@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import loading_logo from "../components/assets/loading_coin_logo.png"
 
@@ -20,6 +20,8 @@ interface Object {
  type Props = {
    //React declares type by itself in states if we are passing the default value
     slidingHeader:React.SetStateAction<boolean>//I took the type from the declaration on the usestate
+    loadedLogo: React.SetStateAction<boolean>
+    setLogoLoaded: React.Dispatch<React.SetStateAction<boolean>>
     homePageCheckr:React.RefObject<HTMLDivElement>
     
     isMobileActive:React.SetStateAction<boolean>
@@ -30,14 +32,15 @@ interface Object {
     homepageData:Object;
     // homepageData.topHomepageCoins:object;
 }
-export default function HomePage({homepageData,slidingHeader,homePageCheckr,windowWidth,isMobileActive,setMobileActive}:Props) {
 
-    
-
+export default function HomePage({ homepageData, slidingHeader, homePageCheckr, windowWidth, isMobileActive, setMobileActive,loadedLogo,setLogoLoaded }:Props) {
     const navigation = useNavigate();
 
 
-
+let imgLoaderHandler=()=>{
+    console.log(loadedLogo, "Loaded Logo")
+    setLogoLoaded(true)
+}
    
 
 
@@ -241,7 +244,7 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                     <div className="tileInnerWrapper">
 
                                                         <div className="generalInfo">
-                                                            <img src={`${coin.IMAGEURL}`} alt="Coin Symbol IMG"/>
+                                                            <img className={loadedLogo ? "" :"ImageSceleton"} src={`${coin.IMAGEURL}`} alt="Coin Symbol IMG" onLoad={() => imgLoaderHandler()}/> 
                                                             <div className="title">{coin.FROMSYMBOL}</div>
                                                             <div className="price">{coin.PRICE.toLocaleString("en-US",{style:"currency",currency:"USD"})}</div>
                                                         </div>
@@ -281,15 +284,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                             </div>
 
 
-                                            <div>
+                                            <div className="persentage">
 
-                                                <div className="arrowWrapper">
+                                                <div className="arrowWrapperSkeleton">
                                                     <div className="arrowInnerWrapper">
+                                                        <span className="arrowSkeleton">↑</span>
 
                                                     </div>
                                                 </div>
 
-                                                <span className="persentageValue">
+                                                <span className="persentageValueSkeleton">
                                                    
                                                 </span>
                                             </div>
@@ -309,15 +313,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                             </div>
 
 
-                                            <div>
+                                            <div className="persentage">
 
-                                                <div className="arrowWrapper">
+                                                <div className="arrowWrapperSkeleton">
                                                     <div className="arrowInnerWrapper">
+                                                        <span className="arrowSkeleton">↑</span>
 
                                                     </div>
                                                 </div>
 
-                                                <span className="persentageValue">
+                                                <span className="persentageValueSkeleton">
                                                    
                                                 </span>
                                             </div>
@@ -337,15 +342,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                     </div>
 
 
-                                                    <div>
+                                                    <div className="persentage">
 
-                                                        <div className="arrowWrapper">
+                                                        <div className="arrowWrapperSkeleton">
                                                             <div className="arrowInnerWrapper">
+                                                                <span className="arrowSkeleton">↑</span>
 
                                                             </div>
                                                         </div>
 
-                                                        <span className="persentageValue">
+                                                        <span className="persentageValueSkeleton">
 
                                                         </span>
                                                     </div>
@@ -365,15 +371,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                     </div>
 
 
-                                                    <div>
+                                                    <div className="persentage">
 
-                                                        <div className="arrowWrapper">
+                                                        <div className="arrowWrapperSkeleton">
                                                             <div className="arrowInnerWrapper">
+                                                                <span className="arrowSkeleton">↑</span>
 
                                                             </div>
                                                         </div>
 
-                                                        <span className="persentageValue">
+                                                        <span className="persentageValueSkeleton">
 
                                                         </span>
                                                     </div>
@@ -393,15 +400,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                     </div>
 
 
-                                                    <div>
+                                                    <div className="persentage">
 
-                                                        <div className="arrowWrapper">
+                                                        <div className="arrowWrapperSkeleton">
                                                             <div className="arrowInnerWrapper">
+                                                                <span className="arrowSkeleton">↑</span>
 
                                                             </div>
                                                         </div>
 
-                                                        <span className="persentageValue">
+                                                        <span className="persentageValueSkeleton">
 
                                                         </span>
                                                     </div>
@@ -422,15 +430,16 @@ export default function HomePage({homepageData,slidingHeader,homePageCheckr,wind
                                                     </div>
 
 
-                                                    <div>
+                                                    <div className="persentage">
 
-                                                        <div className="arrowWrapper">
+                                                        <div className="arrowWrapperSkeleton">
                                                             <div className="arrowInnerWrapper">
+                                                                <span className="arrowSkeleton">↑</span>
 
                                                             </div>
                                                         </div>
 
-                                                        <span className="persentageValue">
+                                                        <span className="persentageValueSkeleton">
 
                                                         </span>
                                                     </div>

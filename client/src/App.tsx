@@ -20,6 +20,7 @@ function App() {
   const headerCheckr = useRef<HTMLDivElement>(null)
 
   let[slidingHeader, setSlidingHeader] = useState(false)
+  let [loadedLogo, setLogoLoaded] = useState(false)
   let [isMobileActive,setMobileActive] = useState(false)
   let [homepageData, setHomepageData] = useState({
     // topHomepageCoins:{},
@@ -105,7 +106,7 @@ function App() {
 
       <Routes>
         {/* send email on first Wrapper to sign up page  */}
-        <Route path="/" element = {<HomePage homepageData={homepageData} windowWidth={windowWidth} slidingHeader={slidingHeader} isMobileActive={isMobileActive} setMobileActive={setMobileActive}  homePageCheckr={homePageCheckr}/>}/>
+          <Route path="/" element={<HomePage loadedLogo={loadedLogo} setLogoLoaded={setLogoLoaded} homepageData={homepageData} windowWidth={windowWidth} slidingHeader={slidingHeader} isMobileActive={isMobileActive} setMobileActive={setMobileActive}  homePageCheckr={homePageCheckr}/>}/>
         <Route path="/signup" element={<SignUpPage/>}/> 
       </Routes>
      

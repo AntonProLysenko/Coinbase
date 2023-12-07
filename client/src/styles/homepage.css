@@ -6,6 +6,23 @@
     background-color: rgb(255, 255, 255);
   }
 }
+@keyframes arrowRotation {
+  0% {
+    transform: rotate(0 rad);
+  }
+  25% {
+    transform: rotate(1.542rad);
+  }
+  50% {
+    transform: rotate(3.142rad);
+  }
+  75% {
+    transform: rotate(4.642rad);
+  }
+  100% {
+    transform: rotate(6.283rad);
+  }
+}
 .skeleton {
   animation: skeletonLoading 2s linear 0.25s infinite alternate;
 }
@@ -535,6 +552,9 @@
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage .arrowWrapper {
   padding-right: 8px;
+}
+.HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage .arrowWrapperSkeleton {
+  animation: arrowRotation 2s linear 0.25s infinite;
 }
 .HomepageCoinDataWrapper .innerWrapper .tilesWrapper .tilesContainer .tileWrapper .tile .tileInnerWrapper .persentage.positive {
   color: rgb(9, 133, 81);
